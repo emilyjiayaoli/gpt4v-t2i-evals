@@ -1,0 +1,2 @@
+Sample 57, Group score: 1, Time: 28.829 seconds
+Sample 65, Group score: 1, Time: 29.054 seconds
