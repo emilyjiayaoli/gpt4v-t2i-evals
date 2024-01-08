@@ -6,6 +6,7 @@ from easydict import EasyDict as edict
 import subprocess
 import os
 import json
+import numpy as np
 
 def get_winoground_scores(scores):
     # scores can be a tuple of (scores_t2i, scores_i2t) or just scores_t2i
@@ -37,14 +38,11 @@ def get_winoground_scores(scores):
             })
     return winoground_scores
 
-def get_winoground_acc(scores, saved_path="./clip_l14.json", save=False):
-    ''' Accuracy for winoground'''
+
+def get_winoground_acc(scores):
     text_correct_count = 0
     image_correct_count = 0
     group_correct_count = 0
-    text_corrects = []
-    image_corrects = []
-    group_corrects = []
     def text_correct(result):
         return result["c0_i0"] > result["c1_i0"] and result["c1_i1"] > result["c0_i1"]
 
@@ -54,39 +52,70 @@ def get_winoground_acc(scores, saved_path="./clip_l14.json", save=False):
     def group_correct(result):
         return image_correct(result['t2i']) and text_correct(result['i2t'])
     
-    for idx, result in enumerate(scores):
+    for result in scores:
         text_correct_count += 1 if text_correct(result['i2t']) else 0
         image_correct_count += 1 if image_correct(result['t2i']) else 0
         group_correct_count += 1 if group_correct(result) else 0
-        if text_correct(result['i2t']):
-            text_corrects.append(idx)
-        if image_correct(result['t2i']):
-            image_corrects.append(idx)
-        if group_correct(result):
-            group_corrects.append(idx)
-    denominator = len(scores)
-    if save:
-        import json
-        with open(saved_path, "w") as f:
-            json.dump({
-                'text': text_corrects,
-                'image': image_corrects,
-                'group': group_corrects,
-                'denominator': denominator,
-            }, f, indent=2)
 
-    # result = {
-    #     'text': text_correct_count/denominator,
-    #     'image': image_correct_count/denominator,
-    #     'group': group_correct_count/denominator,
-    # }
+    denominator = len(scores)
     result = {
-        'text': text_correct_count,
-        'image': image_correct_count,
-        'group': group_correct_count,
-        'denominator': denominator,
-    }
+            'text': round(text_correct_count*100/denominator,4),
+            'image': round(image_correct_count*100/denominator,4),
+            'group': round(group_correct_count*100/denominator,4),
+        }
     return result
+
+# def get_winoground_acc(scores, saved_path="./clip_l14.json", save=False, demonimator=False):
+#     ''' Accuracy for winoground'''
+#     text_correct_count = 0
+#     image_correct_count = 0
+#     group_correct_count = 0
+#     text_corrects = []
+#     image_corrects = []
+#     group_corrects = []
+#     def text_correct(result):
+#         return result["c0_i0"] > result["c1_i0"] and result["c1_i1"] > result["c0_i1"]
+
+#     def image_correct(result):
+#         return result["c0_i0"] > result["c0_i1"] and result["c1_i1"] > result["c1_i0"]
+
+#     def group_correct(result):
+#         return image_correct(result['t2i']) and text_correct(result['i2t'])
+    
+#     for idx, result in enumerate(scores):
+#         text_correct_count += 1 if text_correct(result['i2t']) else 0
+#         image_correct_count += 1 if image_correct(result['t2i']) else 0
+#         group_correct_count += 1 if group_correct(result) else 0
+#         if text_correct(result['i2t']):
+#             text_corrects.append(idx)
+#         if image_correct(result['t2i']):
+#             image_corrects.append(idx)
+#         if group_correct(result):
+#             group_corrects.append(idx)
+#     denominator = len(scores)
+#     if save:
+#         import json
+#         with open(saved_path, "w") as f:
+#             json.dump({
+#                 'text': text_corrects,
+#                 'image': image_corrects,
+#                 'group': group_corrects,
+#                 'denominator': denominator,
+#             }, f, indent=2)
+#     if demonimator:
+#         result = {
+#             'text': round(text_correct_count*100/denominator,4),
+#             'image': round(image_correct_count*100/denominator,4),
+#             'group': round(group_correct_count*100/denominator,4),
+#         }
+#     else:
+#         result = {
+#             'text': text_correct_count,
+#             'image': image_correct_count,
+#             'group': group_correct_count,
+#             'denominator': denominator,
+#         }
+#     return result
 
 
 def get_winoground_analysis(scores):
@@ -328,4 +357,90 @@ class EqBen_Val(Dataset):
         print("EQBen_Val text same:", error['text_same'])
         print("EQBen_Val image flip:", error['image_flip'])
         print("EQBen_Val image same:", error['image_same'])
+        return results, acc['group']
+    
+class EqBen_Mini(Dataset):
+    def __init__(self, image_preprocess=None, root_dir='./', download=False, return_image_paths=True):
+        self.preprocess = image_preprocess
+        
+        self.root_dir = os.path.join(root_dir, "eqben_vllm")
+        if not os.path.exists(self.root_dir):
+            # https://drive.google.com/file/d/11YUTf06uzRHtFV8rYi96z4vTPi8_GNEM/view?usp=sharing
+            os.makedirs(self.root_dir, exist_ok=True)
+            subprocess.call(["gdown", "--id", "11YUTf06uzRHtFV8rYi96z4vTPi8_GNEM", "--output", os.path.join(self.root_dir, "eqben_vllm.zip")])
+            subprocess.call(["unzip", "eqben_vllm.zip"], cwd=self.root_dir)
+            
+        self.root_dir = os.path.join(root_dir, "eqben_vllm", "images")
+        self.subset_types = {
+            'eqbensd': ['eqbensd'],
+            'eqbenk': ['eqbenkubric_cnt', 'eqbenkubric_loc', 'eqbenkubric_attr'],
+            'eqbeng': ['eqbengebc'],
+            'eqbenag': ['eqbenag'],
+            'eqbeny': ['eqbenyoucook2'],
+        }
+        json_file = os.path.join(root_dir, "eqben_vllm", "all_select.json")
+        self.metadata = json.load(open(json_file, 'r'))
+        self.subset_indices = {subset_type: [] for subset_type in self.subset_types}
+        for item_idx, item in enumerate(self.metadata):
+            image_path = item['image0']
+            for subset_type in self.subset_types:
+                if image_path.split('/')[0] in self.subset_types[subset_type]:
+                    self.subset_indices[subset_type].append(item_idx)
+                    break
+        
+        self.return_image_paths = return_image_paths
+        self.transform = image_preprocess
+        if self.return_image_paths:
+            assert self.transform is None, "Cannot return image paths and apply transforms"
+     
+    def __len__(self):
+        return len(self.metadata)
+    
+    def get_image_loader(self):
+        def image_loader(image_path):
+            if image_path.split('.')[-1] == 'npy':
+                return Image.fromarray(np.load(image_path)[:, :, [2, 1, 0]], 'RGB')
+            else:
+                return Image.open(image_path).convert("RGB")
+        return image_loader
+
+    def image_loader(self, image_path):
+        if image_path.split('.')[-1] == 'npy':
+            return Image.fromarray(np.load(image_path)[:, :, [2, 1, 0]], 'RGB')
+        else:
+            return Image.open(image_path).convert("RGB")
+    
+    def __getitem__(self, index):
+        image_0_path = os.path.join(self.root_dir, self.metadata[index]['image0'])
+        image_1_path = os.path.join(self.root_dir, self.metadata[index]['image1'])
+        if self.return_image_paths:
+            image_0 = image_0_path
+            image_1 = image_1_path
+        else:
+            if self.transform:
+                image_0 = self.transform(self.image_loader(image_0_path))
+                image_1 = self.transform(self.image_loader(image_1_path))
+            else:
+                image_0 = self.image_loader(image_0_path)
+                image_1 = self.image_loader(image_1_path)
+        
+        caption_0 = self.metadata[index]['caption0']
+        caption_1 = self.metadata[index]['caption1']
+        item = edict({"image_options": [image_0, image_1], "caption_options": [caption_0, caption_1]})
+        return item
+    
+    def evaluate_scores(self, scores):
+        winoground_scores = get_winoground_scores(scores)
+        acc = get_winoground_acc(winoground_scores)
+        print("EQBen_Mini performance (overall)")
+        print(f"{'Dataset': <70} {'Text': <10} {'Image': <10} {'Group': <10}")
+        print(f"{'EQBen_Mini': <70} {acc['text']: <10.2f} {acc['image']: <10.2f} {acc['group']: <10.2f}")
+        results = {}
+        results['all'] = acc
+        for subset_type in self.subset_types:
+            subset_indices = self.subset_indices[subset_type]
+            subset_scores = [winoground_scores[idx] for idx in subset_indices]
+            subset_acc = get_winoground_acc(subset_scores)
+            print(f"{'EQBen_Mini ' + subset_type: <70} {subset_acc['text']: <10.2f} {subset_acc['image']: <10.2f} {subset_acc['group']: <10.2f}")
+            results[subset_type] = subset_acc
         return results, acc['group']

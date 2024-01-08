@@ -1,0 +1,4 @@
+Sample 0, Group score: 1, Time: 16.091 seconds
+Sample 1, Group score: 0, Time: 16.981 seconds
+Sample 2, Group score: 0, Time: 16.921 seconds
+Sample 4, Group score: 1, Time: 19.064 seconds

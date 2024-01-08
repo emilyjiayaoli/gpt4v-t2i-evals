@@ -1,5 +1,5 @@
 '''
-Winoground Evals on GPT-4V
+Winoground / EqBen Evals on GPT-4V
 @Author: Emily Li
 '''
 
@@ -11,12 +11,13 @@ import winoground
 import numpy as np
 import traceback
 import ast
+from io import BytesIO
 
 from gpt4v_api_client import GPT4V_API_Client
 
 class GPT4V_Winoground_Evals:
     def __init__(self, log_path:str, save_folder_name:str, 
-                 openai_api_key:str, post_processing_fn=None, 
+                 openai_api_key:str, dataset_name:str, post_processing_fn=None, 
                  system_prompt:str=None, user_prompt:str=None, 
                  api_max_retries=1, dataset_root_dir='./', 
                  score_none_retry_msg="'score' MUST be a numerical value."):
@@ -24,14 +25,16 @@ class GPT4V_Winoground_Evals:
         # self.max_tokens = 1200  # return max 1200 tokens per call
         self.log_folder_path = os.path.join(log_path, save_folder_name)
 
-        self.dataset = winoground.Winoground(root_dir=dataset_root_dir, return_image_paths=True)
+        self.dataset_name = dataset_name
 
+        # Define dataset
+        if self.dataset_name.lower() == 'winoground':
+            self.dataset = winoground.Winoground(root_dir=dataset_root_dir, return_image_paths=True)
+        elif self.dataset_name.lower() == 'eqben-mini':
+            self.dataset = winoground.EqBen_Mini(root_dir=dataset_root_dir, return_image_paths=False)
+        
         self.system_msg = system_prompt
         self.user_msg = user_prompt
-
-        self.winoground_scores = None
-        self.accuracy = None
-        self.winoground_analysis = None
 
         self.post_processing_fn = post_processing_fn
         self.api = GPT4V_API_Client(self.log_folder_path, openai_api_key, post_processing_fn=self.post_processing_fn, max_retries=api_max_retries, score_none_retry_msg=score_none_retry_msg)
@@ -61,9 +64,17 @@ class GPT4V_Winoground_Evals:
             self.last_reset_time = time.time()
 
     # Function to encode the image
-    def encode_image(self, image_path):
+    def encode_image_from_path(self, image_path):
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
+        
+    def encode_image_from_PIL(self, pil_image):
+        # Convert the PIL Image to a byte stream
+        buffered = BytesIO()
+        pil_image.save(buffered, format="JPEG") 
+
+        # Encode this image under base64
+        return base64.b64encode(buffered.getvalue()).decode('utf-8')
 
     # Function to create a log file and write logs
     def log_to_file(self, folder_name, file_name, content):
@@ -84,12 +95,14 @@ class GPT4V_Winoground_Evals:
 
         if isinstance(raw_result_score, str):
 
-            if raw_result_score == 'yes':
+            if 'yes' in raw_result_score:
                 processed_result_score = 1
-            elif raw_result_score == 'no':
+                raw_result_score = 1
+            elif 'no' in raw_result_score:
                 processed_result_score = 0
+                raw_result_score = 0
 
-            if 'Very Likely' in raw_result_score:
+            elif 'Very Likely' in raw_result_score:
                 processed_result_score = 1.0
             elif 'Somewhat Likely' in raw_result_score:
                 processed_result_score = 0.75
@@ -100,7 +113,7 @@ class GPT4V_Winoground_Evals:
             elif 'Very Unlikely' in raw_result_score:
                 processed_result_score = 0.0
 
-            if 'Very Similar' in raw_result_score:
+            elif 'Very Similar' in raw_result_score:
                 processed_result_score = 1.0
             elif 'Somewhat Similar' in raw_result_score:
                 processed_result_score = 0.75
@@ -112,7 +125,7 @@ class GPT4V_Winoground_Evals:
                 processed_result_score = 0.0
             
             
-            if 'Perfect Agreement' in raw_result_score:
+            elif 'Perfect Agreement' in raw_result_score:
                 processed_result_score = 1.0
             elif 'High Agreement' in raw_result_score:
                 processed_result_score = 0.75
@@ -135,20 +148,19 @@ class GPT4V_Winoground_Evals:
         'description': 'In the image, a large tree...',
         'reasoning': '...'}
     '''
-    def evaluate_11match(self, image_path:str, img_caption:str) -> dict:
+    def evaluate_11match(self, image, img_caption:str) -> dict:
 
         system_msg, user_msg = self.setup_prompt(img_caption) # retrieve prompt
 
-        base64_image = self.encode_image(image_path) # encode image compatible w/ gpt4v api
-        
+        if isinstance(image, str) and self.dataset_name.lower() == 'winoground':
+            # image is a path
+            base64_image = self.encode_image_from_path(image) # encode image compatible w/ gpt4v api
+        elif self.dataset_name.lower() == 'eqben-mini':
+            # image is a PIL image
+            base64_image = self.encode_image_from_PIL(image)
+
         response = self.api.call_gpt4v(base64_image, system_msg, user_msg) 
         result, tokens = self.api.process_gpt4_v_response(response, retry_count=0)
-
-        # if result['score'] is None:
-        #     print("Score is None, retrying in eval11...")
-        #     retry_user_msg = user_msg + " " + self.score_none_retry_msg
-        #     response = self.api.call_gpt4v(base64_image, system_msg, retry_user_msg)
-        #     result, tokens = self.api.process_gpt4_v_response(response, retry_count=0)
         
         result['score'] = self.post_process_score(result['score'])
 
@@ -247,6 +259,109 @@ class GPT4V_Winoground_Evals:
                 self.log_to_file(self.log_folder_path, 'res_evaluations_log.txt', str(sample_result))
 
             except Exception as e:
+                print(sample)
+                print(f"Error in sample {sample['id']}: {e}. Returning...", end=" ")
+                failed_samples.append(sample['id'])
+                self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
+                traceback.print_exc()
+                return
+        
+        print(f"Done - Overall failed_samples: {failed_samples}")
+        self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
+
+
+    def evaluate_eqben_mini_gpt4v(self, sample_indices:list) -> dict:
+
+        print("Saving to folder:", self.log_folder_path)
+
+        # Initialize score matrix
+        self.score_matrix = np.zeros((len(self.dataset), 2, 2))
+
+        failed_samples = []
+
+        for i, id in enumerate(sample_indices): # Loop through each sample in the winoground dataset
+            sample = self.dataset[id] # get sample
+            sample_result = {}
+            scores = np.zeros((2,2))
+
+            try:
+                # get image and caption
+                img1, img2 = sample['image_options']
+                caption1, caption2 = sample['caption_options']
+
+                sample['id'] = id
+                
+                print(f"Sample {sample['id']}...", end=" ")
+                start_time = time.time()
+
+                # get all combinations of image and caption
+                i1c1_result, token1 = self.evaluate_11match(img1, caption1)
+                if i1c1_result['score'] is None or not token1: 
+                    print(token1, i1c1_result)
+                    raise Exception("Error in i1c1_result")
+                print("Finished i1c1,", end=" ")
+
+                i1c2_result, token2 = self.evaluate_11match(img1, caption2)
+                if i1c2_result['score'] is None or not token2: 
+                    print(token2, i1c2_result)
+                    raise Exception("Error in i1c2_result")
+                print("i1c2,", end=" ")
+
+                i2c1_result, token3 = self.evaluate_11match(img2, caption1)
+                if i2c1_result['score'] is None or not token3: 
+                    print(token3, i2c1_result)
+                    raise  Exception("Error in i2c1_result")
+                # self.update_token_usage_and_delay(token3)
+                print("i2c1,", end=" ")
+
+                i2c2_result, token4 = self.evaluate_11match(img2, caption2)
+                if i2c2_result['score'] is None or not token4:
+                    print(token4, i2c2_result)
+                    raise Exception("Error in i2c2_result")
+                # self.update_token_usage_and_delay(token4)
+                print("i2c2,", end=" ")
+
+                # Populate sample result
+                sample_result['id'] = sample['id']
+
+                scores[0][0] = float(i1c1_result['score'])
+                scores[0][1] = float(i1c2_result['score'])
+                scores[1][0] = float(i2c1_result['score'])
+                scores[1][1] = float(i2c2_result['score'])
+                sample_result['scores'] = scores
+
+                self.score_matrix[sample['id']] = scores # update score matrix
+
+                # calculate image score, text score, and group score
+                sample_result['text_score'] = int(self.text_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
+                sample_result['image_score'] = int(self.image_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
+                sample_result['group_score'] = int(self.group_correct(sample_result['text_score'], sample_result['image_score']))
+
+                # save other info
+                # sample_result['img1'] = img1 # don't save image PIL object
+                # sample_result['img2'] = img2
+                sample_result['caption1'] = caption1
+                sample_result['caption2'] = caption2
+
+                sample_result['i1c1_result'] = i1c1_result
+                sample_result['i1c2_result'] = i1c2_result
+                sample_result['i2c1_result'] = i2c1_result
+                sample_result['i2c2_result'] = i2c2_result
+
+                # log results
+                log_content = f"Sample {sample['id']}, Group score: {sample_result['group_score']}, Time: {round(time.time() - start_time, 3)} seconds"
+                self.log_to_file(self.log_folder_path, 'raw_evaluations_log.txt', log_content)
+
+                # print sample summary
+                print(f"Text score: {sample_result['text_score']},", end=" ")
+                print(f"Image score: {sample_result['image_score']},", end=" ")
+                print(f"Group score: {sample_result['group_score']},", end=" ")
+                print(f"Took {round(time.time() - start_time, 3)} seconds!")
+
+                self.log_to_file(self.log_folder_path, 'res_evaluations_log.txt', str(sample_result))
+
+            except Exception as e:
+                print(sample)
                 print(f"Error in sample {sample['id']}: {e}. Returning...", end=" ")
                 failed_samples.append(sample['id'])
                 self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
@@ -257,13 +372,16 @@ class GPT4V_Winoground_Evals:
         self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
 
     # Read the file path and process the file
-    def process_results(name: str, file_path: str):
+    def process_results(name: str, file_path: str, return_entirety=False):
         scores = {}
         ids = []
         total_image_score = 0
         total_text_score = 0
         total_group_score = 0
         total_samples = 0
+
+        if return_entirety:
+            all_data = {}
 
         # Store indices failure cases
         failure_cases = {'text_score_fc': [],
@@ -291,7 +409,10 @@ class GPT4V_Winoground_Evals:
 
                 else:
                     id = data['id']
-                
+
+                if return_entirety:
+                    all_data[id] = data
+
                 ids.append(id)
 
                 # Extract and count scores
@@ -316,7 +437,11 @@ class GPT4V_Winoground_Evals:
         print(" Image Score:", total_image_score, "-->", round(total_image_score/total_samples, 3))
         print(" Text Score:", total_text_score, "-->", round(total_text_score/total_samples, 3))
         print(" Group Score:", total_group_score, "-->", round(total_group_score/total_samples, 3))
-        return sorted(ids), scores, failure_cases
+        
+        if return_entirety:
+            return sorted(ids), scores, failure_cases, all_data
+        else:
+            return sorted(ids), scores, failure_cases
     
 
     ''' 

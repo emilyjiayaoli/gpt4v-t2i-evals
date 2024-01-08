@@ -80,6 +80,8 @@ class GPT4V_API_Client:
     def process_response_content(self, response): # helper
         # process valid response
         content = response['choices'][0]['message']['content'] # Get content field from the response
+        # find ```json\n{\n and get everything after starting from the first char
+        content = content[content.find('{'):]
 
         if self.post_processing_fn:
             # organize raw output into json format
@@ -150,7 +152,12 @@ class GPT4V_API_Client:
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=self.headers, json=payload)
 
-        self.log_to_file(self.log_folder_path, 'api_raw_output.txt', str(response.json())) # Log the raw API response
+        try:
+            self.log_to_file(self.log_folder_path, 'api_raw_output.txt', str(response.json())) # Log the raw API response
+        except Exception as e:
+            print("Error in logging raw output", e)
+            print("Response:", response)
+            traceback.print_exc()
         
         return response.json()
     
