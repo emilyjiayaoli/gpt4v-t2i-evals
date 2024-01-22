@@ -325,7 +325,6 @@ class Winoground(Dataset):
             # print(f"Winoground {tag} group score: {results[tag]['group']}")
         return results, acc['group']
 
-
 class TIFA160_DSG(Dataset):
     def __init__(self, image_preprocess=None, root_dir="./", download=True, return_image_paths=True):
         self.root_dir = os.path.join(root_dir, 'tifa160')
