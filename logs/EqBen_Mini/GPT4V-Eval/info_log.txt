@@ -1,0 +1,8 @@
+Date: 01/09/2024
+Prompt:
+	 system_msg: 
+	 user_msg: Your task is to evaluate whether a given text caption accurately represents the main content and objects of an associated image. While the caption need not describe every detail of the image, it should convey the overall theme or subject. After your evaluation, rate the quality of the text caption’s match to the image on a scale of 1-100, with 100 being a perfect match. Caption: '{img_caption}' 
+Provide your evaluation in JSON format, including keys for 'score' and 'reasoning'.
+Dataset: EqBen_Mini. Number of samples: 140.
+
+

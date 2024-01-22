@@ -1,0 +1,9 @@
+def get_raw_prob_num_prompts_no_sys(output_json=True):
+    '''Describe the image is removed, removed system prompt '''
+    system_msg = ""
+    user_msg = "Calculate a similarity score in the format of the probability of a match between the provided image and the caption '{img_caption}'. \n" 
+    if output_json:
+        user_msg += "Provide your evaluation in JSON format, including keys for 'score', and 'reasoning'. "
+    return system_msg, user_msg
+
+just took  our system message

@@ -1,0 +1,6 @@
+def get_binary_score_prompts_b():
+    '''stanford nlp lab baseline, binary scoring'''
+    system_msg = ""
+    user_msg = "Select whether the image matches the caption. Pay close attention to the word order. (Give a short explanation first, then change to a new line give the final answer in the exact format of: \"yes\" or \"no\"))\n Caption: '{img_caption}'\n"
+    user_msg += "Provide your evaluation in JSON format, including keys for 'score':<final answer> and 'reasoning'."
+    return system_msg, user_msg

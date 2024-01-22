@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 103, in process_gpt4_v_response
+    data_content, tokens_used = self.process_response_content(response)
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 91, in process_response_content
+    json_data = json.loads(content_cleaned) # Parse with json.loads()
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 3 column 227 (char 246)
+
+Traceback (most recent call last):
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 108, in process_gpt4_v_response
+    data_content, tokens_used = self.process_response_content(response)
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 95, in process_response_content
+    json_data = json.loads(content_cleaned) # Parse with json.loads()
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 3 column 19 (char 39)
+
+Traceback (most recent call last):
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 108, in process_gpt4_v_response
+    data_content, tokens_used = self.process_response_content(response)
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 95, in process_response_content
+    json_data = json.loads(content_cleaned) # Parse with json.loads()
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Invalid control character at: line 3 column 79 (char 99)
+
+Traceback (most recent call last):
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 108, in process_gpt4_v_response
+    data_content, tokens_used = self.process_response_content(response)
+  File "/Users/emily/Desktop/code repos/winogroundv2/gpt4v-winoground-evals-clean/gpt4v_api_client.py", line 95, in process_response_content
+    json_data = json.loads(content_cleaned) # Parse with json.loads()
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/emily/opt/anaconda3/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 3 column 129 (char 147)
+

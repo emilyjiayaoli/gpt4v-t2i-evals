@@ -1,0 +1,354 @@
+{
+    "0": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The text caption accurately represents the main content of the associated image, which shows a dove standing on a branch. The caption captures the essential elements of the image without going into unnecessary detail, making it a perfect match."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The caption does not accurately represent the image. The bird in the image is not an eagle; it is a dove. Therefore, the caption fails to correctly describe the main subject of the photo."
+        },
+        "i1c0_result": {
+            "score": 3,
+            "reasoning": "The caption inaccurately identifies the bird in the image. The image shows a bald eagle perched on a branch, not a dove. The caption does correctly mention the branch, but the main subject \u2014 the type of bird \u2014 is incorrect, which is critical for an accurate description."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The given caption 'a photo of an eagle standing on the branch' accurately represents the main content of the image, which shows an eagle perched on a branch. No significant details that contradict the caption are present, and the overall theme of the image is captured by the caption."
+        },
+        "scores": [
+            [
+                100.0,
+                0.0
+            ],
+            [
+                3.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a photo of dove standing on the branch",
+            "a photo of eagle standing on the branch"
+        ]
+    },
+    "1": {
+        "i0c0_result": {
+            "score": 30,
+            "reasoning": "The image shows a dog, which matches part of the text caption. However, the dog in the image is not red; it is predominantly black with some tan markings. The caption inaccurately represents the color of the dog, which is fundamental to the description. Therefore, the score is significantly reduced as the color is a primary attribute in the given caption."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The caption 'a photo of brown dog' does not accurately represent the main content of the image, as the dog in the photo is predominantly black, not brown. Therefore, the caption does not match the image."
+        },
+        "i1c0_result": {
+            "score": 50,
+            "reasoning": "The caption does not accurately represent the color of the dog in the image. The dog appears to be brown with a slight reddish tint rather than a solid red color. However, the caption does correctly identify that there is a dog in the photo. Therefore, the score reflects a partial match, noting the correct identification of the animal, but an inaccurate description of its color."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The caption accurately represents the main content of the image, which is a brown dog. The focus of the image is clearly on the dog, and no significant elements have been omitted in the description."
+        },
+        "scores": [
+            [
+                30.0,
+                0.0
+            ],
+            [
+                50.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a photo of red dog",
+            "a photo of brown dog"
+        ]
+    },
+    "2": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The text caption accurately represents the main content of the image by describing the painting's subject (a dove) and its location (on the tree), which are clearly depicted in the image. The caption captures the essence of the painting without the need for additional details."
+        },
+        "i0c1_result": {
+            "score": 98,
+            "reasoning": "The caption 'a painting of bird on the tree' accurately represents the main content of the image, which shows a painted bird perched on the branch of a tree. The only minor detail not captured by the caption is the stylistic elements and the background, but this does not significantly detract from the overall depiction conveyed by the text."
+        },
+        "i1c0_result": {
+            "score": 95,
+            "reasoning": "The image shows a stylized painting of a bird, which appears to be a dove, perched on a tree branch. The background has abstract design elements that are not specifically mentioned in the caption. Because the main elements of the caption ('a painting of dove on the tree') are represented in the image, the match is high. The score is not perfect because the caption overlooks the abstract background details, but these are not central to the main content depicted."
+        },
+        "i1c1_result": {
+            "score": 90,
+            "reasoning": "The image provided is indeed a painting that features a bird sitting on a tree, which corresponds well with the caption provided. The score is not a perfect 100 because there are additional elements in the painting, such as stylized shapes or patterns at the bottom, that are not mentioned in the caption, but these elements do not change the overall theme focused on by the caption."
+        },
+        "scores": [
+            [
+                100.0,
+                98.0
+            ],
+            [
+                95.0,
+                90.0
+            ]
+        ],
+        "texts": [
+            "a painting of dove on the tree",
+            "a painting of bird on the tree"
+        ]
+    },
+    "3": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The caption accurately represents the image shown. The main subject of the image is a dog and it is indeed wearing a cowboy hat. There are no significant elements in the image that are not described by the caption, as the described elements are the clear focus of the image."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The caption inaccurately describes the image. The dog in the image is wearing a hat, not a crown. Therefore, the main content of the caption does not match the main object in the image."
+        },
+        "i1c0_result": {
+            "score": 0,
+            "reasoning": "The image shows a dog wearing what appears to be a crown, not a cowboy hat. Therefore, the text caption does not accurately represent the main content of the image."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The provided text caption 'a photo of dog wearing a crown' perfectly matches the main content of the image, which shows a dog with a crown on its head."
+        },
+        "scores": [
+            [
+                100.0,
+                0.0
+            ],
+            [
+                0.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a photo of dog wearing a cowboy hat",
+            "a photo of dog wearing a crown"
+        ]
+    },
+    "4": {
+        "i0c0_result": {
+            "score": 95,
+            "reasoning": "The caption accurately represents that the image contains a bus which mostly appears to be black in color. However, the caption does not mention the distinctive yellow striping which is also a prominent feature of the bus. Despite this omission, the overall theme of a black bus is correctly conveyed."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The caption inaccurately describes the color of the bus. The bus in the image is black with yellow and white stripes, not blue. Therefore, the caption does not accurately convey the main content of the associated image."
+        },
+        "i1c0_result": {
+            "score": 10,
+            "reasoning": "The caption inaccurately describes the color of the bus. The bus in the image is blue with some yellow trim, not black. While the caption correctly identifies the object in the image as a bus, the color is a significant characteristic, and the error greatly impacts the accuracy of the description."
+        },
+        "i1c1_result": {
+            "score": 85,
+            "reasoning": "The caption accurately identifies the main subject of the image, which is a bus, and the primary color of the bus, which is blue. However, the bus also has some yellow coloring and additional details like a luggage rack on top and a specific design that are not mentioned in the caption. Despite these omissions, the caption gives an accurate basic description of the image."
+        },
+        "scores": [
+            [
+                95.0,
+                0.0
+            ],
+            [
+                10.0,
+                85.0
+            ]
+        ],
+        "texts": [
+            "a photo of black bus",
+            "a photo of blue bus"
+        ]
+    },
+    "5": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The caption 'a real image of bus' accurately represents the main content of the associated image, which prominently features a real bus vehicle as its central focus."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The image shows a photograph of a real bus, not an oil painting. Therefore, the caption does not accurately represent the main content of the image."
+        },
+        "i1c0_result": {
+            "score": 0,
+            "reasoning": "The image provided is a painting of a bus, not a real image of a bus. The caption inaccurately describes the nature of the image as it suggests the imagery is photographic, when in fact it is an artistic rendition."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The image indeed corresponds to an oil painting of a bus. The image shows a vibrant, colorfully painted bus, with the artistic brush strokes and texture indicative of oil painting techniques. The caption accurately represents the main content and objects in the image."
+        },
+        "scores": [
+            [
+                100.0,
+                0.0
+            ],
+            [
+                0.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a real image of bus",
+            "an oil painting of bus"
+        ]
+    },
+    "6": {
+        "i0c0_result": {
+            "score": 85,
+            "reasoning": "The caption 'a photo of cattle in the zoo' adequately describes the main content of the image, which shows cattle, possibly in an enclosure that could be within a zoo. The setting is not entirely clear as being specifically a zoo without additional context, as it could also resemble a farm or other animal enclosure. However, the presence of cattle is accurately described, and the environment does suggest a setting akin to a zoo. The score is thus high but not perfect, due to the slight ambiguity regarding the specific type of enclosure."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The image does not show a goat but instead displays two cows likely in a farm or zoo setting. Therefore, the text caption does not accurately represent the main content of the image."
+        },
+        "i1c0_result": {
+            "score": 50,
+            "reasoning": "The image shows goats within an enclosure which could be a part of a zoo. However, the caption incorrectly identifies the animals as cattle. While goats can be found in a zoo, they are not cattle, so the caption is partially incorrect. It correctly describes the setting possibly being a zoo but misidentifies the type of animals pictured."
+        },
+        "i1c1_result": {
+            "score": 80,
+            "reasoning": "The image does indeed show goats, which aligns with the text caption. However, the caption mentions a single goat, while the image clearly depicts multiple goats. Also, while the setting does appear to be a zoo or a similar animal enclosure, the 'zoo' aspect is not explicitly clear from the image alone, which could also affect the accuracy of the description. The caption captures the general theme but lacks specificity about the number of goats."
+        },
+        "scores": [
+            [
+                85.0,
+                0.0
+            ],
+            [
+                50.0,
+                80.0
+            ]
+        ],
+        "texts": [
+            "a photo of cattle in the zoo",
+            "a photo of goat in the zoo"
+        ]
+    },
+    "7": {
+        "i0c0_result": {
+            "score": 0,
+            "reasoning": "The image is a manipulation attempting to imitate Van Gogh's style using motifs from his famous 'Starry Night' painting and depicting a train, which is not an actual work by Vincent Van Gogh. The caption incorrectly attributes this image to Van Gogh's post-impressionism work. This is misleading and not a genuine piece by the artist. Therefore, the caption does not accurately represent the image."
+        },
+        "i0c1_result": {
+            "score": 95,
+            "reasoning": "The caption 'an oil painting of a train' accurately describes the main subject of the image, which is indeed a depiction of a train, likely created using oil paints given the style and texture visible. The style is reminiscent of Vincent van Gogh's work, which is characterized by bold, dramatic brush strokes and vivid colors. The painting also includes a distinctive sky with swirling patterns that could suggest a reference to van Gogh's famous 'Starry Night', further enriching its artistic value. However, it does not mention the artistic style or the sky, both of which are prominent elements. Despite this, as the train is the main focus of the painting, the caption is substantially accurate."
+        },
+        "i1c0_result": {
+            "score": 0,
+            "reasoning": "The image shows what appears to be a digitally altered or stylized photograph of a modern train, rather than an actual Van Gogh post-impressionism painting. Van Gogh's work is from the 19th century and would not include modern trains. Additionally, the style does not match Van Gogh's characteristic brushwork and color palette."
+        },
+        "i1c1_result": {
+            "score": 95,
+            "reasoning": "The provided caption 'an oil painting of train' accurately represents the main content of the associated image, which appears to be a painting (with a texture that is indicative of oil paint) depicting a train. The painting style captures the train with a level of detail that is consistent with oil painting techniques. However, the score is not a perfect 100 because the caption does not mention the landscape or the sky, which are also significant elements in the painting."
+        },
+        "scores": [
+            [
+                0.0,
+                95.0
+            ],
+            [
+                0.0,
+                95.0
+            ]
+        ],
+        "texts": [
+            "an Van Gogh post-impressionism painting of train",
+            "an oil painting of train"
+        ]
+    },
+    "8": {
+        "i0c0_result": {
+            "score": 90,
+            "reasoning": "The image depicts a squirrel standing on what appears to be a desk surface next to a laptop and a smartphone. The main content of the image, which is the squirrel being on the desk, is accurately represented by the caption. However, the caption omits the presence of the laptop and smartphone, which are significant objects in the image as well. Despite this, the essence of the scene is captured satisfactorily in the caption."
+        },
+        "i0c1_result": {
+            "score": 1,
+            "reasoning": "The caption inaccurately represents the image content. The animal in the photo is not a dog but a squirrel. While the creature is indeed on a desk, the description of the wrong animal makes the caption highly inaccurate in describing the main subject of the image."
+        },
+        "i1c0_result": {
+            "score": 0,
+            "reasoning": "The image shows a dog on the desk, not a squirrel. Therefore, the text caption does not accurately represent the main content of the image."
+        },
+        "i1c1_result": {
+            "score": 90,
+            "reasoning": "The caption accurately describes the main subject of the image, which is a dog sitting on a desk. There is also a smartphone visible on the desk, but as it is not the main focus of the image, its omission does not significantly affect the overall accuracy of the caption. The score is slightly reduced because the caption could have provided a more complete description by including the presence of the smartphone to fully represent all major elements in the image."
+        },
+        "scores": [
+            [
+                90.0,
+                1.0
+            ],
+            [
+                0.0,
+                90.0
+            ]
+        ],
+        "texts": [
+            "a photo of squirrel on the desk",
+            "a photo of dog on the desk"
+        ]
+    },
+    "9": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The image depicts a painting of a dog standing on the grass, which is accurately described by the text caption. The main content of the image is the dog and its position on the grass, both of which are correctly captured by the caption."
+        },
+        "i0c1_result": {
+            "score": 0,
+            "reasoning": "The caption inaccurately represents the main content of the image. The image actually depicts a painting of a dog standing on the grass, not a rabbit. The caption does not convey the overall theme or subject of the image at all."
+        },
+        "i1c0_result": {
+            "score": 0,
+            "reasoning": "The image does not show a dog. Instead, it features a creature that is a fantastical blend of different animals, most resembling a rabbit with antlers. Thus, the caption does not accurately represent the main content of the image."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The caption accurately represents the image which shows a painting of a rabbit standing on the grass. The main content of the image is the rabbit and its placement in a grassy field, both of which are captured by the text caption."
+        },
+        "scores": [
+            [
+                100.0,
+                0.0
+            ],
+            [
+                0.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a painting of dog standing on the grass",
+            "a painting of rabbit standing on the grass"
+        ]
+    },
+    "10": {
+        "i0c0_result": {
+            "score": 100,
+            "reasoning": "The caption accurately represents the main content of the image. The image shows a painting of a cat wearing a crown, which directly corresponds to the caption provided."
+        },
+        "i0c1_result": {
+            "score": 10,
+            "reasoning": "The provided caption does not accurately represent the image. The cat is not wearing a cowboy hat; instead, it appears to be wearing a crown or a headpiece decorated with flowers and jewels. The main subject is correctly identified as a cat, which accounts for the score not being lower."
+        },
+        "i1c0_result": {
+            "score": 70,
+            "reasoning": "The image does depict a painting of a cat, which matches part of the text caption. However, the cat is not wearing a crown as described in the caption, but rather a hat that appears to be a sombrero, which is a significant detail. The caption captures the fact that the main subject is a cat but inaccurately describes its headgear."
+        },
+        "i1c1_result": {
+            "score": 100,
+            "reasoning": "The caption 'a painting of cat wearing a cowboy hat' perfectly matches the main content of the associated image, which shows a painted depiction of a cat with a cowboy hat on its head."
+        },
+        "scores": [
+            [
+                100.0,
+                10.0
+            ],
+            [
+                70.0,
+                100.0
+            ]
+        ],
+        "texts": [
+            "a painting of cat wearing a crown",
+            "a painting of cat wearing a cowboy hat"
+        ]
+    }
+}

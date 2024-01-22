@@ -8,6 +8,7 @@ import time
 import traceback
 import requests 
 import os
+import ast
 
 class GPT4V_API_Client:
     def __init__(self, log_folder_path, openai_api_key, 
@@ -77,6 +78,31 @@ class GPT4V_API_Client:
             print("Unhandled error", response)
             return None, None
         
+    def parse_malformatted_json(self, string):
+        dictionary = {}
+        lines = string.split('\n')
+        
+        for line in lines:
+            if ':' in line:
+                key, value = line.split(':', 1)
+                key = key.strip().strip('"{}')
+                value = value.strip().strip('"{}').rstrip(',')
+                
+                # Convert the value to an integer if it's numeric
+                if value.isnumeric():
+                    value = int(value)
+                # Convert to list if is list
+                
+                try:
+                    value_list = ast.literal_eval(value)
+                    value = value_list
+                except Exception as e:
+                    pass
+                
+                dictionary[key] = value
+
+        return dictionary
+
     def process_response_content(self, response): # helper
         # process valid response
         content = response['choices'][0]['message']['content'] # Get content field from the response
@@ -88,7 +114,12 @@ class GPT4V_API_Client:
             json_data = self.post_processing_fn(content)
         else:
             content_cleaned = content.replace('```json\n', '').replace('\n```', '') # Remove the Markdown code block formatting (the triple backticks and 'json' line)
-            json_data = json.loads(content_cleaned) # Parse with json.loads()
+            try:
+                json_data = json.loads(content_cleaned) # Parse with json.loads()
+            except Exception as e:
+                print("Error in json.loads, so loading manually...")
+                json_data = self.parse_malformatted_json(content_cleaned)
+
         tokens_used = response['usage']['total_tokens']
 
         return json_data, tokens_used

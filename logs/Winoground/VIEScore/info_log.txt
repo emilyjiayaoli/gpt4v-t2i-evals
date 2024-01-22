@@ -1,0 +1,247 @@
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [79]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [79]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [0]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [149]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [0]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [149]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [0]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [152]
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/09/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [191]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [216]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [216]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [242]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [250]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [251]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [263]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: [271]
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Date: 01/10/2024
+Prompt:
+	 system_msg: You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.):                         {
+                            "score" : [...],
+                            "reasoning" : "..."
+                        }
+	 user_msg: RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}
+Dataset: Winoground. Number of samples: 400.
+
+
+Failed Examples: []

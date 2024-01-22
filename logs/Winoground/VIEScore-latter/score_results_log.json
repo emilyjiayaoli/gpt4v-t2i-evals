@@ -1,0 +1,3242 @@
+{
+    "310": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly matches the prompt. Each of the three bugs (ants) is shown holding a leaf, the insects and leaves are clearly visible, and the composition is consistent with the text prompt."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image shows three ants each carrying a leaf, however, the prompt specifies that every leaf should have a bug. Since there are only three leaves present and each with an ant, which technically is a bug, it matches the prompt to some extent. But the lack of variety in bugs and the fact that there's no indication that every leaf outside this scene also has a bug reduces the overall effectiveness in following the prompt."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image effectively shows a ladybug (a type of bug) on a leaf, which aligns with the prompt 'every bug has a leaf.' However, the phrase could be interpreted as necessitating a one-to-one relationship between bugs and leaves, i.e., each bug should have its own leaf. In the image, there are multiple bugs (aphids) on the same leaf, which may not perfectly match the prompt's implied instruction if a stricter interpretation is applied. Additionally, not every bug in the image is on a separate leaf, which detracts from the score slightly."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image shows multiple bugs on different parts of the plant, including leaves. A ladybug and several smaller bugs, which seem to be aphids, are visible. However, not every leaf is shown to have a bug; some leaves might be out of the frame or not showing bugs on them. Therefore, the image mostly but not perfectly follows the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                7.0
+            ],
+            [
+                7.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/310/0.png",
+            "./datasets/winoground/images/310/1.png"
+        ],
+        "texts": [
+            "every bug has a leaf",
+            "every leaf has a bug"
+        ]
+    },
+    "311": {
+        "i0c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows green leaves without any indications of them turning red. While it fits the 'green leaves' aspect of the prompt, it does not display the transition to red as implied by 'seasons change.'"
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image shows only green leaves and does not depict any red leaves that are changing to green as implied by the prompt."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image shows leaves during a transitional phase, noticeable due to the presence of frost, suggesting the change of seasons. The leaves have a hint of red but are predominantly brown, indicating a mid-to-late fall season. While the prompt suggests a change from green to red, the image does not display vibrant green or red leaves but rather brown, indicating that it only partially matches the prompt."
+        },
+        "i1c1_result": {
+            "score": 1.0,
+            "reasoning": "The image shows leaves with frost on them, indicating a winter scene, not a transition from red leaves to green as would happen from winter to spring. The colors of the leaves do not reflect a change to green but rather autumn or the persistence of winter. The concept of seasons changing as described in the prompt is not effectively depicted in the image."
+        },
+        "scores": [
+            [
+                2.0,
+                0.0
+            ],
+            [
+                7.0,
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/311/0.png",
+            "./datasets/winoground/images/311/1.png"
+        ],
+        "texts": [
+            "the green leaves will soon be red as the seasons change",
+            "the red leaves will soon be green as the seasons change"
+        ]
+    },
+    "312": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image effectively depicts a white wall that is in the process of being painted blue. The blue paint is visible on the roller and partially applied to the wall, indicating the painting action is ongoing. The prompt is followed perfectly."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows a blue wall being painted white. The paint roller is actively applying white paint over the blue, which aligns well with the prompt. The score is not a perfect 10 because the process of painting is not fully completed - we can't see a significant portion of the wall already painted white, which could imply the 'soon' aspect more effectively."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the text prompt, depicting a hand with a paintbrush applying white paint to a blue wall. While the prompt mentions a white wall being painted blue, the presence of white paint on a blue wall can imply the process is ongoing and the blue wall will soon be covered in white as we see the first strokes of change. The image successfully conveys the concept of a wall's color being changed by painting, though it shows white paint over blue rather than blue over white."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. It depicts a blue wall with a stroke of white paint, indicating the process of painting it white. The brush is visible, the white paint is contrasting with the blue wall, and the motion of painting the wall white is clear. One point is deducted only because the prompt implies the entire wall will soon be white, but the image only shows the initial stages of this process."
+        },
+        "scores": [
+            [
+                10.0,
+                8.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/312/0.png",
+            "./datasets/winoground/images/312/1.png"
+        ],
+        "texts": [
+            "the white wall will soon be painted blue",
+            "the blue wall will soon be painted white"
+        ]
+    },
+    "313": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt by depicting a solar eclipse, where the moon is aligned between the Earth and the sun, thus preventing the sun's rays from reaching the Earth."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image depicts a solar eclipse where the moon is positioned between the Earth and the sun, blocking the sun's rays. This is the opposite of the prompt, which describes a lunar eclipse scenario where the Earth prevents the sun's rays from reaching the moon."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image appears to depict a lunar eclipse scenario, where the Earth's shadow is preventing sunlight from directly reaching the surface of the moon visible to us. The lit edge of the moon suggests that the sun's rays are being obstructed, which aligns with the prompt. However, the image does not explicitly show the interaction with Earth or illustrate how this prevents sunlight from reaching the Earth's surface, which could be conveyed more clearly. Thus, the image is relevant to the prompt but lacks some context for full alignment."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully depicts a lunar eclipse, where the Earth blocks the sun's rays from reaching the moon, which aligns with the prompt. The illuminated edge of the moon suggests that not all light is blocked, characteristic of a penumbral or partial lunar eclipse. A full lunar eclipse might show an entirely red-orange moon with no bright edge, so this representation is not perfect but is clearly identifiable as an eclipse event."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                7.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/313/0.png",
+            "./datasets/winoground/images/313/1.png"
+        ],
+        "texts": [
+            "the moon prevents the sun's rays from falling on the earth",
+            "the earth prevents the sun's rays from falling on the moon"
+        ]
+    },
+    "314": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately represents the text prompt: Several paper airplanes are shown flying in straight paths represented by dashed lines, and there is one paper airplane deviating from the pattern with a curved flight path, also indicated by a dashed line. Each element required by the prompt is featured in the image."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately represents the text prompt. All paper airplanes except for one are shown with a curved trajectory, while one paper airplane has a straight trajectory path, which perfectly follows the prompt. The reason for not giving a full score is to leave room for potential discrepancies not visible at this resolution or angle, such as paper plane proportions or any other minor detail."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively follows the prompt. There are multiple paper airplanes, and all but one are shown flying on straight, dashed paths. The one that stands out is a different color (yellow) and is following a curved, dashed path, accurately illustrating the prompt that all paper airplanes fly on a straight path except for one which takes a curved one."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt. It depicts multiple paper airplanes where all but one are following a curved path, indicated by the dashed lines behind them. One paper airplane, which is distinct in color, takes a straight path, differentiating it from the rest as described by the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/314/0.png",
+            "./datasets/winoground/images/314/1.png"
+        ],
+        "texts": [
+            "all paper airplanes fly on a straight path except for one which takes a curved one",
+            "all paper airplanes fly on a curved path except for one which takes a straight one"
+        ]
+    },
+    "315": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image effectively matches the prompt. The individual depicted has a facial expression and posture that suggest discomfort or tightness, implying they are too big for the pants. However, the pants do not appear to be overly tight or small, which might have more accurately depicted the concept of the individual being 'too big for the pants'. Therefore, I deducted one point."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a person wearing pants that appear to fit properly, contradicting the prompt indicating that the pants should be too big for them. Due to this discrepancy, the score is low."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the prompt 'the person is too big for the pants' as the person in the image is holding out a pair of pants that are clearly too large for him, indicating significant weight loss or misfit."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt. It shows a person holding out their significantly oversized pants to illustrate that they are too big for them."
+        },
+        "scores": [
+            [
+                9.0,
+                2.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/315/0.png",
+            "./datasets/winoground/images/315/1.png"
+        ],
+        "texts": [
+            "the person is too big for the pants",
+            "the pants is too big for the person"
+        ]
+    },
+    "316": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The image successfully depicts a kid who appears to be in the upward motion of a jump and is in the process of throwing a basketball. However, the child's feet are not clearly off the ground, which would better represent the 'jumped' aspect of the prompt, and the motion blur that is typically associated with a dynamic action like throwing is not present. These factors slightly detract from fully matching the prompt."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image depicts a young individual who appears to be a kid throwing a basketball towards another person. However, the kid is not depicted in the process of jumping which partially misses fulfilling the prompt. The overall scene is consistent with a casual basketball throw scenario, but the specific action of jumping after the throw is not demonstrated."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image depicts a young individual, presumably a kid, engaging with what appears to be an older individual, possibly a parent or older sibling. The kid is in a jumping pose but isn't in the act of throwing a basketball; instead, the basketball is being held by the older individual possibly in preparation for play. The scenario does not align perfectly with the prompt of a kid who jumped and then threw a basketball."
+        },
+        "i1c1_result": {
+            "score": 4.0,
+            "reasoning": "The image does show a kid with a basketball and jumping, but the image does not depict the kid in the act of throwing the basketball. Instead, the basketball is being held by the adult, which doesn't align with the prompt specifying the kid threw the ball. Therefore, the success of the AI in following the prompt is moderately low."
+        },
+        "scores": [
+            [
+                7.0,
+                7.0
+            ],
+            [
+                2.0,
+                4.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/316/0.png",
+            "./datasets/winoground/images/316/1.png"
+        ],
+        "texts": [
+            "a kid jumped then threw a basketball",
+            "a kid threw a basketball then jumped"
+        ]
+    },
+    "317": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image closely follows the prompt, showing one cheerleader supporting multiple cheerleaders. The central figure is holding up two cheerleaders by their hands, who in turn are holding up another cheerleader, forming a multi-tiered formation that aligns well with the concept of 'one cheerleader supporting multiple cheerleaders.' Deductions are due to not directly showing all the support mechanics and the potential ambiguity of 'supporting' in the prompt."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately follows the prompt by showing multiple cheerleaders supporting one cheerleader. There are two cheerleaders being supported by one at the bottom, and each of them is supporting another cheerleader, making a total of three cheerleaders being supported as described."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image shows one cheerleader being supported up high by multiple cheerleaders below, which aligns well with the prompt. The only minor discrepancy is that the central figure supporting the one on top is not clearly presented as a cheerleader due to wearing a plain t-shirt instead of a typical cheerleader outfit, but this does not significantly detract from the overall adherence to the prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it shows multiple cheerleaders supporting one cheerleader who is elevated above the rest. The image captures the common cheerleading formation with appropriate attire and props (pom-poms)."
+        },
+        "scores": [
+            [
+                8.0,
+                10.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/317/0.png",
+            "./datasets/winoground/images/317/1.png"
+        ],
+        "texts": [
+            "one cheerlearder supporting multiple cheerleaders",
+            "multiple cheerleaders supporting one cheerlearder"
+        ]
+    },
+    "318": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it shows two persons wearing one scarf. The details of the scarf, the way it is wrapped around both individuals, and their winter attire align well with the text prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt as it shows two people each wearing a scarf, rather than one person wearing two scarfs."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image only shows a single person, not two persons sharing one scarf as the prompt specifies."
+        },
+        "i1c1_result": {
+            "score": 5.0,
+            "reasoning": "The image shows one person wearing what appears to be a headband or a head wrap, and a face covering that resembles a scarf. However, it is not distinctly clear that the head wrap is a scarf as well, therefore, the image only partially fulfills the prompt of showing one person wearing two scarfs."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                0.0,
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/318/0.png",
+            "./datasets/winoground/images/318/1.png"
+        ],
+        "texts": [
+            "two persons wearing one scarf",
+            "one person wearing two scarfs"
+        ]
+    },
+    "319": {
+        "i0c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows various kids holding pets, but there are no instances of a 'human head on pet', so the AI-generated image does not follow the prompt at all."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not meet the criteria specified in the prompt. The prompt asks for a pet head on a human body, but this image displays humans with full pet bodies. There are no instances of pet heads on human bodies in this image."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The AI-generated image does include animal heads on human bodies, but the prompt specifically asks for a human head on a pet. The image provided has not followed this guidance, instead, it shows a pet's head on human bodies, which is the opposite of the prompt. The quality of the image is high, and the integration of the animal heads on the bodies is well-done, but since it does not match the prompt's requirement, the score is low."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image follows the prompt perfectly. It depicts one figure with a dog's head and another with a cat's head, both dressed in human clothing and positioned in a way that suggests a human body structure, effectively interpreting the prompt 'pet head on human'. The integration is seamless and the context provided by the setting, their clothes, and accessories underscore the human aspect of the composition."
+        },
+        "scores": [
+            [
+                0.0,
+                0.0
+            ],
+            [
+                2.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/319/0.png",
+            "./datasets/winoground/images/319/1.png"
+        ],
+        "texts": [
+            "human head on pet",
+            "pet head on human"
+        ]
+    },
+    "320": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image very closely follows the prompt with a depiction of a cow positioned above a crescent moon amidst a starry sky. The image loses a point because 'over the moon' generally suggests the cow should be in a jumping or flying position over the moon rather than floating/hovering above it. However, the artistic rendering overall does a very good job at capturing the essence of the phrase."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The AI-generated image does depict a cow and a moon with a face, capturing the whimsical nature of a fantasy or nursery rhyme scenario. However, the prompt specifies 'the moon is over the cow' which suggests that the moon should be positioned above the cow. In this image, the cow is above the moon. Despite this positional discrepancy, the general theme is adhered to, hence the score reflects a mostly successful attempt with room for improvement in positioning."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively follows the text prompt with a cow positioned above a fence and beneath a moon and stars, capturing the essence of 'over the moon'. The stylized illustration aligns well with the whimsical nature of the phrase. Points are docked because the cow is not directly over the crescent graphic, which could be interpreted as the moon; thus, the cow might not be perceived as being directly over it."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt depicting a cow with the moon and stars in the background. The cow is positioned under the moon, aligning with the phrase 'the moon is over the cow'."
+        },
+        "scores": [
+            [
+                9.0,
+                7.0
+            ],
+            [
+                8.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/320/0.png",
+            "./datasets/winoground/images/320/1.png"
+        ],
+        "texts": [
+            "the cow is over the moon",
+            "the moon is over the cow"
+        ]
+    },
+    "321": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image shows a pet, specifically a dog wearing a pink knitted hat, suggesting a level of care that aligns with 'babying' a pet. The pet is also in a stroller, which is a common way humans 'baby' their pets. The image loses points because the prompt is grammatically incorrect ('someone babys a pet'), which may imply expecting to see a person babying a pet, and no person is visible in the image."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt because it shows a baby pug wearing a hat and no one is petting the animal."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a human baby, not a pet being babysat. Therefore, the image does not follow the prompt at all."
+        },
+        "i1c1_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a baby, but there's no visible action of someone petting the baby as mentioned in the prompt."
+        },
+        "scores": [
+            [
+                8.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/321/0.png",
+            "./datasets/winoground/images/321/1.png"
+        ],
+        "texts": [
+            "someone babys a pet",
+            "someone pets a baby"
+        ]
+    },
+    "322": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully depicts a cat inside what appears to be a miniature house, adhering to the prompt 'cat house'. The cat is peering out of an open door, giving the impression that it is inhabiting the structure."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The image effectively follows the prompt by showing a house cat peeking out from the doorway of a dollhouse, which playfully interprets the term 'house cat.' The cat is appropriately scaled in relation to the house, reinforcing the interpretation of a cat in its 'house.'"
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a cat sleeping on a sofa, not a 'cat house' as per the prompt. The setting does not depict a specific structure or area designed for a cat to live in or play with, which is typically meant by the term 'cat house'. The score reflects that there is a cat present but not the complete scenario requested."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately represents a house cat, following the prompt perfectly. The cat is depicted in a domestic setting, relaxed and asleep, which is characteristic of house cats."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                2.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/322/0.png",
+            "./datasets/winoground/images/322/1.png"
+        ],
+        "texts": [
+            "cat house",
+            "house cat"
+        ]
+    },
+    "323": {
+        "i0c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a brass pan, which may be interpreted as gold in color. However, the prompt 'gold for pan' suggests gold nuggets or particles in a pan which is associated with gold panning, an activity that involves searching for gold. The image does not show the activity or concept of gold panning, nor does it show actual gold. It only coincidentally aligns with the color aspect due to the material of the pan."
+        },
+        "i0c1_result": {
+            "score": 5.0,
+            "reasoning": "The image shows a pan, but not specifically in the act of panning for gold. It lacks context such as being by a river or containing sediment or gold flecks, which are commonly associated with gold panning. The image is only partially representative of the prompt."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively depicts a scene with a person panning for gold. The individual is holding a pan with visible gold nuggets inside, sitting by a river, which is a typical setting for gold panning. The attire and context are period-appropriate, suggesting a gold rush era. The score is not a perfect 10 because the prompt 'gold for pan' is somewhat vague and could potentially be interpreted in different ways, but the image does align well with a common interpretation of gold panning activities."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully captures the concept of panning for gold. It features a character, resembling a gold miner from the historic gold rush era, holding a pan with gold flakes in it. The individual is positioned by a creek, which is a typical setting for gold panning. The authentic attire and the presence of the pan with gold nuggets make the image perfectly aligned with the provided text prompt."
+        },
+        "scores": [
+            [
+                2.0,
+                5.0
+            ],
+            [
+                8.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/323/0.png",
+            "./datasets/winoground/images/323/1.png"
+        ],
+        "texts": [
+            "gold for pan",
+            "pan for gold"
+        ]
+    },
+    "324": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the text prompt 'water for plants'. It shows a watering can being used to water a potted plant, which is exactly what one would expect from such a prompt."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The AI-generated image effectively follows the prompt by displaying a scene where plants are being watered. The focus on the stream of water entering the pot, the healthy condition of the plants, and garden gloves all emphasize the care for plants via watering. The image does not depict plants that specifically thrive in water (like aquatic plants), but does successfully show plants being watered, which is a reasonable interpretation of the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively matches the prompt 'water for plants' by displaying water lilies growing in their natural watery habitat. The health of the plants and the clarity of the water indicate the water is suitable for the plants' growth. The image loses a point as the prompt could also suggest a human intervention for watering plants, which is not depicted."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly represents the prompt 'plants for water' by displaying water lilies and lily pads, which are aquatic plants, spread across the water surface. The composition, clarity, and the presence of multiple plants in their natural aquatic environment fully align with the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                8.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/324/0.png",
+            "./datasets/winoground/images/324/1.png"
+        ],
+        "texts": [
+            "water for plants",
+            "plants for water"
+        ]
+    },
+    "325": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully portrays a businessperson in distress, which fits the theme of a 'businessperson's downfall'. The individual is smartly dressed suggesting a business context, and the body language - with hands covering the face - is commonly associated with distress or concern. The setting appears to be in an urban environment, perhaps outside office buildings, which is appropriate for a businessperson. Only minor details may not perfectly align with the 'downfall' concept but overall, the image conveys the intended prompt effectively."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The prompt suggests a businessperson experiencing a fall, typically implying a physical fall or a metaphorical failure in business. The image shows a man in business attire sitting on steps with his face in his hands, which could be interpreted as a reaction to a downfall. However, it does not show the act of falling down or a clear depiction of a business failure. Thus, the image loosely relates to the prompt."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image shows a man in a business suit who appears to be falling through the air, which could metaphorically represent a 'downfall.' However, the term 'businessperson's downfall' typically conveys a more abstract concept related to failure in business or career, not a literal fall. The image lacks context indicating any business or career failure. Therefore, it somewhat aligns with the prompt but may not fully capture the more figurative sense of downfall typically meant in such a context."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The AI-generated image shows a person in smart attire, presumably a businessperson, in a falling pose, with papers flying around, which aligns well with the prompt 'the businessperson's fall down'. However, the lack of context or background that would indicate a fall (such as an office setting, stumbling over something etc.) slightly reduces the clarity of the narrative, hence an 8 out of 10."
+        },
+        "scores": [
+            [
+                9.0,
+                1.0
+            ],
+            [
+                5.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/325/0.png",
+            "./datasets/winoground/images/325/1.png"
+        ],
+        "texts": [
+            "the businessperson's down fall",
+            "the businessperson's fall down"
+        ]
+    },
+    "326": {
+        "i0c0_result": {
+            "score": 5.0,
+            "reasoning": "The image depicts a swimming competition with a person wearing a yellow swim cap out in front, which seems to represent successfully outswimming others. However, the prompt specifically mentions a 'red swimcap,' which is worn by a person who appears to have been outswum. The AI has somewhat successfully followed the prompt by showing a swimmer ahead of another, but failed to correctly color the swim cap of the leading person as the prompt specifically mentioned 'red'. Therefore, the image partially meets the requirements of the prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not show a person in a red swim cap swimming out. Instead, it shows multiple swimmers in a pool, with the one closest wearing a yellow swim cap."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image effectively follows the prompt. It shows a person swimming in water with a red swim cap, and the perspective suggests they are moving swiftly through the water. There may be minor details that are not perfect, but overall, the image is successful in conveying the idea of a person swimming and the red swim cap is clearly visible."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately follows the prompt. It depicts a person in a red swim cap swimming, with the perspective suggesting the viewer is in the water as well. The focus on the swimmer and the detailed depiction of the water splashing around due to the swimmer's movements correspond perfectly with the text prompt."
+        },
+        "scores": [
+            [
+                5.0,
+                0.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/326/0.png",
+            "./datasets/winoground/images/326/1.png"
+        ],
+        "texts": [
+            "outswam the person in the red swimcap",
+            "the person in the red swimcap swamout"
+        ]
+    },
+    "327": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully depicts a man in a white shirt with epaulettes, suggesting a uniform typical of a ship officer, manning the ship's controls. This aligns perfectly with the prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The prompt seems to be a misspelled request for 'shipping a man,' but the provided image shows a man piloting a ship, which does not align with the concept of shipping a person. Additionally, the misspelling in the prompt ('shiping a mann') makes the intended meaning unclear. The image does not follow any conceivable correct interpretation of the given prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt at all. It shows a man inside a cardboard box, which does not relate to 'manning a ship.'"
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image follows the prompt quite well: it shows a man inside a shipping box, which corresponds with the prompt 'shipping a man' (assuming 'shiping a mann' is a typo). The image is clear and well-composed, with the man fitting snugly inside the box. The reason for not scoring a 10 may be due to the fact that the man is not actually being shipped (no shipping labels or closed box), and it's a staged setting rather than an actual shipping scenario. However, it effectively conveys the concept of a man in a situation where he appears ready to be shipped."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                0.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/327/0.png",
+            "./datasets/winoground/images/327/1.png"
+        ],
+        "texts": [
+            "manning a ship",
+            "shiping a mann"
+        ]
+    },
+    "328": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully meets the criteria of the prompt. The person in the foreground is wearing a sweater, while the person in the background is not wearing a sweater. The positioning of the individuals aligns with the text prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt because the person in the front is wearing a sweater, which contradicts the requirement for the person in front to not be wearing a sweater."
+        },
+        "i1c0_result": {
+            "score": 4.0,
+            "reasoning": "The image shows two individuals, one in front of the other. The person at the back appears to be wearing a sweater, while the person in the foreground does not seem to be wearing a sweater. This is the opposite of what the prompt describes, as the person wearing a sweater should be standing in front of the one who isn't. The composition somewhat follows the prompt in terms of positioning but fails to match the clothing criteria exactly."
+        },
+        "i1c1_result": {
+            "score": 7.0,
+            "reasoning": "In the image, there is a person in the foreground who is not wearing a sweater, and they are standing in front of another person who is wearing a sweater. This matches the prompt's description. However, due to the perspective and angle of the photo, and the carpet or item being held by the foreground individual, it's slightly difficult to ascertain the placement and clothing at first glance, thus not a perfect depiction of the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                4.0,
+                7.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/328/0.png",
+            "./datasets/winoground/images/328/1.png"
+        ],
+        "texts": [
+            "the person wearing a sweater stands in front of the person who isn't wearing a sweater",
+            "the person who isn't wearing a sweater stands in front of the person wearing a sweater"
+        ]
+    },
+    "329": {
+        "i0c0_result": {
+            "score": 5.0,
+            "reasoning": "The image partially follows the prompt - it depicts a person with glasses sitting in a box, which matches the prompt. However, the person without glasses is not actively shown pushing the person in the box, but instead appears to be playfully interacting without a clear pushing gesture."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively depicts a person without glasses sitting in a box. Another person with glasses is positioned behind the first person, in a leaning posture that suggests some motion, possibly pushing. The image mostly adheres to the text prompt, however, the 'pushing' action could be more clearly illustrated to perfectly match the description."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image somewhat follows the prompt as it shows one person pushing another who is sitting in a box. However, the prompt specifies that the person being pushed should have glasses, and the person pushing should not. In the image, the person with glasses is the one pushing, which is contrary to the prompt. Additionally, the prompt does not specify that anyone should be wearing a helmet, which the person in the box is, adding an element not included in the prompt. This discrepancy in the details results in an average score."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately depicts a person with glasses who is pushing another person who is sitting in a box. However, the person in the box appears to be wearing a helmet, which is additional detail not included in the prompt. Consequently, one point is deducted."
+        },
+        "scores": [
+            [
+                5.0,
+                8.0
+            ],
+            [
+                5.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/329/0.png",
+            "./datasets/winoground/images/329/1.png"
+        ],
+        "texts": [
+            "a person without glasses pushes a person with glasses sitting in a box",
+            "a person with glasses pushes a person without glasses sitting in a box"
+        ]
+    },
+    "330": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully depicts lemons transitioning from green to yellow, which directly correlates with the concept of 'what is green will soon be yellow.' It shows the ripening process of the lemons, aligning well with the prompt. The reason for not giving a perfect score is the presence of fully yellow lemons that have already completed the transition, which slightly deviates from the prompt focusing on the change itself."
+        },
+        "i0c1_result": {
+            "score": 6.0,
+            "reasoning": "The image shows lemons on a tree with some lemons yellow and some green. The text prompt suggests a transformation from yellow to green, which could imply ripening or changing seasons. The image captures the essence of the prompt with yellow and green lemons, indicating a stage of transition, but it does not clearly convey the process of change over time or the reason why something that is yellow will turn green. Therefore, the image is somewhat successful but not fully aligned with the transformational aspect of the prompt."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively illustrates the transition from green to yellow, suggesting something green (the fruit's rind) is becoming yellow, possibly indicating ripening or another natural process. The composition clearly depicts this change, aligning perfectly with the prompt."
+        },
+        "i1c1_result": {
+            "score": 1.0,
+            "reasoning": "The image shows an object with both yellow and green colors, perhaps a lemon with mold, set against a backdrop split between yellow and dark gray. The green part likely represents mold growth and doesn't convey the idea of a yellow object transitioning into green. It does not follow the prompt effectively as it could suggest decay rather than a natural or intended transformation to green."
+        },
+        "scores": [
+            [
+                9.0,
+                6.0
+            ],
+            [
+                10.0,
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/330/0.png",
+            "./datasets/winoground/images/330/1.png"
+        ],
+        "texts": [
+            "what is green will soon be yellow",
+            "what is yellow will soon be green"
+        ]
+    },
+    "331": {
+        "i0c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a lizard with a tail already present; there are no indications in the image that the tail is an addition or it being grown. Therefore, the image does not follow the prompt that implies an animal without a tail will soon have one."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a lizard with a fully intact tail, which implies that the tail is present. The prompt suggests that the animal should be depicted in a way where its tail would appear as if it's about to be gone or missing. Since the image shows the animal with a complete tail and no implied or explicit action leading to its removal, it does not accurately follow the prompt."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully follows the prompt by showing a tadpole, an animal which is currently not with a tail but will eventually develop one as it matures into a frog."
+        },
+        "i1c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a tadpole which is an animal that will eventually lose its tail as it develops into a frog. However, the AI has not followed the prompt effectively because the tail is still very prominent and there are no overt indications that the tail is about to be lost, such as signs of it shrinking or the creature undergoing metamorphosis. For better alignment with the prompt, there should be a visual clue indicating that the tail will soon be gone."
+        },
+        "scores": [
+            [
+                0.0,
+                2.0
+            ],
+            [
+                10.0,
+                2.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/331/0.png",
+            "./datasets/winoground/images/331/1.png"
+        ],
+        "texts": [
+            "soon this animal not with a tail will have one",
+            "soon this animal with a tail will not have one"
+        ]
+    },
+    "332": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately follows the prompt by depicting a mouse in physical contact with a dog, as the mouse is shown sitting on the dog's nose, which constitutes 'touching'."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a mouse resting on a dog's nose, not touching it as specified in the prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a computer mouse being touched by what seems to be a dog's paw, however, the text prompt requires a depiction of a live mouse touching a dog. There is no actual live mouse or an interaction between two animals present, therefore the image does not follow the prompt at all."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively follows the prompt by displaying a dog paw touching a computer mouse. The details are clear and leave no ambiguity about the contents of the image, successfully meeting the requirements of the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/332/0.png",
+            "./datasets/winoground/images/332/1.png"
+        ],
+        "texts": [
+            "a mouse is touching a dog",
+            "a dog is touching a mouse"
+        ]
+    },
+    "333": {
+        "i0c0_result": {
+            "score": 1.0,
+            "reasoning": "The image depicts a woman showing a dress to a man, likely seeking an opinion. However, the phrase 'fishing for compliments' is an idiom that implies someone is actively seeking praise. The image does not convey this idiomatically or symbolically, therefore it doesn't effectively represent the concept of 'fishing for compliments.' The only connection is that the scenario might indirectly involve looking for a compliment, but this is not explicit. Thus, the image only marginally aligns with the text prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image depicts a woman holding a dress and looking at her reflection in a mirror with a man standing in the background. This does not relate to the text prompt 'compliments for fishing,' which would suggest a scene or elements pertaining to fishing activities."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image literally depicts a child holding a fish with an adult celebrating the catch, which is associated with actual fishing. The text prompt 'fishing for compliments' is a figurative expression meaning seeking praise or flattery, not literally fishing. The image does not convey this metaphorical concept."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt as it depicts a scene related to fishing where a boy is holding a large fish and an older man appears to be giving compliments. The expressions on their faces suggest praise and joy which is aligned with the idea of giving compliments for a successful catch in fishing. The only reason it does not score a perfect 10 is because the compliments are implied through gestures and expressions rather than being explicitly shown or written."
+        },
+        "scores": [
+            [
+                1.0,
+                0.0
+            ],
+            [
+                1.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/333/0.png",
+            "./datasets/winoground/images/333/1.png"
+        ],
+        "texts": [
+            "fishing for compliments",
+            "compliments for fishing"
+        ]
+    },
+    "334": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully captures the essence of the prompt with a person dusting off their hands. The dust particles are visible and the motion is implied. It loses a point for not clearly showing the act of both hands coming together which is typically associated with the act of dusting off hands."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image shows a close-up of a person's hands with dust particles coming off the hands, which corresponds to the concept of someone dusting off their hands. However, the term 'handing off' could imply a transfer to another person, which is not depicted. The primary action of dusting is represented well, which justifies a high score, but the lack of any interaction with another person or a clearer representation of a 'hand off' action results in a score of 8 instead of a perfect 10."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a person seemingly engaging with a robotic vacuum cleaner rather than dusting off their hands. The action captured does not align with the text prompt."
+        },
+        "i1c1_result": {
+            "score": 7.0,
+            "reasoning": "The AI-generated image shows a person using a robotic vacuum cleaner, which could imply that they are 'handing off their dusting responsibilities' to the machine. However, the phrase 'hands off their dusting' could be interpreted in several ways, such as passing a hand duster to another person or physically dusting off an item. The image closely follows the implied meaning of delegating cleaning tasks by using a technology aid but does not depict a hand duster or a typical dusting action. The score reflects the association with dusting and automation but acknowledges the potential for different interpretations of the prompt."
+        },
+        "scores": [
+            [
+                9.0,
+                8.0
+            ],
+            [
+                1.0,
+                7.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/334/0.png",
+            "./datasets/winoground/images/334/1.png"
+        ],
+        "texts": [
+            "that person dusting off their hands",
+            "that person hands off their dusting"
+        ]
+    },
+    "335": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The AI-generated image somewhat follows the prompt. There is a person wearing black shoes who is cleaning a bookshelf with an orange duster, and there is another person who appears to be relaxing with a glass that could be perceived as orange. However, the prompt specifically mentions the second person should be 'drinking wine from an orange glass' and 'wearing green shoes.' While the shoes of the second person are green, it's not clear that the person is drinking wine since the action of drinking is not captured in the image. Moreover, the glass does not distinctly present as one that would typically be used for wine. Overall, the setting matches well, but a couple of details are not entirely in alignment with the prompt's specifics."
+        },
+        "i0c1_result": {
+            "score": 6.0,
+            "reasoning": "The image closely matches the prompt in several aspects: there is a person cleaning a bookshelf with an orange duster, and another person sitting and holding a glass, who appears relaxed. However, there are discrepancies. The person cleaning has black shoes instead of green, and the color of the glass is not distinctly orange. The image captures the overall scenario but misses the specific color details provided in the prompt."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image partially meets the criteria of the prompt. There is a person cleaning a bookshelf, but the duster is not visibly orange, and the person's shoes are not visible, so it's unclear if they are black. There is also a person with green shoes, as specified, and they appear to be holding a glass; however, it is not clearly an orange glass, nor is it clear if the content of the glass is wine. The person with green shoes does seem to be in a relaxed pose, which aligns with the prompt."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image closely follows the prompt. There is a person wearing green shoes cleaning a bookshelf, who appears to be using an orange duster. Additionally, another person is present wearing black shoes and is holding a wine glass, which seems to be orange, and appears relaxed. A point is deducted because the cleaning person is not in the act of cleaning\u2014no motion or cleaning action is shown. Another point is deducted because the person drinking wine is not depicted in a drinking pose but merely holding the glass."
+        },
+        "scores": [
+            [
+                7.0,
+                6.0
+            ],
+            [
+                5.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/335/0.png",
+            "./datasets/winoground/images/335/1.png"
+        ],
+        "texts": [
+            "a person wearing black shoes cleaning a bookshelf with an orange duster while a person wearing green shoes drinks wine from an orange glass and relaxes",
+            "a person wearing green shoes cleaning a bookshelf with an orange duster while a person wearing black shoes drinks wine from an orange glass and relaxes"
+        ]
+    },
+    "336": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. There is a person with short hair happily ironing a light blue shirt. Another person with long hair is sitting on a white couch. The setting matches the description given. One point is deducted because the prompt does not specify the gender of the people, and the image might be making assumptions based on traditional roles; however, this is a minor detail and the main elements of the prompt are present and accurately depicted."
+        },
+        "i0c1_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a person with short hair rather than long, smiling while ironing a light blue shirt, which matches the prompt. However, the other person is seated on the couch and appears to have short hair rather than long, not adhering to that part of the description. The overall setting and actions match the prompt, but the specific hair details do not."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image closely follows the text prompt. It shows a person with short hair (although not distinctly short, somewhat medium length) who appears happily ironing a light blue shirt, fulfilling that part of the prompt. Additionally, there is a person with long hair sitting on what appears to be a white couch. The score is not a perfect 10 because the hair length of the person ironing could be interpreted as not strictly short, and there are minor distractions such as the ironing board cover not being entirely visible. However, the main elements of the prompt are captured well."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately represents a person with long hair ironing a light blue shirt and looking happy, while another person with shorter hair sits on what appears to be a white couch. The setting and the actions align well with the text prompt, resulting in a high score. However, the exact emotions of the people may be interpreted subjectively, which prevents a perfect score."
+        },
+        "scores": [
+            [
+                9.0,
+                6.0
+            ],
+            [
+                8.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/336/0.png",
+            "./datasets/winoground/images/336/1.png"
+        ],
+        "texts": [
+            "a person with short hair is happily ironing a light blue shirt while a person with long hair sits on a white couch",
+            "a person with long hair is happily ironing a light blue shirt while a person with short hair sits on a white couch"
+        ]
+    },
+    "337": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully meets the text prompt by depicting a pair of yellow duck shoes. The boots are yellow, featuring duck faces on the toes in line with the description."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly matches the prompt. The shoes depicted are yellow and have a duck design on them, fitting the description 'yellow duck on shoes'. The image shows a pair of yellow shoes with facial features that resemble a duck's face, including eyes and a beak, which aligns with the concept of duck-themed footwear. There are no discrepancies between the prompt and the image."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image features a pair of shoes with a yellow duck inside one of them, matching the 'yellow duck shoes' concept. However, the shoes themselves are not 'yellow duck shoes,' which would imply shoes that look like yellow ducks. Instead, these are regular shoes with a yellow duck toy inside. Therefore, the image doesn't perfectly align with the prompt but does closely relate to the concept."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image effectively follows the prompt showing a yellow duck inside one of the shoes. However, the prompt does mention 'duck on shoes' which implies the duck should be on top of the shoes. Despite the slight ambiguity in the preposition, the image closely matches the intended theme and visualization described by the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                8.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/337/0.png",
+            "./datasets/winoground/images/337/1.png"
+        ],
+        "texts": [
+            "yellow duck shoes on",
+            "yellow duck on shoes"
+        ]
+    },
+    "338": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The image successfully depicts a row of yellow rubber ducks with a child standing in front of them, fitting the prompt well. However, the child is not entirely visible nor facing forward, as only their lower half is shown. This partial representation leads to a deduction in points since the prompt specifies 'child in front facing row of yellow rubber ducks,' creating an expectation of seeing the child's front-facing perspective."
+        },
+        "i0c1_result": {
+            "score": 5.0,
+            "reasoning": "The image captures a row of yellow rubber ducks as described in the prompt, and includes yellow boots which match the ducks, suggesting a theme. However, the child is not visible in the frame beyond the legs. Since the prompt specifies a 'front facing child,' and the image does not show the child's face or front, it only partially meets the criteria of the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with a child in the front facing a row of yellow rubber ducks. The child's position and the noticeable focus on the ducks achieve the essence of the prompt effectively. The setting isn't specified in the prompt, but the outdoor setting does not detract from the main elements required. One point is deducted because the child's face is not visible which is a small deviation from the 'front facing' aspect of the prompt."
+        },
+        "i1c1_result": {
+            "score": 6.0,
+            "reasoning": "The image features a row of yellow rubber ducks which meets part of the prompt criteria. However, the prompt specifies a 'front facing child', and the image only shows the lower half of a child from a side angle, not front-facing. The child does not occupy a central position amongst the ducks, which could be implied by the prompt. Thus, the image partially meets the requirements of the prompt but does not capture the child's front-facing position, which is a key aspect of the prompt."
+        },
+        "scores": [
+            [
+                7.0,
+                5.0
+            ],
+            [
+                9.0,
+                6.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/338/0.png",
+            "./datasets/winoground/images/338/1.png"
+        ],
+        "texts": [
+            "child in front facing row of yellow rubber ducks",
+            "front facing child in row of yellow rubber ducks"
+        ]
+    },
+    "339": {
+        "i0c0_result": {
+            "score": 1.0,
+            "reasoning": "The image depicts a cartoonish bird with a chef's hat holding a spoon and a frying pan. However, the entities being tossed in the air from the pan resemble blue, cartoonish figures and do not appear to be actual people. Thus, the image fails to convey the prompt of a bird actually cooking a person and interprets it in a creative way that is not aligned with the literal sense of the prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not show a person cooking a bird, but rather depicts a cartoonish bird cooking with a spoon while other small characters seem to be jumping out of a pan, which does not align with the given prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt as it depicts a human chef holding a platter of food, not a bird cooking a person."
+        },
+        "i1c1_result": {
+            "score": 5.0,
+            "reasoning": "The image shows a person holding what appears to be a cooked bird, aligning with the 'person cooking a bird' prompt. However, the person is not shown in the act of cooking, but rather presenting the already cooked bird, which does not fully meet the 'cooking' aspect of the prompt. Moreover, the image is stylized and doesn't depict an actual cooking scenario."
+        },
+        "scores": [
+            [
+                1.0,
+                0.0
+            ],
+            [
+                0.0,
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/339/0.png",
+            "./datasets/winoground/images/339/1.png"
+        ],
+        "texts": [
+            "a bird cooking a person",
+            "a person cooking a bird"
+        ]
+    },
+    "340": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt. There is a person wearing yellow who is jumping and another person wearing a striped shirt also jumping. The reason for not giving a perfect score is that the person in stripes is wearing a hat, which adds an element not mentioned in the prompt, but this is minor compared to the overall adherence to the prompt."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately follows the prompt displaying a person wearing yellow who appears to be jumping, and another person who is wearing stripes. Both individuals are captured in mid-air suggesting movement. The reason for not giving a full score of 10 is that the second person's striped clothing would ideally be more prominently displayed to match the 'person wearing stripes' description perfectly."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt. There is a person wearing yellow (the woman) and a person wearing stripes (the man). Both appear to be engaging in a playful jump or leap, with the woman captured mid-jump, which is congruent with the action described in the prompt. The point is deducted because the man is not actively jumping; he seems to be sitting and reacting to the woman jumping."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately depicts a jumping person wearing yellow and another person wearing stripes. The scene fulfills the text prompt effectively with clear imagery that matches the given description."
+        },
+        "scores": [
+            [
+                9.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/340/0.png",
+            "./datasets/winoground/images/340/1.png"
+        ],
+        "texts": [
+            "a person wearing yellow and a person wearing stripes jumping",
+            "a jumping person wearing yellow and a person wearing stripes"
+        ]
+    },
+    "341": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully captures a person wearing yellow with their feet in the air and another person wearing a striped shirt. The prompt is followed closely, however, the person wearing yellow does not have their feet entirely in the air, as they are supported by the couch."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image successfully features a person wearing stripes with their feet in the air (on the left side), and a person wearing yellow (on the right side). Points are deducted as the feet of the person wearing stripes are not prominently in the air, which could slightly deviate from the expectation created by the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. There is a person wearing a yellow top; their feet are indeed in the air as they are upside down on a sofa. Another person is present wearing a horizontally striped top, fulfilling the 'person wearing stripes' requirement. The scene appears natural and the execution is well done. The point is deducted as it's unclear if the person in the striped top is also wearing stripes on the rest of their clothing, which the prompt may imply."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully follows the prompt. There is a person with feet in the air wearing stripes, and there is also a person wearing yellow, both are clearly visible in the image."
+        },
+        "scores": [
+            [
+                9.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/341/0.png",
+            "./datasets/winoground/images/341/1.png"
+        ],
+        "texts": [
+            "a person wearing yellow with their feet in the air and a person wearing stripes",
+            "a person wearing stripes with their feet in the air and a person wearing yellow"
+        ]
+    },
+    "342": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image depicts a potted plant with variegated leaves positioned in a bright environment where sunlight casts striped shadows across the plant and the surface it rests on. This visual represents the concept of 'darker things become light in stripes' quite well, as the shadows create a pattern of alternating brightness on the darker background. The stripes created by the light effects clearly follow the prompt. However, the phrase could also imply a transformation which is not literally depicted, hence the score is slightly reduced."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively captures the concept of light things in stripes becoming darker, as evidenced by the shadow stripes cast on the plant and the tabletop, which demonstrate a contrast between light and dark -- correlating to the prompt. One point is deducted because the stripes are caused by the light shadow effect and not an inherent property of the objects getting darker in stripes."
+        },
+        "i1c0_result": {
+            "score": 4.0,
+            "reasoning": "The image depicts a person applying a light-colored stain or paint to a wooden surface with a brush. While the action creates light-colored stripes on the darker wood, suggesting a transformation from dark to light in a striped pattern, it is a literal interpretation of painting stripes rather than an abstract representation of 'darker things become light in stripes.' Therefore, the score reflects partial alignment with the prompt but not a perfect interpretation."
+        },
+        "i1c1_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a process where a person is staining or painting a wooden surface with a brush, and the stain is creating darker stripes on the lighter wood. This somewhat corresponds to the prompt, as the light stripes (natural wood color) are becoming darker due to the application of stain or paint. However, the text prompt is somewhat abstract and open to interpretation, so this specific activity of staining wood may not be the only valid representation of 'light things in stripes become darker.' The image is effective but not the perfect embodiment of the prompt."
+        },
+        "scores": [
+            [
+                8.0,
+                9.0
+            ],
+            [
+                4.0,
+                6.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/342/0.png",
+            "./datasets/winoground/images/342/1.png"
+        ],
+        "texts": [
+            "darker things become light in stripes",
+            "light things in stripes become darker"
+        ]
+    },
+    "343": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The AI-generated image depicts two individuals on a roof, with one clearly using a hammer on roofing material. This aligns with the prompt's instruction of 'together hammering something.' However, the second person is not visibly using a hammer, which detracts slightly from the prompt's depiction of 'together hammering.' Therefore, the image effectively follows the prompt but is not perfect due to the second person not participating in the hammering action."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image shows two people on a roof where one individual is using a hammer, which aligns with the 'hammering' aspect of the prompt. However, they are working on roofing, not necessarily 'hammering something together' in a more general sense such as woodworking or metalwork. The focus, therefore, is quite specific to roofing rather than a broader interpretation of the prompt."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a single person with a hammer, working on assembling furniture, which does not align with the prompt 'together hammering something' that suggests multiple people should be involved in the hammering activity. However, because hammering is depicted, albeit by one person, it warrants a low score."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows a person in the process of assembling furniture, which is in line with the concept of 'hammering something together.' The individual is holding a hammer and appears to be working on joining pieces of the structure. However, the exact moment of hammering is not captured as the hammer is not in contact with any nail or surface, and there is no motion blur that would indicate movement, hence the score is not a full 10."
+        },
+        "scores": [
+            [
+                7.0,
+                7.0
+            ],
+            [
+                2.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/343/0.png",
+            "./datasets/winoground/images/343/1.png"
+        ],
+        "texts": [
+            "together hammering something",
+            "hammering something together"
+        ]
+    },
+    "344": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully follows the prompt. It features a person next to a baby, and a white piece of furniture is being assembled. The baby is holding what appears to be an orange tool, which can be inferred to be a screwdriver. The setting, with the white furniture panels, also suggests that assembly is taking place. One point is deducted as it's not perfectly clear whether the person is using the screwdriver, or if the baby is simply holding it."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully depicts a baby sitting next to a person who is assembling a white piece of furniture, consistent with the text prompt. The person appears to be using a tool, though the orange color of the screwdriver is not prominent or clearly noticeable in this image, which is a minor deviation from the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt: it shows a person and a baby sitting next to each other, with the baby holding what appears to be an orange screwdriver, and they are both interacting with a white piece of furniture that is in the process of being assembled. However, the baby's grip on the screwdriver might not be perceived as actually assembling, which is quite normal for a baby's capability, but it slightly deviates from the prompt's implication of active participation."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image closely matches the text prompt. A baby is sitting next to a person who is using an orange screwdriver to assemble a white piece of furniture."
+        },
+        "scores": [
+            [
+                9.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/344/0.png",
+            "./datasets/winoground/images/344/1.png"
+        ],
+        "texts": [
+            "A person sits next to a baby using an orange screwdriver to assemble a white piece of furniture",
+            "A baby sits next to a person using an orange screwdriver to assemble a white piece of furniture"
+        ]
+    },
+    "345": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the text prompt, showing a worker in a yellow hat using a drill on a section of wooden framing to the left of an opening in the wall. The setting appears to be a construction site, which is appropriate for the description given. The image is not scored a perfect 10 because the prompt specifies 'to the left of where the opening in the wall is,' which might imply a closer proximity to the opening than depicted. However, the general composition of the image very accurately reflects the text prompt."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt. There is a worker wearing a yellow hat using a drill, and to the left of him, from the viewer's perspective, there is an opening in the wall. The setting looks consistent with a construction environment. One point was deducted because 'to the left' could be interpreted differently, but overall, the AI-generated image aligns well with the text prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with a worker wearing a yellow hat using a drill on a wooden structure. The worker is positioned to the left of an opening in the wall, aligning with the 'to the left of where the opening in the wall is' part of the prompt. The image loses a point because the drill is not clearly 'in use' as there is no visible action such as drilling or putting in a screw, but otherwise, it is a near-perfect representation of the given prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. The worker is wearing a yellow hat and is using a drill. There is an opening in the structure of the wall that is to the left of the worker, from the viewer's perspective. The environment is consistent with a construction setting. The image loses one point because the prompt specifies 'the opening in the wall' which could imply a more defined or intentional opening, whereas the space to the left appears to be part of the construction process rather than a finished opening."
+        },
+        "scores": [
+            [
+                9.0,
+                9.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/345/0.png",
+            "./datasets/winoground/images/345/1.png"
+        ],
+        "texts": [
+            "a worker in a yellow hat uses a drill to the left of where the opening in the wall is",
+            "the opening in the wall is to the left of where a worker in a yellow hat uses a drill"
+        ]
+    },
+    "346": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively follows the provided text prompt. It depicts a small animal, specifically a lamb, which is an animal known for its curled, woolly hair. The image matches the criteria described in the prompt perfectly."
+        },
+        "i0c1_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a small animal, presumably a lamb, which indeed has hair, fulfilling that part of the prompt. However, the lamb is standing and not curled as described in the prompt. Therefore, it loses some points for not matching the curled position specified."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a cat with smooth, short fur rather than curled hair as specified in the prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image very closely matches the prompt. It shows a small animal with hair, specifically a cat, which is curled up, thus aligning with the description of 'a curled small animal with hair'. The deduction of one point might be related to the animal not being fully curled, as its tail and one leg are stretched out."
+        },
+        "scores": [
+            [
+                10.0,
+                6.0
+            ],
+            [
+                0.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/346/0.png",
+            "./datasets/winoground/images/346/1.png"
+        ],
+        "texts": [
+            "A small animal with curled hair",
+            "A curled small animal with hair"
+        ]
+    },
+    "347": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt, displaying a right hand pulling a yellow glove onto a left hand. The actions depicted match the description given in the text prompt."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. The left hand can be seen pulling a glove onto the right hand, which matches the description. The only minor discrepancy is that the glove appears slightly unnatural or overextended, but overall the image accurately represents the action described in the prompt."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image effectively shows a right hand pulling on a glove onto a left hand. The glove appears partially on the left hand, which is consistent with the action described in the prompt. However, the hand pulling the glove could be depicted in a clearer manner to reflect the motion of pulling the glove on. Also, the shadows and lighting could be improved to enhance the realism of the interaction. Overall, the image is accurate to the prompt but has minor issues that prevent a perfect score."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively shows a left hand pulling a glove onto a right hand, with the glove covering most of the right hand and fingers in the process of being adjusted. This closely matches the prompt. The score is not a full 10 because the pull of the glove is not overtly dynamic \u2014 there isn't clear tension or motion showing the pull, but overall, the depiction is accurate to the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                7.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/347/0.png",
+            "./datasets/winoground/images/347/1.png"
+        ],
+        "texts": [
+            "A right hand pulls a glove onto a left hand",
+            "A left hand pulls a glove onto a right hand"
+        ]
+    },
+    "348": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the given prompt depicting a dog and a person with their feet hanging out of a car window."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the text prompt. It shows a dog with its feet hanging out of a car window along with a person's feet, establishing the scenario described in the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt: there is a dog and a person visible with their heads out of a car window which may imply their feet are hanging out as well. However, the feet are not explicitly shown in the image, thus not perfectly matching the prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. It depicts a dog with its feet hanging out of a car window and also includes a person. The only minor discrepancy is that the entire dog body is visible, not just the feet, but this does not detract significantly from the overall adherence to the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/348/0.png",
+            "./datasets/winoground/images/348/1.png"
+        ],
+        "texts": [
+            "A dog and a person with their feet hanging out of a car window",
+            "A dog with their feet hanging out of a car window and a person"
+        ]
+    },
+    "349": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively captures the prompt of a person whispering into a dog's ear. The positioning of the person's head and mouth close to the dog's ear indicates a whispering action, while the dog's attentive stance and upward gaze suggest it is listening. The only minor deduction is due to the lack of visible space between the person's mouth and the dog's ear, which could make it unclear whether words are actually being whispered or not. Overall, the image closely aligns with the given prompt."
+        },
+        "i0c1_result": {
+            "score": 5.0,
+            "reasoning": "The image partially follows the prompt as it features a dog and a person close to each other, with the person's head near the dog's head. However, the dog is not positioned in a way that suggests it is 'whispering' into the person's ear. The dog's mouth is closed, and there's no clear interaction that indicates whispering. Therefore, the image meets the prompt halfway."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image somewhat follows the prompt but does not depict the person whispering into the dog's ear; instead, the person appears to be listening to the dog. The person is also not in a whispering pose, as their mouth is open in a surprised expression rather than positioned near the dog's ear in a manner consistent with whispering."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt depicting a dog positioned close to a person's ear, giving the impression that it is whispering into the person's ear. The person's facial expression suggests surprise or amusement, which is appropriate to the concept of a dog whispering to a human. Overall, the image effectively captures the essence of the prompt."
+        },
+        "scores": [
+            [
+                9.0,
+                5.0
+            ],
+            [
+                5.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/349/0.png",
+            "./datasets/winoground/images/349/1.png"
+        ],
+        "texts": [
+            "A person whispering into a dog's ear",
+            "A dog whispering into a person's ear"
+        ]
+    },
+    "350": {
+        "i0c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt since it is not an AI-generated image, but a photograph featuring two real animals, with a donkey and a horse close to each other. The prompt specifies a scenario with a donkey whispering into an ear, which is not depicted in the image."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows one donkey close to another animal that resembles a horse, and it is positioned as if it might be whispering. However, the prompt specifies that someone should be whispering into a donkey's ear, which implies a person should be in the image doing the action. Since no human is present and the action is not clearly that of whispering a secret, the image does not effectively meet the prompt."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image features a donkey and a child who is close to the donkey's ear, which aligns closely with the prompt describing a donkey being whispered to. However, the prompt specifically asks for one ear, and while only one ear is predominantly in focus, the other ear is still partially visible in the frame. Also, it is not quite clear that the child is actually whispering, which prevents a perfect score."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt. It features a child whispering into the ear of a donkey. The positioning of the child and the donkey's visible ear aligns with the text prompt description."
+        },
+        "scores": [
+            [
+                0.0,
+                2.0
+            ],
+            [
+                8.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/350/0.png",
+            "./datasets/winoground/images/350/1.png"
+        ],
+        "texts": [
+            "one ear that some donkey is whispering a secret into",
+            "donkey ear that some one is whispering a secret into"
+        ]
+    },
+    "351": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully follows the prompt by depicting a person walking and cutting lines into green plants, specifically, mowing a lawn which is evident from the contrasting shades of green where the grass has been cut."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image accurately depicts a person walking and creating lines cut into green plants, specifically a lawn, using a lawn mower. This aligns with the given prompt. The deduction of a point is due to the fact that the lines made by the lawn mower aren't very distinct or visible in the image, which could be a point of improvement for fully matching the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image precisely follows the prompt showing a person walking through what seems to be a green plantation with distinct lines cut into it. The plantation features clear patterns resembling lines or paths, and the individual is indeed walking along these lines. The depiction matches the description of 'someone walking' and 'cut lines into green plants.' One point is deducted because it is not clear whether the lines have been actively cut by the individual or if they are part of the plantation's design. The prompt could imply someone currently cutting into the greenery, which is not depicted."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt. It shows a person walking along lines that have been cut into green plants, which appear to be part of a well-maintained garden or farm. All elements requested in the prompt are present and clearly depicted."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/351/0.png",
+            "./datasets/winoground/images/351/1.png"
+        ],
+        "texts": [
+            "walking someone cut lines into green plants",
+            "someone walking lines cut into green plants"
+        ]
+    },
+    "352": {
+        "i0c0_result": {
+            "score": 6.0,
+            "reasoning": "The image depicts what appears to be molten lava interacting with water, creating steam, which is consistent with the prompt. However, there is no clear depiction of a volcano above the water; the image focuses on a close interaction between lava and water. The essence of the prompt is captured, but the specifics of a volcano are not depicted."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image convincingly depicts a scene where the heat from molten lava contacts water, creating steam. It seems to be a representation of lava flowing into the ocean, a natural occurrence that can create large steam plumes. However, the prompt specifically mentions 'water above a volcano,' which suggests a different scenario such as a volcanic crater filled with water that is steaming. In this image, water isn't depicted above the volcano but rather seems to be at sea level with lava entering the water, thus the score reflects the deviation from the exact prompt description."
+        },
+        "i1c0_result": {
+            "score": 6.0,
+            "reasoning": "The image shows steam rising prominently, which aligns with the prompt stating steam should be visually present. However, the steam appears to be originating from a geyser or a hot spring rather than a volcano, which does not fully match the prompt's specification of a volcano above water. The body of water present appears to be relatively calm, possibly a lake or a river, and a volcano is not visible in the image. Therefore, while the image captures the steam aspect, it fails to accurately represent the volcano element."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively depicts a large cloud of steam rising above a landscape, consistent with what one would expect from water interacting with volcanic activity to produce steam. The setting sun and the steam cloud's interaction with light closely match the concept of water and heat creating steam above a volcanic area. One point is deducted because the volcano itself is not visible, which could make the interpretation of steam over a volcano slightly ambiguous."
+        },
+        "scores": [
+            [
+                6.0,
+                7.0
+            ],
+            [
+                6.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/352/0.png",
+            "./datasets/winoground/images/352/1.png"
+        ],
+        "texts": [
+            "a volcano above water makes steam",
+            "water above a volcano makes steam"
+        ]
+    },
+    "353": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image accurately depicts a child and an adult where the child is on a bike and the adult is present alongside. However, it doesn't clearly show the child riding the bike, as the child and bike are stationary and the adult is holding the bike, which might imply the child is learning to ride or is being assisted rather than riding independently."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image shows a child on a bicycle with an adult alongside, seemingly offering guidance or support, which aligns with the text prompt of a child and an adult with a bike. However, they do not appear to be riding the bike in the usual sense since the bike is stationary and not in motion. Therefore, the image does not perfectly match the 'riding a bike' part of the prompt."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully depicts an adult and a child with a bike, which follows the given text prompt. The adult appears to be controlling the bike, while the child is riding behind, suggesting joint participation in the activity. However, the prompt suggests that the child is riding the bike, which typically would mean the child is in control, thus creating a slight deviation from the perfect interpretation of the text prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately depicts a child and an adult riding a bike, which perfectly matches the given text prompt."
+        },
+        "scores": [
+            [
+                8.0,
+                7.0
+            ],
+            [
+                8.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/353/0.png",
+            "./datasets/winoground/images/353/1.png"
+        ],
+        "texts": [
+            "A child riding a bike and an adult",
+            "A child and an adult riding a bike"
+        ]
+    },
+    "354": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively depicts an adult putting a helmet on a child. There is a clear interaction between the adult and the child with the helmet being placed over the child's head. The image aligns very well with the prompt, but it does not score a perfect 10 as it is not fully clear the helmet is being secured in place, a detail that would fully satisfy the 'putting on' action implied in the prompt."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a child with a helmet on, but does not depict the child putting the helmet on an adult as specified in the prompt. The subject and action do not match the request."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively depicts an adult putting a helmet on a child, in line with the text prompt. However, the helmet is not yet fully on the child's head; it's more above than actually being worn, which slightly deviates from the prompt. Hence, a near-perfect score instead of a full score."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully follows the prompt by depicting a child putting a helmet on an adult. The child is seen placing the helmet on the adult's head, matching the action described in the prompt perfectly."
+        },
+        "scores": [
+            [
+                9.0,
+                2.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/354/0.png",
+            "./datasets/winoground/images/354/1.png"
+        ],
+        "texts": [
+            "an adult putting a helmet on a child",
+            "a child putting a helmet on an adult"
+        ]
+    },
+    "355": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt and depicts an adult lying next to a child. The adult is wearing a purple feather boa, which satisfies the requirement of wearing purple; however, it's not entirely clear if the entirety of the adult\u2019s attire is purple. The setting indicates a playful and relaxed environment, consistent with the prompt's scenario. The score is not a perfect 10 because the prompt specifies 'lying' and, while they appear relaxed, it's not indisputably clear that they're in a lying down position as opposed to lounging at a slight incline."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image features an adult lying next to a child as described in the prompt. However, the child is not wearing purple; instead, the child is wearing pink, and the adult has purple feathers, which does not fully align with the request for the child to be the one wearing purple."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively shows an adult and a child lying side by side, closely adhering to the prompt. However, the color of the adult's clothing isn't clearly purple as specified in the prompt, primarily due to the image angle and the child covering part of the adult's body. Therefore, a point is deducted."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the text prompt. There is an adult lying next to a child. The child is wearing purple, and both individuals are positioned as if the child is lying next to the adult. Therefore, the image fulfills the requirements of the prompt perfectly."
+        },
+        "scores": [
+            [
+                9.0,
+                2.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/355/0.png",
+            "./datasets/winoground/images/355/1.png"
+        ],
+        "texts": [
+            "An adult wearing purple lying next to a child",
+            "An adult lying next to a child wearing purple"
+        ]
+    },
+    "356": {
+        "i0c0_result": {
+            "score": 4.0,
+            "reasoning": "The image does depict a fencing scene involving two fencers, one of whom is using a wheelchair, but there are discrepancies with the text prompt. The fencer using the wheelchair appears to be the one who is being scored against rather than scoring a point. Additionally, the fencer who is standing does not appear to be reacting to a point being scored against them. The clothing of the fencers is generally appropriate, with one fencer wearing black pants. However, the image does not clearly communicate a point being scored against the fencer in black pants, which is a primary element of the prompt."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully depicts a fencer having a point scored against them by another fencer who is wearing black pants and using a wheelchair. Both fencers are equipped with fencing swords and protective gear, consistent with a fencing match."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image portrays a fencing scene where one of the fencers is using a wheelchair, matching the prompt's description of a fencer in a wheelchair. The individual using the wheelchair appears to be on the offensive, implying a point could be scored. However, the other fencer is not clearly visible, and it is not evident from the image that the fencer in the wheelchair has actually scored against the opponent. Additionally, it cannot be confirmed if the other fencer is wearing black pants as it's out of focus and not clearly part of the scene, so it is not a perfect alignment with the prompt."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows a fencer in a wheelchair, which is consistent with the description of a fencer using a wheelchair. The fencer in the wheelchair is wearing black pants, which again matches the prompt. However, it's not entirely clear that a point is being scored against them, as there is no clear indication of contact or the standard fencing scoring equipment visible in the image, which leads to slight ambiguity. Therefore, the image has been rated an 8."
+        },
+        "scores": [
+            [
+                4.0,
+                10.0
+            ],
+            [
+                7.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/356/0.png",
+            "./datasets/winoground/images/356/1.png"
+        ],
+        "texts": [
+            "a fencer who is wearing black pants having a point scored against them by another fencer using a wheelchair",
+            "a fencer having a point scored against them by another fencer who is wearing black pants using a wheelchair"
+        ]
+    },
+    "357": {
+        "i0c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt as it depicts two people working with equipment, possibly in a workshop, and not exercising. Additionally, no clear indication of the exercise context is present."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not show a person without braids exercising. Instead, it shows two people who appear to be working with machinery or equipment, which is not related to the prompt of exercising. Additionally, while one person has long braids, there is no visible indication of exercise happening, which is a primary requirement of the prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not show a person with long braids exercising nor a person without braids in front of them. Instead, it appears to show two individuals engaged in some manual activity, possibly related to machinery or craft, hence not following the given prompt at all."
+        },
+        "i1c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not depict a person without braids exercising in front of a person with long braids. Instead, it shows two people who seem to be working on a machine or equipment in a workshop setting, where one person has long braids, and the other person with curly hair does not appear to be exercising."
+        },
+        "scores": [
+            [
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/357/0.png",
+            "./datasets/winoground/images/357/1.png"
+        ],
+        "texts": [
+            "a person with long braids is exercising in front of a person without braids",
+            "a person without braids is exercising in front of a person with long braids"
+        ]
+    },
+    "358": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully depicts a person wearing gray outperforming a person wearing blue in a stadium setting. The person in gray is standing on the highest podium, while the person in blue is on a lower one, indicating that the person wearing gray has indeed outperformed the one wearing blue."
+        },
+        "i0c1_result": {
+            "score": 3.0,
+            "reasoning": "The image shows three people on a podium in a stadium, aligning with the 'in the stadium' part of the prompt. However, it is unclear who outperformed whom as they are all holding blank placards. Additionally, the person wearing gray is on the highest podium (suggesting they placed first), contradicting the prompt where the person wearing blue is supposed to have outperformed the one wearing gray. Hence, the image only partially satisfies the prompt."
+        },
+        "i1c0_result": {
+            "score": 3.0,
+            "reasoning": "In the image provided, the three individuals are on a podium with placings, and the person on the highest podium (1st place) is wearing a blue track jacket, not gray. The person in gray is on the 3rd place podium, indicating that they did not outperform the individual in blue, which does not follow the prompt correctly."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately reflects the text prompt, with the person wearing blue standing on the first-place podium, signifying that they outperformed the other individuals, including the one wearing gray who is on the third-place podium."
+        },
+        "scores": [
+            [
+                10.0,
+                3.0
+            ],
+            [
+                3.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/358/0.png",
+            "./datasets/winoground/images/358/1.png"
+        ],
+        "texts": [
+            "in the stadium, the person wearing gray outperformed the one wearing blue",
+            "in the stadium, the person wearing blue outperformed the one wearing gray"
+        ]
+    },
+    "359": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image depicts individuals butchering white meat (chicken), and they are wearing yellow protective gear. No red clothing is visible, which adheres to the prompt requirements. The score is not a perfect 10 because the individuals are not actively shown in the process of butchering. They seem to be handling or inspecting the meat rather than actively cutting it."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The image shows individuals handling meat, which partially follows the prompt related to butchering. However, the meat in the image appears to be poultry, not red meat, and the individuals are wearing yellow protective gear, which directly contradicts the prompt's specification to wear white but not yellow. Therefore, the score is low."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt as the individuals are wearing red and not yellow, and they appear to be butchering red meat rather than white meat."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively captures the act of butchering red meat with multiple individuals engaged with the meat on tables. They are all wearing white protective clothing, which includes aprons, hairnets, and gloves. There is no yellow clothing present in the image. The score is not a perfect 10 because the prompt does not specify the setting or the number of people, and thus the image fulfills the criteria without being able to assess those unspecified aspects."
+        },
+        "scores": [
+            [
+                8.0,
+                1.0
+            ],
+            [
+                0.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/359/0.png",
+            "./datasets/winoground/images/359/1.png"
+        ],
+        "texts": [
+            "butchering white meat while wearing yellow but not red",
+            "butchering red meat while wearing white but not yellow"
+        ]
+    },
+    "360": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively follows the prompt. It depicts a child with a fake beard standing next to an adult. The child's fake beard is the focal point, which is exactly what the prompt specifies."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively represents an adult and a child side by side, consistent with the prompt. The child appears to be wearing a fake beard, which aligns well with the text prompt. All main elements of the prompt are present and visible, with only minor details potentially affecting the score, such as whether the adult's beard should also be fake or not, which is not explicitly mentioned in the prompt. Overall, the image successfully follows the text prompt."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image reflects an adult with a fake beard, portrayed as Santa Claus, and a child, but it does not depict a child with a fake beard as specified in the prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it features an adult with a fake beard\u2014presumably, dressing as Santa Claus\u2014and a child interacting with him."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                1.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/360/0.png",
+            "./datasets/winoground/images/360/1.png"
+        ],
+        "texts": [
+            "a child with a fake beard and an adult",
+            "an adult with a fake beard and a child"
+        ]
+    },
+    "361": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The image shows a group of children in Halloween costumes, including a child dressed as a bee (an insect) and another dressed as a skeleton (often considered a mammal as humans are mammals). The child dressed as an insect is to the right of the child dressed as a mammal when facing the photo. However, there are multiple children, and the prompt does not describe the scene as having more than two children or other types of costumes, which affects the accuracy of the image in relation to the prompt."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the text prompt. There is a child dressed as an insect (a bee) towards the left side of the image, and to the right of this child is another child dressed as a skeletal figure, which can represent a mammal (human). They are in a Halloween setting, evident by their costumes and the trick-or-treat buckets they are carrying."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image depicts a group of children in various Halloween costumes. While there are children dressed as mammals (e.g., a leopard costume), it is not clear which child, if any, is specifically dressed as an insect. Furthermore, the positioning of the children does not explicitly show a child dressed as an insect to the right of a child dressed as a mammal. The prompt is not executed accurately in terms of costume identification or positioning."
+        },
+        "i1c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt because there are multiple children in various costumes, but none of them are specifically positioned with a child dressed as a mammal to the right of a child dressed as an insect."
+        },
+        "scores": [
+            [
+                7.0,
+                10.0
+            ],
+            [
+                2.0,
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/361/0.png",
+            "./datasets/winoground/images/361/1.png"
+        ],
+        "texts": [
+            "on halloween, a child dressed as an insect is to the right of a child dressed as a mammal",
+            "on halloween, a child dressed as a mammal is to the right of a child dressed as an insect"
+        ]
+    },
+    "362": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully depicts a modern office complex characterized by a significant number of windows. Additionally, there is a manicured lawn in the foreground which aligns with the 'nicely landscaped lawn' described in the prompt. The image is cohesive and well-composed. The reason for not giving a perfect score might be that the lawn, while nicely kept, could feature a bit more landscaping to match the 'nicely landscaped' description more precisely."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the given prompt. It displays a modern office complex with numerous windows and a nicely landscaped lawn in the foreground. The image composition accurately represents the description."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The image largely follows the prompt: it shows a section of a modern office complex characterized by large windows. Below these windows, there is a landscaped lawn, but it is difficult to determine how 'nicely' landscaped it is given the perspective. The image loses points because the lawn is not the main focus, and it is not clear how extensive the landscaping is."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully portrays a nicely landscaped lawn above a modern office complex with many windows. The office space is clearly visible through the large windows, and office equipment and furniture are also discernible, while the lawn is lush and expansive, with people sitting and standing, adding to the landscaped feeling. The image loses points because the prompt specifies a modern office complex, but the exterior wall finish doesn't give a distinctly modern aesthetic, and the image composition doesn't quite convey the sense of 'above' the office complex, as it appears more side by side."
+        },
+        "scores": [
+            [
+                9.0,
+                10.0
+            ],
+            [
+                8.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/362/0.png",
+            "./datasets/winoground/images/362/1.png"
+        ],
+        "texts": [
+            "a modern office complex with many windows above a nicely landscaped lawn",
+            "a nicely landscaped lawn above a modern office complex with many windows"
+        ]
+    },
+    "363": {
+        "i0c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a large tree branch that has fallen onto a parked car, causing damage to the vehicle. However, the tree is not partially inside the car in the sense of being integrated or growing through it; rather, it has fallen from above. Therefore, the image aligns only minimally with the prompt."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a car with a fallen tree on top of it, but it does not depict a car that is 'partially inside a tree' as per the prompt. The car and tree are in contact, but they are not merged or integrated in a way that would suggest the car is partially inside the tree."
+        },
+        "i1c0_result": {
+            "score": 3.0,
+            "reasoning": "The image shows a large tree that has fallen and created a natural archway over a parked car. Although the prompt is somewhat represented because the car is underneath the tree, the tree is not 'partially inside' the car, which would imply that some part of the tree has penetrated the vehicle's structure. Therefore, the image does not accurately follow the prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt depicting a parked car that is partially inside a tree. The car is shown under a hollow section of the fallen tree trunk, creating the appearance that it is indeed partially within the tree."
+        },
+        "scores": [
+            [
+                2.0,
+                1.0
+            ],
+            [
+                3.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/363/0.png",
+            "./datasets/winoground/images/363/1.png"
+        ],
+        "texts": [
+            "a tree is partially inside a parked car",
+            "a parked car is partially inside a tree"
+        ]
+    },
+    "364": {
+        "i0c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows new vehicles being transported on a train car, which might imply that they are 'parked' in the sense of being stationary on the train. However, the prompt 'some are parking in a train' suggests the action of vehicles actively being parked inside a train, which is not depicted here. Therefore, the image does not fully match the intended scenario described in the prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image depicts a train carrying new vehicles and does not show a park or people training as suggested by the text prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The AI-generated image does not follow the prompt because the image depicts people exercising outdoors, not 'some are parking in a train'."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt. It shows individuals training in a park with exercise mats and dumbbells, surrounded by greenery which is indicative of a park setting. The attire of the individuals suggests physical activity or training."
+        },
+        "scores": [
+            [
+                2.0,
+                0.0
+            ],
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/364/0.png",
+            "./datasets/winoground/images/364/1.png"
+        ],
+        "texts": [
+            "some are parking in a train",
+            "some are training in a park"
+        ]
+    },
+    "365": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image closely follows the prompt displaying an athlete seemingly running across the surface of water. The dynamic posture, splash effects, and attire are consistent with an athletic setting. However, the lighting and star-like specks in the background aren't typical for standard representations of an athlete running on water, which may slightly detract from the prompt accuracy."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively captures an athlete in motion, with a visual representation of water splashing around, which implies 'water running' on the athlete. The dynamic pose and the clear presence of water droplets give a strong sense of action. However, the term 'running on' could be interpreted as water actually flowing down the athlete, which is not distinctly visible here. The splashing could be from the athlete moving through water, rather than water running on them."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a person pouring water on themselves, not running on water. Therefore, the prompt has not been followed at all."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt. It features an athlete with water running on her. The composition effectively captures the action of water being poured over the person\u2019s head, indicating a sense of cooling off after an athletic activity, which aligns with the prompt."
+        },
+        "scores": [
+            [
+                8.0,
+                8.0
+            ],
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/365/0.png",
+            "./datasets/winoground/images/365/1.png"
+        ],
+        "texts": [
+            "an athlete running on water",
+            "water running on an athlete"
+        ]
+    },
+    "366": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it shows a horse which is at the edge of a body of water, likely the ocean, and is in motion causing water to splash around its legs, depicting that it is indeed getting wet."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately follows the prompt by depicting a horse in the process of getting wet, with its legs in the water and splashes around them, which demonstrates the interaction with the water. The setting appears to be at the beach, which is a believable location for this activity. The reason for not giving a full score is because only the legs of the horse are shown wet, while the rest of the body is not visibly wet, which could have further satisfied the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image accurately depicts a horse getting wet as it is being sprayed with water. The horse's wetness is indicated by the water droplets visible on its coat and the stream of water making contact with its head. Although the crop is tight and part of the horse is obscured, it does not significantly detract from the overall success of the image in conveying the intended scene based on the text prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt showing a horse being wet by a stream of water, which demonstrates the act of getting a horse wet."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/366/0.png",
+            "./datasets/winoground/images/366/1.png"
+        ],
+        "texts": [
+            "a horse getting wet",
+            "getting a horse wet"
+        ]
+    },
+    "367": {
+        "i0c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a person holding a tray with glasses above their head, which aligns with the prompt. However, the glasses are not above the person's leg, contrary to the prompt's instruction. This represents a partial success in meeting the prompt criteria."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The prompt specifies that the person's head and leg should be above glasses full of water, but the image does not depict this scenario. The image shows a person hanging upside down holding a tray with glasses, with the glasses below their head and body, not above as the prompt describes."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a person holding glasses on a tray but the glasses are not above the person's head or leg as the prompt describes. The glasses are not placed in accordance with the instructions, hence the low score."
+        },
+        "i1c1_result": {
+            "score": 5.0,
+            "reasoning": "The AI-generated image somewhat follows the prompt, as the person's head is above the glasses. However, the leg is not above the glasses as per the prompt's requirement, but rather to the side, with only the heel being somewhat above the glasses. The leg's position detracts from a perfect adherence to the prompt."
+        },
+        "scores": [
+            [
+                2.0,
+                0.0
+            ],
+            [
+                1.0,
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/367/0.png",
+            "./datasets/winoground/images/367/1.png"
+        ],
+        "texts": [
+            "the glasses full of water are above the person's head and leg",
+            "the person's head and leg are above the glasses full of water"
+        ]
+    },
+    "368": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with a person's finger touching the head of a squirrel. The reason for not giving a perfect score is the finger is hovering slightly above the head rather than making direct contact, but the intention of the prompt is clear and well executed."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a squirrel and a person's hand, however, the squirrel is not touching the head of the person as described in the prompt, but instead, the person's hand is pointed towards the squirrel without physical contact."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a squirrel standing on a person's head without any visible contact of the person touching the squirrel's head."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with a squirrel in the act of reaching towards or touching the head of a person. However, the angle and position might not make it immediately clear that the touch is happening, hence not a perfect score."
+        },
+        "scores": [
+            [
+                9.0,
+                1.0
+            ],
+            [
+                0.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/368/0.png",
+            "./datasets/winoground/images/368/1.png"
+        ],
+        "texts": [
+            "a person is touching the head of a squirrel",
+            "a squirrel is touching the head of a person"
+        ]
+    },
+    "369": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly captures a deer's nose resting on a child's hand, adhering to the text prompt with both subjects positioned as described."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the text prompt. A child's hand is visible resting on the deer's nose, which perfectly aligns with the given instructions."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The provided image perfectly follows the prompt as it depicts a deer's nose resting on a child's hand. The child and the deer are in clear focus, and the interaction between them is exactly what the prompt describes."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt showing a child's hand resting on a deer's nose. The composition, focus, and lighting accentuate the gentle interaction between the child and the deer."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/369/0.png",
+            "./datasets/winoground/images/369/1.png"
+        ],
+        "texts": [
+            "a deer's nose is resting on a child's hand",
+            "a child's hand is resting on a deer's nose"
+        ]
+    },
+    "370": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt by displaying two sparklers being held in one hand. The sparklers are ignited, suggesting they are in use as intended."
+        },
+        "i0c1_result": {
+            "score": 5.0,
+            "reasoning": "The image includes a sparkler being held, which is consistent with the prompt. However, the prompt suggests that there should be two hands holding one sparkler together, whereas the image only shows one hand holding a sparkler. Therefore, the image only partially fulfills the prompt."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image shows a person holding a single lit sparkler. The prompt specifies that there should be two sparklers for one hand, hence the image does not fully comply with the prompt. The visible sparkler and the action are represented correctly, but since only one is present instead of two, the image achieves a score of 5."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully depicts one sparkler being held by two hands, perfectly following the given prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                5.0
+            ],
+            [
+                5.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/370/0.png",
+            "./datasets/winoground/images/370/1.png"
+        ],
+        "texts": [
+            "two sparklers for one hand",
+            "one sparkler for two hands"
+        ]
+    },
+    "371": {
+        "i0c0_result": {
+            "score": 1.0,
+            "reasoning": "The image depicts a human hand holding an egg near a chicken, which suggests the chicken is producing food (eggs) that can be collected by a person. However, the prompt specifies an animal giving a person food, which implies an active gesture of an animal offering or passing food to a person. In this image, the chicken is not actively giving food to the person, so it does not follow the prompt as intended."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The AI-generated image shows an interaction between a person and an animal. However, the person is not giving food to the animal; instead, the person seems to be collecting eggs from a chicken coop. This does not align with the prompt of a person actively giving an animal food, resulting in a low score."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image does not effectively follow the prompt of an animal giving a person food. Instead, it depicts a person, seemingly in a historical or theatrical costume, seated at a table with food and a squirrel on it. The person is holding out a piece of food towards the squirrel which can be interpreted as the person offering food to the animal, not the other way around. There is no visual indication that the animal is giving food to the person."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt as it depicts a person offering food to an animal, which appears to be a squirrel. The person is holding out a small piece of food towards the animal, aligning perfectly with the scenario described in the text prompt."
+        },
+        "scores": [
+            [
+                1.0,
+                1.0
+            ],
+            [
+                2.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/371/0.png",
+            "./datasets/winoground/images/371/1.png"
+        ],
+        "texts": [
+            "an animal giving a person food",
+            "a person giving an animal food"
+        ]
+    },
+    "372": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image presents a large spider looming over a dog, consistent with the text prompt. The spider appears oversized in relation to the dog, which conveys the 'towering over' aspect accurately. One point is deducted because the spider's morphology isn't perfectly realistic (the eyes, for example, are more cartoonish). Another point is deducted because the dog's posture doesn't convey being dwarfed or intimidated, which might be expected in a real scenario as described by the text prompt. Overall, the AI has generated an image quite close to the text prompt."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully illustrates a dog lying down with a spider towering over it. The spider appears to be largely disproportionate to the dog, giving the impression that it is towering. However, the spider's appearance seems somewhat unrealistic and cartoonish, which slightly detracts from the intended realism. Nonetheless, the overall composition is in line with the prompt."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image does not accurately follow the prompt. The prompt asks for a spider towering over a dog, which implies a spider should be significantly larger than the dog and in a dominant position. Instead, the image shows multiple small spiders on a dog, none of which are towering over the dog."
+        },
+        "i1c1_result": {
+            "score": 5.0,
+            "reasoning": "The image features a dog and spiders, however, the dog is not 'towering over' a spider, as the spiders are present around the dog and not beneath it. The image is quite literal but does not capture the dynamic of 'towering' specified in the prompt. Therefore, it only partly fulfills the criteria."
+        },
+        "scores": [
+            [
+                8.0,
+                8.0
+            ],
+            [
+                1.0,
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/372/0.png",
+            "./datasets/winoground/images/372/1.png"
+        ],
+        "texts": [
+            "a spider towering over a dog",
+            "a dog towering over a spider"
+        ]
+    },
+    "373": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it depicts a car entering a hollow tube. The setting is clear, and the car's position at the entrance of the tube fulfills the specification of the prompt."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt by showing a car with a hollow tube seemingly going into it. The perspective is such that the tube frames the car, meeting the criteria of the prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image shows someone refueling a car, not a car going into a hollow tube."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt by depicting a fuel nozzle (hollow tube) going into the fuel filler neck of a car."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                0.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/373/0.png",
+            "./datasets/winoground/images/373/1.png"
+        ],
+        "texts": [
+            "a car going into a hollow tube",
+            "a hollow tube going into a car"
+        ]
+    },
+    "374": {
+        "i0c0_result": {
+            "score": 7.0,
+            "reasoning": "The AI-generated image shows two people wearing blue tops which satisfies the color match in clothing. However, both individuals are on the same side of the tennis net, not on different sides as the prompt specifies. This is the main discrepancy from the prompt."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully depicts two people who are on the same side of the tennis net, and they are wearing clothes of different colors. Both are donning blue tops but with different shades and different colored bottoms, and they appear to be on a tennis court, with tennis rackets in hand, adhering well to the prompt. One point is deducted because the prompt does not specify the use of wheelchairs, which is a significant detail in the image."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image shows two people on opposite sides of a tennis net. One person is wearing a blue shirt and white shorts, while the other is wearing a gray shirt and blue-striped shorts. Although their outfits are not the exact same colors, the color scheme is similar with blue and white tones. Therefore, the image mostly follows the prompt but is not perfect because the clothing colors do not match exactly."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately shows two people on the same side of the tennis net, and they are wearing clothes of different colors, which matches the text prompt perfectly."
+        },
+        "scores": [
+            [
+                7.0,
+                9.0
+            ],
+            [
+                7.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/374/0.png",
+            "./datasets/winoground/images/374/1.png"
+        ],
+        "texts": [
+            "two people wearing clothes of the same colors are on different side of the tennis net",
+            "two people wearing clothes of different colors are on the same side of the tennis net"
+        ]
+    },
+    "375": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt showing multiple cows drinking water, which are living things engaged in the act of drinking."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively shows living things (cattle) drinking water, which aligns perfectly with the prompt 'drinking living things'."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt by depicting a human, which is a living thing, in the act of drinking from a container."
+        },
+        "i1c1_result": {
+            "score": 0.0,
+            "reasoning": "The AI-generated image shows a person drinking from a cup, which does not meet the criteria of the prompt 'drinking living things'. There are no living things being consumed in the image."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                10.0,
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/375/0.png",
+            "./datasets/winoground/images/375/1.png"
+        ],
+        "texts": [
+            "living things drinking",
+            "drinking living things"
+        ]
+    },
+    "376": {
+        "i0c0_result": {
+            "score": 5.0,
+            "reasoning": "The person depicted is indeed near water, which matches part of the prompt. However, the use of the lasso is not clearly depicted as we would expect, such as throwing or spinning it. The person is holding what appears to be a lasso, but is not actively using it in a manner that would be traditionally associated with 'using a lasso'. Moreover, the pose and outfit suggest a stylized or conceptual approach rather than a direct representation of the action described in the prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not depict a person using a water lasso. Instead, it shows a person sitting on a bench by the seaside with some object in hand that does not resemble a lasso. There is no element in the image that suggests the presence of a water lasso."
+        },
+        "i1c0_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a person near water, but instead of using a lasso, the person is playing with a hose or a sprinkler. Therefore, the image only partially meets the prompt criteria."
+        },
+        "i1c1_result": {
+            "score": 6.0,
+            "reasoning": "The image features a person (a child) interacting with water from a hose, which loosely represents the concept of a 'water lasso' as water is being manipulated in an arc-like shape. However, an actual water lasso would ideally be a more deliberate and controlled stream of water, potentially resembling a lasso shape more closely. The image does depict the fun and dynamic interaction with water but does not perfectly fit the concept of using a 'water lasso.'"
+        },
+        "scores": [
+            [
+                5.0,
+                0.0
+            ],
+            [
+                2.0,
+                6.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/376/0.png",
+            "./datasets/winoground/images/376/1.png"
+        ],
+        "texts": [
+            "a person near water using a lasso",
+            "near a person using a water lasso"
+        ]
+    },
+    "377": {
+        "i0c0_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a person spraying water with a hose, which aligns with parts of the prompt. However, the other person is sitting on a toy rather than a real bike, and there is no one else visibly being sprayed with water. The figure in motion blur could potentially be on a bike, but it is not clear, and the main focus does not depict a bike. Therefore, the image partially satisfies the prompt."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The image does not accurately follow the prompt. There is a person spraying water; however, the person they are spraying is seated on a red ball, not on a bike as the prompt specifies. Additionally, the movement blur suggests that someone is in motion, but it is not clear that they are 'on a bike' and no one else is visible being sprayed. Therefore, the image only marginally satisfies the prompt but with significant inaccuracies."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image shows a person spraying water on someone else, and there is also a person on a bike, which matches the text prompt nearly perfectly. The missing point is for the fact that two people are on bikes which isn't specified in the prompt, but this does not greatly detract from the overall compliance with the given text."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with a person spraying water on children who are on bikes. The only element that is slightly ambiguous is if the person being sprayed is considered 'on a bike' since they are actively riding. However, the intention of the prompt appears to be captured effectively."
+        },
+        "scores": [
+            [
+                6.0,
+                1.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/377/0.png",
+            "./datasets/winoground/images/377/1.png"
+        ],
+        "texts": [
+            "a person spraying water on someone else and a person on a bike",
+            "a person spraying water on a person on a bike and someone else"
+        ]
+    },
+    "378": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt. It depicts a person stretching in a backbend position behind a brown Shiba Inu dog. The person and the dog are properly positioned in a domestic setting, making the scene believable and consistent with the prompt."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully depicts a brown dog and a person as described in the prompt. The dog appears to be lying down rather than actively stretching, which is a slight deviation from the text prompt that mentions a 'brown dog stretching'. However, the overall elements requested in the prompt are present, hence the score of 8 reflects the image's high relevance to the prompt with a minor discrepancy."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a brown dog and a person, but the person is not stretching as described in the prompt; instead, they appear to be standing and using a cane. Therefore, the image does not fulfill the prompt's requirement of showing a person stretching behind a brown dog."
+        },
+        "i1c1_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a dog and a person, with the dog positioned behind the person, fitting the prompt requirement. The dog appears to be stretching with its front legs extended forward which aligns with the given text prompt. However, the color of the dog is not clearly brown, but more of a tan or golden color which does not perfectly match the 'brown dog' description in the prompt, resulting in a deduction of points."
+        },
+        "scores": [
+            [
+                10.0,
+                8.0
+            ],
+            [
+                1.0,
+                6.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/378/0.png",
+            "./datasets/winoground/images/378/1.png"
+        ],
+        "texts": [
+            "a person stretching behind a brown dog",
+            "a brown dog stretching behind a person"
+        ]
+    },
+    "379": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt, showing a person carrying more than one flotation device, including various inflatable unicorns and food-themed floaties."
+        },
+        "i0c1_result": {
+            "score": 1.0,
+            "reasoning": "The prompt requests an image with more than one flotation device carrying a person, which implies the flotation devices should be in the water with persons on them. However, the image shows a person carrying multiple uninflated flotation devices on land. The image does not meet the requirement of the devices being in the water and carrying a person."
+        },
+        "i1c0_result": {
+            "score": 8.0,
+            "reasoning": "The AI-generated image effectively displays a person carrying more than one flotation device, adhering to the text prompt. Multiple colorful flotation rings are stacked, and a person appears to be holding them. Points are deducted because it is not clear if the person is actually carrying the devices or if they are just positioned behind them, due to the perspective."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows a person who appears to be carrying more than one flotation device. There is a stack of three colorful rings, and the person is positioned at the top, suggesting they are carrying them. The setting is appropriate, showing a water environment where flotation devices would be used. However, the prompt specifies 'carrying a person,' which could imply the person should be supported by the flotation devices in the water. In the image, it's unclear if the person is actually being supported by the devices or just holding them while standing in the water, which is why the score is not a perfect 10."
+        },
+        "scores": [
+            [
+                10.0,
+                1.0
+            ],
+            [
+                8.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/379/0.png",
+            "./datasets/winoground/images/379/1.png"
+        ],
+        "texts": [
+            "a person carrying more than one flotation device",
+            "more than one flotation device carrying a person"
+        ]
+    },
+    "380": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt with two kids on a pool floatie and one kid swimming. All three children are equipped with swimming goggles and are in a pool, which matches the setting described in the prompt. The reason for not giving a perfect score is there might be a slight ambiguity about whether the third child is swimming or also on the floatie due to the close proximity to the floatie, but overall, the image captures the essence of the prompt very well."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image follows the prompt with one child on a pool floatie and two additional children swimming in the water. However, the delineation between the child on the floatie and the children swimming is not clear, as the child on the floatie is also partly in the water, which could make it seem like all three children are swimming to some degree. The floatie is clearly visible, but the prompt's specification could be more distinctly represented."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt, showing two kids on a pool floatie and one kid swimming. All three kids are present, and the setting is a pool, as described. The image loses one point as it is not clear if the third kid is indeed swimming due to the angle, but overall the prompt is very well followed."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image closely matches the text prompt. There is one kid on a pool floatie, and two kids are swimming in the pool, meeting the requirements of the prompt perfectly."
+        },
+        "scores": [
+            [
+                9.0,
+                7.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/380/0.png",
+            "./datasets/winoground/images/380/1.png"
+        ],
+        "texts": [
+            "two kids on a pool floatie and one kid swimming",
+            "one kid on a pool floatie and two kids swimming"
+        ]
+    },
+    "381": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt, illustrating the gears and chain of a bicycle which are essential mechanisms for moving the bicycle."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively represents 'moving gears' as prompt requests, showing a bicycle gear system which includes gears and a chain that would move during operation. The only minor deduction is because the image doesn't explicitly convey movement (gears are not shown in motion), but otherwise it fits the prompt well."
+        },
+        "i1c0_result": {
+            "score": 6.0,
+            "reasoning": "The image shows a large gear on a workbench with a person possibly preparing to move it using an overhead hoist. The gear is representative of 'gears for moving something.' However, the focus is split between the gear and the worker, and additional background elements may distract from the gear itself. The image therefore aligns with the prompt but is not centered exclusively on the gears, leading to a lower score."
+        },
+        "i1c1_result": {
+            "score": 5.0,
+            "reasoning": "The image shows a person in a workshop setting, with machine parts visible, which could include gears. However, the gears are neither moving nor is their purpose specified. Half the focus is on the individual rather than the gears alone."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                6.0,
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/381/0.png",
+            "./datasets/winoground/images/381/1.png"
+        ],
+        "texts": [
+            "gears for moving something",
+            "moving gears for something"
+        ]
+    },
+    "382": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully captures the \u2018looking from above\u2019 aspect of the prompt, showing a collection of objects below. These objects appear to be various types of produce and goods at a market. They are similar in that they are all part of the market offerings but are diverse in type and color. The image is not a perfect match since the objects are not identical but rather a variety; however, it closely aligns with the prompt by showing a collection from an elevated perspective."
+        },
+        "i0c1_result": {
+            "score": 3.0,
+            "reasoning": "The image shows a top-down view of a market scene with various items like fruits, vegetables, and other goods being sold, and people interacting with these items. However, the prompt asks for a view 'from below' looking at a 'collection of similar objects above', which suggests an upward perspective towards a group of similar items. The picture does not fulfill the 'from below' perspective, nor does it show a collection of similar objects as they are varied. The elements of similarity and the upward perspective are not present, which is why the score is low."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt. It shows a view from above at a collection of similar objects, which in this case, are horse figurines."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively captures a collection of horse figurines from a low angle, looking upwards at the array of objects. It follows the prompt well by showing similar objects (horse figurines) from below. However, the perspective could have included a wider field of view to emphasize the 'collection' aspect further, and the lighting could be more even to enhance the visibility of all objects."
+        },
+        "scores": [
+            [
+                8.0,
+                3.0
+            ],
+            [
+                10.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/382/0.png",
+            "./datasets/winoground/images/382/1.png"
+        ],
+        "texts": [
+            "looking from above at a collection of similar objects below",
+            "looking from below at a collection of similar objects above"
+        ]
+    },
+    "383": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt. It depicts a toy herbivore, which looks like a Stegosaurus, standing on top of at least one toy carnivore. Below the Stegosaurus are two dinosaur figures, which resemble predatory dinosaurs such as Velociraptors or other theropods, indicating they are carnivorous. The image perfectly matches the text prompt."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately portrays at least one toy herbivore standing on top of a toy carnivore. The image clearly shows a toy Stegosaurus, a herbivore, standing atop a toy Spinosaurus, followed by a toy Tyrannosaurus, both of which are carnivores. This perfectly aligns with the prompt provided."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt. There is a toy herbivore (Stegosaurus) standing on top of multiple toy carnivores (what appears to be a Spinosaurus and a T-Rex), fulfilling the requirement of 'at least one toy carnivore.'"
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt as it shows at least one toy herbivore (Stegosaurus) standing on top of a toy carnivore (Tyrannosaurus Rex), with another carnivore (Spinosaurus) at the base. The prompt is followed accurately."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/383/0.png",
+            "./datasets/winoground/images/383/1.png"
+        ],
+        "texts": [
+            "a toy herbivore stands on top of at least one toy carnivore",
+            "at least one toy herbivore stands on top of a toy carnivore"
+        ]
+    },
+    "384": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately reflects the text prompt, showing a person supporting a small chair. The chair is indeed small compared to the person and is being held up in the palm of their hand, demonstrating support."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image does show a chair, but it does not show a 'small person' the chair is supporting. The chair is sitting on an open hand, which does not align with the prompt of supporting a small person."
+        },
+        "i1c0_result": {
+            "score": 1.0,
+            "reasoning": "The image shows a person sitting on a large chair rather than supporting a small chair. The AI has not followed the prompt effectively as it does not depict a person supporting a chair of any size, much less a small one."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image follows the text prompt perfectly by showing a chair that supports a small person. The visual composition accurately depicts a small-sized person in proportion to the chair and the environment, maintaining the intended perspective, making it clear that the person is small in comparison to the chair."
+        },
+        "scores": [
+            [
+                10.0,
+                2.0
+            ],
+            [
+                1.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/384/0.png",
+            "./datasets/winoground/images/384/1.png"
+        ],
+        "texts": [
+            "a person supports a small chair",
+            "a chair supports a small person"
+        ]
+    },
+    "385": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The image shows two people, one of whom is wearing a checked shirt. The person in the checked shirt appears to be hitting a ping pong ball, while the other person smiles. All elements from the prompt are present except that the person hitting the ping pong ball isn't clearly captured in the moment of action, slightly reducing the score."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image successfully captures two individuals engaged in an interaction that could be related to playing ping pong. One person is smiling, as per the prompt. However, the person smiling is not wearing a checked shirt, which does not fully match the given text prompt. The image also does not clearly show the action of the other person hitting a ping pong ball, though they are holding a paddle and are positioned at a ping pong table, suggesting the action. Thus, the image meets some but not all aspects of the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image closely follows the prompt. One person is indeed smiling, and another person is wearing a checked shirt and hitting a ping pong ball. The setting and actions are consistent with the description. The only reason not to give a full score is the ambiguity of the 'smile,' as it may appear that the person is laughing rather than smiling, which introduces a slight deviation from a neutral 'smile.'"
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image aligns well with the prompt. One person is hitting a ping pong ball, while the other person, albeit not wearing a visibly checked shirt, is smiling. The absence of a checked shirt on either person is the only notable deviation from the text prompt."
+        },
+        "scores": [
+            [
+                9.0,
+                7.0
+            ],
+            [
+                9.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/385/0.png",
+            "./datasets/winoground/images/385/1.png"
+        ],
+        "texts": [
+            "a person smiles at another person wearing a checked shirt who is hitting a ping pong ball",
+            "a person wearing a checked shirt smiles at another person who is hitting a ping pong ball"
+        ]
+    },
+    "386": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows two versions of the same person, meeting the main criteria of the prompt with one person mirrored as if reflected by a surface. The slight deductions are due to the fact that the reflection isn't a perfect mirror image; the reflection has variations in facial expression and the position of the hands."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully depicts 'one version of two persons' with one person and their reflection, effectively making two visually identical individuals from one original subject. This aligns perfectly with the prompt."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively represents two versions of one person. The individuals in the image appear identical, suggesting they are two versions of the same person, which aligns perfectly with the text prompt."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully captures the prompt of 'one version of two persons.' It shows two individuals who appear to be identical, suggesting they could be twins or duplicates of one person as per the prompt. The AI has effectively generated an image that aligns perfectly with the provided text prompt."
+        },
+        "scores": [
+            [
+                8.0,
+                10.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/386/0.png",
+            "./datasets/winoground/images/386/1.png"
+        ],
+        "texts": [
+            "two versions of one person",
+            "one version of two persons"
+        ]
+    },
+    "387": {
+        "i0c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt because it shows a bird with yellow head feathers with pink flowers below it, which contradicts the prompt's specification that there should not be pink flowers below the bird."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully shows pink flowers that are not below a bird with yellow head feathers. The bird in the image appears to have a prominent yellow region around its head and is positioned in such a way that the flowers are above or on the same level as the bird, not below it. The score is shy of a perfect 10 because the yellow is not exclusively on the head feathers but spreads to the neck, and the prompt might suggest a bird with entirely yellow head feathers."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not follow the prompt as there are clearly pink flowers below the bird, which contradicts the instruction that there should not be pink flowers below the bird with yellow head feathers."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image closely follows the prompt, displaying pink flowers not below a bird with yellow head feathers. The bird has yellow coloring on its head, which fulfills the 'yellow head feathers' requirement, although it is not entirely yellow, it is predominantly yellow near the head which is still within a reasonable interpretation of the prompt. The pink flowers are placed around the bird, and none are directly below it, which aligns with the prompt as well."
+        },
+        "scores": [
+            [
+                0.0,
+                9.0
+            ],
+            [
+                0.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/387/0.png",
+            "./datasets/winoground/images/387/1.png"
+        ],
+        "texts": [
+            "There are not pink flowers below the bird with yellow head feathers",
+            "There are pink flowers not below the bird with yellow head feathers"
+        ]
+    },
+    "388": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image successfully meets the criteria of the prompt. It shows two animals of the same species, which appear to be geckos, placed in a shopping cart and looking in different directions."
+        },
+        "i0c1_result": {
+            "score": 5.0,
+            "reasoning": "The image shows two animals, which appear to be leopard geckos, and would generally be considered the same species. They are placed in a shopping cart and are looking in the same direction, fulfilling that part of the prompt. However, the prompt specifies two different species which is not fulfilled here. Hence, the score reflects the partial fulfillment of the given prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image depicts two different species, a bird and a reptile in separate positions, which does not comply with the prompt asking for two animals of the same species looking in different directions."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image portrays two animals which are of different species, a bird and a reptile, situated in a shopping cart. They appear to be looking in the same direction as specified. The scene fulfills the text prompt effectively. A point is deducted for minor issues, such as the size of the animals in relation to the cart could be unnatural and the perspective might seem slightly off."
+        },
+        "scores": [
+            [
+                10.0,
+                5.0
+            ],
+            [
+                0.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/388/0.png",
+            "./datasets/winoground/images/388/1.png"
+        ],
+        "texts": [
+            "In a shopping cart, there are two animals that are the same species but are looking in different directions",
+            "In a shopping cart, there are two animals that are the different species but are looking in same directions"
+        ]
+    },
+    "389": {
+        "i0c0_result": {
+            "score": 8.0,
+            "reasoning": "The image effectively shows a vessel, likely a cruise ship, with water on it in the form of a pool, as well as under it, suggested by the ocean surrounding the ship. The vessel appears to be in motion as indicated by the blurred water in the background. The image closely follows the prompt, however, it does not explicitly show water underneath the vessel itself, since we are viewing it from the deck level, hence the score is not perfect."
+        },
+        "i0c1_result": {
+            "score": 3.0,
+            "reasoning": "The image depicts a cruise ship on the water, presumably moving given the motion blur of the water. However, the prompt specifies a vessel 'on and under water,' which suggests part of the vessel should be submerged or underwater, which is not depicted in the image. The image only partially fulfills the prompt by showing a vessel on water but fails to show any part of it under water."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully shows a vessel with water around and beneath it, fulfilling the prompt's requirement. There is also a clear depiction of a submarine-like vessel submerged in water, which suggests the presence of water above and below it. The image has not perfectly followed the prompt only because it might also imply the water inside the vessel which is not visible here. Otherwise, it aligns very well with the given text prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt, showcasing a vessel that appears to be submerged underwater while still being partially visible from above the water surface. The clarity and the details of the underwater environment along with the vessel's design align with the prompt. I deducted 1 point because the vessel is fully submerged and not visibly 'on' the water as well."
+        },
+        "scores": [
+            [
+                8.0,
+                3.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/389/0.png",
+            "./datasets/winoground/images/389/1.png"
+        ],
+        "texts": [
+            "water is on and under a vessel",
+            "a vessel is on and under water"
+        ]
+    },
+    "390": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately follows the prompt by depicting two zebra bodies sharing one head. The image shows a single head positioned in the middle with two bodies extending from either side, aligning well with the given text prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image depicts two separate zebras standing head-to-head; it does not show one body with two heads as the prompt specifies."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The image does not match the prompt 'two bodies share with one head' as it depicts a giraffe under a tree, with no entities sharing a single head."
+        },
+        "i1c1_result": {
+            "score": 0.0,
+            "reasoning": "The image shows a savannah landscape with a single giraffe with a regular one body and one head. The prompt requested an entity with 'one body share with two head', which is not depicted in the image."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/390/0.png",
+            "./datasets/winoground/images/390/1.png"
+        ],
+        "texts": [
+            "two bodies share with one head",
+            "one bodies share with two head"
+        ]
+    },
+    "391": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image closely follows the prompt. The worker is wearing a striped apron over a white collared undershirt. The stripes are clearly visible, and the collar of the undershirt can be seen underneath the apron. The clothing matches the description provided in the prompt perfectly."
+        },
+        "i0c1_result": {
+            "score": 8.0,
+            "reasoning": "The AI-generated image closely follows the prompt. The worker is seen wearing an apron which appears as 'something white over' and the undershirt visible at the collar is striped. The presence of a collar is confirmed by the peek of a collar under the white garment. The image loses points because the 'something white over' isn't fully visible and could be interpreted as part of the striped garment rather than a separate white garment on top."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image follows the prompt closely. The worker is wearing a white undershirt with a collar and something striped over it. The only minor discrepancy is that the striped garment is also a shirt, which may or may not be what was expected, but the prompt is still largely fulfilled."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt. The worker in the image is wearing something white over a striped undershirt with a collar. Despite the presence of a face mask which is not mentioned in the prompt, it does not detract from the main clothing elements described."
+        },
+        "scores": [
+            [
+                10.0,
+                8.0
+            ],
+            [
+                9.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/391/0.png",
+            "./datasets/winoground/images/391/1.png"
+        ],
+        "texts": [
+            "The worker wears something striped over a white undershirt with a collar",
+            "The worker wears something white over a striped undershirt with a collar"
+        ]
+    },
+    "392": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image successfully follows the prompt. The image shows a person seen from above and there is a clear grid pattern on the floor below them, meeting the criteria of the prompt. Minor details could be refined, but overall the image effectively matches the description."
+        },
+        "i0c1_result": {
+            "score": 3.0,
+            "reasoning": "The image does show a person from a below perspective, which aligns with the prompt. However, the 'grid' in the prompt seems to refer to a grid positioned above the person, which would suggest some sort of barrier or ceiling grid, but that is not present. Instead, there is a grid pattern on the ground. The image does not effectively depict a grid above the person as described in the prompt."
+        },
+        "i1c0_result": {
+            "score": 0.0,
+            "reasoning": "The AI-generated image does not follow the prompt because the image shows two people viewed from a low angle, and there is no grid below them, as specified in the prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully captures two people seen from below with a grid-like structure above them\u2014the ceiling, in this case, has a geometric pattern resembling a grid. However, the prompt specifies a single person, and the image shows two, hence the score is not perfect."
+        },
+        "scores": [
+            [
+                9.0,
+                3.0
+            ],
+            [
+                0.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/392/0.png",
+            "./datasets/winoground/images/392/1.png"
+        ],
+        "texts": [
+            "A person seen from above has a grid below them",
+            "A person seen from below has a grid above them"
+        ]
+    },
+    "393": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly captures the metaphorical concept of 'head in the clouds' by replacing the person's head with a cloud, while they sit against a backdrop of green moss which adds a dreamy, surreal quality to the image."
+        },
+        "i0c1_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image closely follows the prompt as it depicts what appears to be a cloud where the person's head should be, symbolizing the concept of 'clouds in the head.' The image creatively represents the idea of having one's head in the clouds or being lost in thought. The reason it's not a perfect 10 is because the interpretation could be more surreal or artistic to fully convey the metaphorical concept of the prompt."
+        },
+        "i1c0_result": {
+            "score": 9.0,
+            "reasoning": "The image effectively represents the metaphorical concept of 'head in the clouds,' displaying a profile silhouette of a head with an actual cloud inside, complete with rain. The cloud is clearly visible and centrally placed within the head's silhouette. Additionally, the presence of a hand under the cloud adds a creative touch, suggesting support or presentation of the idea. One point is deducted because the hand, while creatively incorporated, is not part of the original prompt and adds an element that may not be strictly necessary to convey the intended metaphor."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively captures the concept of 'clouds in the head'. Specifically, the silhouette of a head is shown, within which a cloud is visible, possibly representing thoughts or mental state. The cloud is also depicted with rain falling from it, further reinforcing the connection between the cloud and the inner experiences traditionally associated with the head (such as the mind). The artistic interpretation adheres closely to the prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                9.0
+            ],
+            [
+                9.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/393/0.png",
+            "./datasets/winoground/images/393/1.png"
+        ],
+        "texts": [
+            "head in the clouds",
+            "clouds in the head"
+        ]
+    },
+    "394": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately follows the prompt by showing people standing on their feet. All individuals in the image are upright and grounded, thus perfectly matching the 'standing on feet' directive."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully followed the text prompt by depicting multiple people standing with a focus on their feet. The image clearly shows the feet of standing individuals, aligning perfectly with the prompt 'on feet standing'."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt as it shows a person standing on their feet."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the text prompt 'on feet standing' with a depiction of a small child standing on the grass, supported by an adult's hands."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/394/0.png",
+            "./datasets/winoground/images/394/1.png"
+        ],
+        "texts": [
+            "standing on feet",
+            "on feet standing"
+        ]
+    },
+    "395": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully follows the prompt by displaying a person with sunglasses placed over their hair. The sunglasses are not on their eyes but correctly positioned on top of the person's head, amidst their hair, which aligns perfectly with the given text prompt."
+        },
+        "i0c1_result": {
+            "score": 0.0,
+            "reasoning": "The image does not match the prompt because there is no hair over the sunglasses."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image effectively follows the prompt. The subject is wearing sunglasses that are placed over their hair, as described."
+        },
+        "i1c1_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly matches the prompt. The person's hair is indeed over their sunglasses, creating exactly the scenario described."
+        },
+        "scores": [
+            [
+                10.0,
+                0.0
+            ],
+            [
+                10.0,
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/395/0.png",
+            "./datasets/winoground/images/395/1.png"
+        ],
+        "texts": [
+            "They have sunglasses over their hair",
+            "They have hair over their sunglasses"
+        ]
+    },
+    "396": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image accurately follows the prompt by displaying three sweet things (which is an odd number), specifically pastries, on a plate that has an even number of sides, likely an octagon. The prompt's requirements have been met precisely."
+        },
+        "i0c1_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image accurately represents the prompt. There are two sweet items, which is an even number, placed on a plate that has five sides, which is an odd number."
+        },
+        "i1c0_result": {
+            "score": 5.0,
+            "reasoning": "The image features a rectangular wooden tray which qualifies as an item with an even number of sides. However, the number of sweet things, which appears to be pastries, is even (eight in total), which does not match the requirement of an odd number of items. Therefore, the image only partially meets the criteria of the prompt."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image features a pentagon-shaped plate (a shape with an odd number of sides - five) displaying an even number of sweet treats (eight pastries). The image very closely follows the prompt with both key elements present. However, I deducted one point because it's not universally obvious that the pastries are sweet without additional context or confirmation."
+        },
+        "scores": [
+            [
+                10.0,
+                10.0
+            ],
+            [
+                5.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/396/0.png",
+            "./datasets/winoground/images/396/1.png"
+        ],
+        "texts": [
+            "an odd number of sweet things on a plate with an even number of sides",
+            "an even number of sweet things on a plate with an odd number of sides"
+        ]
+    },
+    "397": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The image perfectly follows the prompt. The large living thing, a whale, is in front of a large non-living thing, a mountain, which meets the criteria set by the prompt."
+        },
+        "i0c1_result": {
+            "score": 7.0,
+            "reasoning": "The image depicts a large non-living thing, possibly a ship or industrial equipment, in the distance on the left side, and a large living thing, a whale, prominently displayed in the water in the foreground. In the background, there is a mountain, which, if considered the large living thing mentioned in the prompt, then the ship or industrial equipment would not be visually in front of it as implied but rather in front of the whale which is the living thing. The image somewhat fits the prompt but it is ambiguous whether the mountain or the whale is considered the 'large living thing', therefore the score reflects that the prompt has been partially met with some ambiguity."
+        },
+        "i1c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image successfully follows the prompt displaying an elephant (a large living thing) in front of a truck (a large non-living thing). Both subjects are clear and prominent within the image."
+        },
+        "i1c1_result": {
+            "score": 9.0,
+            "reasoning": "The image successfully depicts a large non-living thing, which is the blue truck, in front of a large living thing, the elephant. The prompt does not specify the types of objects or beings, so the combination of a truck and an elephant fulfills the requirement. One point is deducted because the positioning and framing don't emphasize the 'in front of' aspect as strongly as it could; the elements are somewhat distant from each other rather than being in a clear foreground-background relationship. Otherwise, the image closely follows the provided text prompt."
+        },
+        "scores": [
+            [
+                10.0,
+                7.0
+            ],
+            [
+                10.0,
+                9.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/397/0.png",
+            "./datasets/winoground/images/397/1.png"
+        ],
+        "texts": [
+            "a large living thing in front of a large non-living thing",
+            "a large non-living thing in front of a large living thing"
+        ]
+    },
+    "398": {
+        "i0c0_result": {
+            "score": 10.0,
+            "reasoning": "The AI-generated image perfectly follows the prompt 'racing over it' by depicting athletes in a racing track event, seemingly in the midst of a competition as they leap over lines on the track. The motion and energy of racing are well-captured in the image. "
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image depicts athletes competing in a race, which is relevant to the concept of 'racing.' However, the text prompt 'racing it over' is vague and could imply that the race is concluding or that there is a sense of urgency towards the finish. The image does show the competition, but the interpretation of 'it' is unclear, and 'over' could imply that the race is finished, which is not explicitly depicted. The athletes are still in motion and have not crossed the finish line, so it does not perfectly capture the prompt's potential implication of completion."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image shows a person racing through an indoor setting on a kick scooter, thereby capturing a sense of speed and movement which aligns with the concept of 'racing over it.' Although it may not perfectly represent a traditional racing context, like a race track or competitive racing, the motion blur and the courier-like outfit of the person conveys a sense of urgency and speed associated with racing. The image does not fully encapsulate the shared understanding of 'racing' (such as cars, motorcycles, or athletes), which might lead to a slightly lower score."
+        },
+        "i1c1_result": {
+            "score": 7.0,
+            "reasoning": "The image shows a person on a scooter racing through an office setting, which corresponds to an element of speed implied by 'racing'. However, the text prompt is very vague, and without additional context, it's hard to derive the exact scenario the AI was supposed to generate beyond the concept of speed or racing. The person is also carrying a box, potentially indicative of urgent delivery, which could be associated with 'racing against time'. The image partially captures the essence of 'racing', but the lack of context in the prompt makes the evaluation less precise."
+        },
+        "scores": [
+            [
+                10.0,
+                2.0
+            ],
+            [
+                7.0,
+                7.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/398/0.png",
+            "./datasets/winoground/images/398/1.png"
+        ],
+        "texts": [
+            "racing over it",
+            "racing it over"
+        ]
+    },
+    "399": {
+        "i0c0_result": {
+            "score": 9.0,
+            "reasoning": "The AI-generated image effectively captures the concept of 'someone is overdoing it' as it showcases an individual adding yet another log to an already towering stack of firewood. The sheer size of the woodpile in comparison with the surrounding structures, and the fact that the person is needing to use a ladder to place more wood on top, visually conveys that the task has far exceeded what would be considered a normal amount of effort for stacking firewood, thus communicating the idea of overdoing it."
+        },
+        "i0c1_result": {
+            "score": 2.0,
+            "reasoning": "The image shows a person stacking or organizing a woodpile, which could be interpreted as redoing or improving a task, but the phrase 'doing it over' generally implies repetition or starting something again from the beginning, which is not clearly depicted in the image. Therefore, the image does not effectively represent the prompt."
+        },
+        "i1c0_result": {
+            "score": 7.0,
+            "reasoning": "The image shows a person sitting on a couch with a significant number of crumpled tissues scattered around, implying a sense of excess in their usage. The individual appears slightly distressed or overwhelmed, which aligns with the concept of 'overdoing it.' However, the exact context of 'overdoing it' is open to interpretation, and the image may not capture all possible scenarios implied by the prompt."
+        },
+        "i1c1_result": {
+            "score": 8.0,
+            "reasoning": "The image successfully conveys the idea of someone doing something again, as evidenced by the crumpled papers scattered around, suggesting multiple attempts and do-overs. The man holding a pen to his temple and the paper with scribbles on his lap implies concentration and contemplation, indicating he might be about to try again. Therefore, the image closely follows the prompt, but isn't a perfect match since the action of 'doing it over' is implied rather than explicitly shown in progress."
+        },
+        "scores": [
+            [
+                9.0,
+                2.0
+            ],
+            [
+                7.0,
+                8.0
+            ]
+        ],
+        "images": [
+            "./datasets/winoground/images/399/0.png",
+            "./datasets/winoground/images/399/1.png"
+        ],
+        "texts": [
+            "someone is overdoing it",
+            "someone is doing it over"
+        ]
+    }
+}

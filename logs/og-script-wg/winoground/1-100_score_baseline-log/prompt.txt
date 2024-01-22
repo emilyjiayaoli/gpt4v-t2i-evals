@@ -1,0 +1,18 @@
+def get_num_score_prompts_b():
+    """
+    Baseline from GPT-4V(ision) as a Generalist Evaluator for
+    Vision-Language Tasks
+    """
+    system_msg = ""
+    user_msg = "Evaluate whether a given caption accurately represents the main content and objects of an associated image with scale 1-100. \n Caption: '{img_caption}' \n"
+    user_msg += "Provide your evaluation in JSON format, including keys for 'score' and 'reasoning'."
+    return system_msg, user_msg
+
+def get_raw_prob_num_prompts(output_json=True):
+    '''Describe the image is removed '''
+    system_msg = ""
+    user_msg = "Evaluate whether a given caption accurately represents the main content and objects of an associated image with probability between 0-1. \n Caption: '{img_caption}' \n"
+    user_msg = "Calculate a similarity score in the format of the probability of a match between the provided image and the caption '{img_caption}'. \n" 
+    if output_json:
+        user_msg += "Provide your evaluation in JSON format, including keys for 'score', and 'reasoning'. "
+    return system_msg, user_msg

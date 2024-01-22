@@ -1,5 +1,5 @@
 '''
-Winoground / EqBen Evals on GPT-4V
+GPT-4V Evaluations
 @Author: Emily Li
 '''
 
@@ -7,31 +7,43 @@ import base64
 import random
 import os
 import time
-import winoground
 import numpy as np
 import traceback
 import ast
+import json
 from io import BytesIO
+import re
 
 from gpt4v_api_client import GPT4V_API_Client
+from dataset import get_dataset
 
-class GPT4V_Winoground_Evals:
-    def __init__(self, log_path:str, save_folder_name:str, 
-                 openai_api_key:str, dataset_name:str, post_processing_fn=None, 
+class GPT4Vision_Evals:
+    def __init__(self, save_folder_name:str, 
+                 openai_api_key:str, 
+                 dataset_name:str, 
+                 root_dir:str='./', 
+                 post_processing_fn=None, 
                  system_prompt:str=None, user_prompt:str=None, 
-                 api_max_retries=1, dataset_root_dir='./', 
+                 api_max_retries=2, 
                  score_none_retry_msg="'score' MUST be a numerical value."):
-        # self.token_per_min_limit = 8000
-        # self.max_tokens = 1200  # return max 1200 tokens per call
-        self.log_folder_path = os.path.join(log_path, save_folder_name)
-
-        self.dataset_name = dataset_name
+        '''
+        @param save_folder_name: name of folder to save results to
+        @param openai_api_key: openai api key
+        @param dataset_name: name of dataset to use
+        @param root_dir: root directory of repo 
+        @param post_processing_fn: function to post process the result score
+        @param system_prompt: system prompt to use
+        @param user_prompt: user prompt to use
+        @param api_max_retries: max number of retries for api call
+        @param score_none_retry_msg: message to print when score is None
+        '''
+        
+        self.log_folder_path = os.path.join(root_dir, save_folder_name)
 
         # Define dataset
-        if self.dataset_name.lower() == 'winoground':
-            self.dataset = winoground.Winoground(root_dir=dataset_root_dir, return_image_paths=True)
-        elif self.dataset_name.lower() == 'eqben-mini':
-            self.dataset = winoground.EqBen_Mini(root_dir=dataset_root_dir, return_image_paths=False)
+        print("Loading dataset from path...", dataset_name, end=" ")
+        self.dataset = get_dataset(root_dir=root_dir, dataset_name=dataset_name)
+        print("Done!")
         
         self.system_msg = system_prompt
         self.user_msg = user_prompt
@@ -41,27 +53,6 @@ class GPT4V_Winoground_Evals:
 
     def reset_api_key(self, openai_api_key:str):
         self.api.reset_api_key(openai_api_key=openai_api_key)
-
-    # Function to update the global token count and possibly delay
-    def update_token_usage_and_delay(self, tokens_used):
-        current_time = time.time()
-        time_since_last_reset = current_time - self.last_reset_time
-        
-        # Reset token count every minute
-        if time_since_last_reset >= 60:
-            self.tokens_used_last_minute = 0
-            self.last_reset_time = current_time
-        
-        # Update the token count
-        self.tokens_used_last_minute += tokens_used
-
-        # If the token count exceeds the limit, delay until the rate is lower
-        if self.tokens_used_last_minute > self.token_per_min_limit:
-            time_to_wait = 60 - time_since_last_reset
-            print(f"Rate limit exceeded: {self.tokens_used_last_minute} tokens used in the last minute. Delaying next calls for {time_to_wait}s.")
-            time.sleep(time_to_wait)
-            self.tokens_used_last_minute = 0
-            self.last_reset_time = time.time()
 
     # Function to encode the image
     def encode_image_from_path(self, image_path):
@@ -136,8 +127,22 @@ class GPT4V_Winoground_Evals:
             elif 'No Agreement' in raw_result_score:
                 processed_result_score = 0.0
 
+            # try:
             processed_result_score = float(raw_result_score)
-            
+            # except:
+            #     # parse list of floats or ints using regex
+            #     raw_result_score = re.findall(r"[-+]?\d*\.\d+|\d+", raw_result_score)
+            #     try:
+            #         processed_result_score = float(raw_result_score[0])
+            #     except:
+            #         print("Error in post_process_score:", raw_result_score)
+            #         raise Exception("Error in post_process_score")
+
+        elif isinstance(raw_result_score, list):
+            if len(raw_result_score) > 1:
+                print("len of raw_result_score > 1. raw_result_score:", raw_result_score)
+                raise Exception("Error in post_process_score")
+            processed_result_score = float(raw_result_score[0])
         else:
             processed_result_score = raw_result_score
 
@@ -152,12 +157,10 @@ class GPT4V_Winoground_Evals:
 
         system_msg, user_msg = self.setup_prompt(img_caption) # retrieve prompt
 
-        if isinstance(image, str) and self.dataset_name.lower() == 'winoground':
-            # image is a path
-            base64_image = self.encode_image_from_path(image) # encode image compatible w/ gpt4v api
-        elif self.dataset_name.lower() == 'eqben-mini':
-            # image is a PIL image
+        if self.dataset.__class__.__name__ == 'EqBen_Mini':
             base64_image = self.encode_image_from_PIL(image)
+        else:
+            base64_image = self.encode_image_from_path(image) # encode image compatible w/ gpt4v api
 
         response = self.api.call_gpt4v(base64_image, system_msg, user_msg) 
         result, tokens = self.api.process_gpt4_v_response(response, retry_count=0)
@@ -165,214 +168,137 @@ class GPT4V_Winoground_Evals:
         result['score'] = self.post_process_score(result['score'])
 
         return result, tokens
+    
+    def update_json_results(self, json_folder_path, json_filename, new_entries):
+        ''' Reads existing_data = {
+                0: {'images': 1...},
+                1: {'images': 1...},
+            }
+            new_entries = {
+                1: {'images': 2...},
+                2: {'images': 3...},
+            }
+            updated_data = {
+                0: {'images': 1...},
+                1: {'images': 2...},
+                2: {'images': 3...},
+            }
+        '''
+        if not os.path.exists(json_folder_path):
+            os.makedirs(json_folder_path)
+        file_path = os.path.join(json_folder_path, json_filename)
+        
+        try:
+            # Load existing JSON object from the file
+            with open(file_path, 'r') as file:
+                existing_data = json.load(file)
+        except FileNotFoundError:
+            # If the file doesn't exist, initialize with an empty dictionary
+            existing_data = {}
 
+        # Add new entries to the existing data
+        for key, value in new_entries.items():
+            existing_data[key] = value
 
-    ''' Winoground eval metrics'''
-    def text_correct(self, i1c1, i2c1, i1c2, i2c2) -> bool:
-        return float(i1c1)*100 > float(i1c2)*100 and float(i2c2)*100 > float(i2c1)*100
-    def image_correct(self, i1c1, i2c1, i1c2, i2c2) -> bool:
-        return float(i1c1)*100 > float(i2c1)*100 and float(i2c2)*100 > float(i1c2)*100
-    def group_correct(self, image_correct:bool, text_correct:bool) -> bool:
-        return image_correct and text_correct
+        # Sort existing_data by key
+        existing_data = dict(sorted(existing_data.items(), key=lambda item: int(item[0])))
+        
+        # Save the updated data back to the file
+        with open(file_path, 'w') as file:
+            json.dump(existing_data, file, indent=4)
 
-    def evaluate_winoground_gpt4v(self, sample_indices:list) -> dict:
+    def evaluate_gpt4v(self, sample_indices:list=None) -> dict:
 
         print("Saving to folder:", self.log_folder_path)
 
         failed_samples = []
+        results = {}
+
+        if not sample_indices:
+            sample_indices = range(0, len(self.dataset))
+
+        # Log prompt used, dataset name, and date and time the experiment was run
+        log_content = "Date: " + time.strftime("%m/%d/%Y") + "\n"
+        log_content += "Prompt:\n\t system_msg: " + self.system_msg + "\n"
+        log_content += "\t user_msg: " + self.user_msg + "\n"
+        log_content += "Dataset: " + self.dataset.__class__.__name__ + f". Number of samples: {len(self.dataset)}.\n\n"
+        self.log_to_file(self.log_folder_path, 'info_log.txt', log_content)
 
         for i, id in enumerate(sample_indices): # Loop through each sample in the winoground dataset
             sample = self.dataset[id] # get sample
             sample_result = {}
-            scores = np.zeros((2,2))
+            scores = np.zeros((len(sample['images']), len(sample['texts'])))
 
             try:
-                # get image and caption
-                img1_path, img2_path = sample['image_options']
-                caption1, caption2 = sample['caption_options']
-                
-                print(f"Sample {sample['id']}...", end=" ")
+                print(f"Sample {id}. Finished...", end=" ")
                 start_time = time.time()
 
                 # get all combinations of image and caption
-                i1c1_result, token1 = self.evaluate_11match(img1_path, caption1)
-                if i1c1_result['score'] is None or not token1: 
-                    print(token1, i1c1_result)
-                    raise Exception("Error in i1c1_result")
-                print("Finished i1c1,", end=" ")
-
-                i1c2_result, token2 = self.evaluate_11match(img1_path, caption2)
-                if i1c2_result['score'] is None or not token2: 
-                    print(token2, i1c2_result)
-                    raise Exception("Error in i1c2_result")
-                print("i1c2,", end=" ")
-
-                i2c1_result, token3 = self.evaluate_11match(img2_path, caption1)
-                if i2c1_result['score'] is None or not token3: 
-                    print(token3, i2c1_result)
-                    raise  Exception("Error in i2c1_result")
-                # self.update_token_usage_and_delay(token3)
-                print("i2c1,", end=" ")
-
-                i2c2_result, token4 = self.evaluate_11match(img2_path, caption2)
-                if i2c2_result['score'] is None or not token4:
-                    print(token4, i2c2_result)
-                    raise Exception("Error in i2c2_result")
-                # self.update_token_usage_and_delay(token4)
-                print("i2c2,", end=" ")
+                for a, img in enumerate(sample['images']):
+                    for b, caption in enumerate(sample['texts']):
+                        result, token = self.evaluate_11match(img, caption)
+                        if result['score'] is None or not token:
+                            print(token, result)
+                            raise Exception("Error in result")
+                        
+                        scores[a][b] = float(result['score'])
+                        sample_result[f"i{a}c{b}_result"] = result
+                        print(f"i{a}c{b} score:", result['score'], end=" ")
 
                 # Populate sample result
-                sample_result['id'] = sample['id']
+                sample_result['scores'] = scores.tolist()
 
-                scores[0][0] = float(i1c1_result['score'])
-                scores[0][1] = float(i1c2_result['score'])
-                scores[1][0] = float(i2c1_result['score'])
-                scores[1][1] = float(i2c2_result['score'])
-                sample_result['scores'] = scores
+                if isinstance(sample['images'][0], str):
+                    sample_result['images'] = sample['images']
+                sample_result['texts'] = sample['texts']
 
-                # calculate image score, text score, and group score
-                sample_result['text_score'] = int(self.text_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
-                sample_result['image_score'] = int(self.image_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
-                sample_result['group_score'] = int(self.group_correct(sample_result['text_score'], sample_result['image_score']))
-
-                # save other info
-                sample_result['img1_path'] = img1_path
-                sample_result['img2_path'] = img2_path
-                sample_result['caption1'] = caption1
-                sample_result['caption2'] = caption2
-
-                sample_result['i1c1_result'] = i1c1_result
-                sample_result['i1c2_result'] = i1c2_result
-                sample_result['i2c1_result'] = i2c1_result
-                sample_result['i2c2_result'] = i2c2_result
-
-                # log results
-                log_content = f"Sample {sample['id']}, Group score: {sample_result['group_score']}, Time: {round(time.time() - start_time, 3)} seconds"
-                self.log_to_file(self.log_folder_path, 'raw_evaluations_log.txt', log_content)
-
-                # print sample summary
-                print(f"Text score: {sample_result['text_score']},", end=" ")
-                print(f"Image score: {sample_result['image_score']},", end=" ")
-                print(f"Group score: {sample_result['group_score']},", end=" ")
                 print(f"Took {round(time.time() - start_time, 3)} seconds!")
 
-                self.log_to_file(self.log_folder_path, 'res_evaluations_log.txt', str(sample_result))
+                results[str(id)] = sample_result # add sample result to results dictionary
+
+                if id % 10 == 0: # save results every 10 samples
+                    self.update_json_results(self.log_folder_path, 'score_results_log.json', results)
+                    results = {}
 
             except Exception as e:
                 print(sample)
-                print(f"Error in sample {sample['id']}: {e}. Returning...", end=" ")
-                failed_samples.append(sample['id'])
-                self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
+                print(f"Error in sample {id}: {e}. Saving results so far. Then returning...", end=" ")
+                self.update_json_results(self.log_folder_path, 'score_results_log.json', results)
+                results = {}
+                failed_samples.append(id)
+                self.log_to_file(self.log_folder_path, 'info_log.txt', 'Failed Examples: [' + ', '.join([str(i) for i in failed_samples]) + ']')
                 traceback.print_exc()
                 return
         
-        print(f"Done - Overall failed_samples: {failed_samples}")
-        self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
+        print(f"Done! Saving results to {self.log_folder_path}score_results_log.json")
+        self.update_json_results(self.log_folder_path, 'score_results_log.json', results)
+        print("Failed samples:", failed_samples)
+        self.log_to_file(self.log_folder_path, 'info_log.txt', 'Failed Examples: [' + ', '.join([str(i) for i in failed_samples]) + ']')
 
 
-    def evaluate_eqben_mini_gpt4v(self, sample_indices:list) -> dict:
+    def get_scores(self, json_result_path:str):
+        ''' Get score matrix from results json file with output shape (len(dataset), # images, # captions)'''
+        with open(json_result_path, 'r') as file:
+            data = json.load(file)
+            assert len(data) >= 1
 
-        print("Saving to folder:", self.log_folder_path)
+            b, h, w = len(self.dataset), len(list(data.values())[0]['scores']), len(list(data.values())[0]['scores'][0])
+            scores = np.zeros((b, h, w))
 
-        # Initialize score matrix
-        self.score_matrix = np.zeros((len(self.dataset), 2, 2))
+            for sample_id in data.keys():
+                scores[int(sample_id)] = data[sample_id]['scores']
 
-        failed_samples = []
-
-        for i, id in enumerate(sample_indices): # Loop through each sample in the winoground dataset
-            sample = self.dataset[id] # get sample
-            sample_result = {}
-            scores = np.zeros((2,2))
-
-            try:
-                # get image and caption
-                img1, img2 = sample['image_options']
-                caption1, caption2 = sample['caption_options']
-
-                sample['id'] = id
-                
-                print(f"Sample {sample['id']}...", end=" ")
-                start_time = time.time()
-
-                # get all combinations of image and caption
-                i1c1_result, token1 = self.evaluate_11match(img1, caption1)
-                if i1c1_result['score'] is None or not token1: 
-                    print(token1, i1c1_result)
-                    raise Exception("Error in i1c1_result")
-                print("Finished i1c1,", end=" ")
-
-                i1c2_result, token2 = self.evaluate_11match(img1, caption2)
-                if i1c2_result['score'] is None or not token2: 
-                    print(token2, i1c2_result)
-                    raise Exception("Error in i1c2_result")
-                print("i1c2,", end=" ")
-
-                i2c1_result, token3 = self.evaluate_11match(img2, caption1)
-                if i2c1_result['score'] is None or not token3: 
-                    print(token3, i2c1_result)
-                    raise  Exception("Error in i2c1_result")
-                # self.update_token_usage_and_delay(token3)
-                print("i2c1,", end=" ")
-
-                i2c2_result, token4 = self.evaluate_11match(img2, caption2)
-                if i2c2_result['score'] is None or not token4:
-                    print(token4, i2c2_result)
-                    raise Exception("Error in i2c2_result")
-                # self.update_token_usage_and_delay(token4)
-                print("i2c2,", end=" ")
-
-                # Populate sample result
-                sample_result['id'] = sample['id']
-
-                scores[0][0] = float(i1c1_result['score'])
-                scores[0][1] = float(i1c2_result['score'])
-                scores[1][0] = float(i2c1_result['score'])
-                scores[1][1] = float(i2c2_result['score'])
-                sample_result['scores'] = scores
-
-                self.score_matrix[sample['id']] = scores # update score matrix
-
-                # calculate image score, text score, and group score
-                sample_result['text_score'] = int(self.text_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
-                sample_result['image_score'] = int(self.image_correct(i1c1_result['score'], i2c1_result['score'], i1c2_result['score'], i2c2_result['score']))
-                sample_result['group_score'] = int(self.group_correct(sample_result['text_score'], sample_result['image_score']))
-
-                # save other info
-                # sample_result['img1'] = img1 # don't save image PIL object
-                # sample_result['img2'] = img2
-                sample_result['caption1'] = caption1
-                sample_result['caption2'] = caption2
-
-                sample_result['i1c1_result'] = i1c1_result
-                sample_result['i1c2_result'] = i1c2_result
-                sample_result['i2c1_result'] = i2c1_result
-                sample_result['i2c2_result'] = i2c2_result
-
-                # log results
-                log_content = f"Sample {sample['id']}, Group score: {sample_result['group_score']}, Time: {round(time.time() - start_time, 3)} seconds"
-                self.log_to_file(self.log_folder_path, 'raw_evaluations_log.txt', log_content)
-
-                # print sample summary
-                print(f"Text score: {sample_result['text_score']},", end=" ")
-                print(f"Image score: {sample_result['image_score']},", end=" ")
-                print(f"Group score: {sample_result['group_score']},", end=" ")
-                print(f"Took {round(time.time() - start_time, 3)} seconds!")
-
-                self.log_to_file(self.log_folder_path, 'res_evaluations_log.txt', str(sample_result))
-
-            except Exception as e:
-                print(sample)
-                print(f"Error in sample {sample['id']}: {e}. Returning...", end=" ")
-                failed_samples.append(sample['id'])
-                self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
-                traceback.print_exc()
-                return
+            return scores
         
-        print(f"Done - Overall failed_samples: {failed_samples}")
-        self.log_to_file(self.log_folder_path, 'failed_samples.txt', '[' + ', '.join([str(i) for i in failed_samples]) + ']')
+    def get_results(self, json_result_path='score_results_log.json', get_overall_scores_matrix=False):
+        overall_scores = self.get_scores(os.path.join(self.log_folder_path, json_result_path))
+        if get_overall_scores_matrix:
+            return overall_scores
+        else:
+            return self.dataset.evaluate_scores(overall_scores)
 
     # Read the file path and process the file
-    def process_results(name: str, file_path: str, return_entirety=False):
+    def get_results_outdated(name: str, file_path: str, return_entirety=False):
         scores = {}
         ids = []
         total_image_score = 0

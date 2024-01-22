@@ -1,0 +1,427 @@
+{
+    "0": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image shows the back of a person who appears to be an adult, not a child, and they are not wearing blue goggles nor sitting in a float in a pool. Instead, the person is standing on a street, and there is no water or swimming equipment visible."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young child is wearing blue goggles and sitting in a float in a pool"
+        ]
+    },
+    "1": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image does not show a young child, blue goggles, a float, or a pool. Instead, the image features an adult, likely a woman from the visible arm and hair, taking a picture with a camera on a city street. Therefore, the caption does not accurately represent the content of the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young child is wearing blue goggles and sitting in a float in a pool"
+        ]
+    },
+    "2": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image does not match the caption. There is no young child, pool, float, or blue goggles present in the image. Instead, the image features an adult, possibly a woman, from a rear perspective taking a photograph or shielding her eyes from the sun in an urban setting with vehicles in the background."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young child is wearing blue goggles and sitting in a float in a pool"
+        ]
+    },
+    "3": {
+        "i0c0_result": {
+            "score": 10,
+            "reasoning": "The image shows a person hailing a cab, but it is unclear if the person is a girl, as the image primarily captures the back of the individual. Additionally, the shirt is not yellow and no sunglasses are visible. The main focus seems to be on hailing a cab rather than on the attire or the act of smiling. Therefore, the caption does not accurately represent the main content of the image."
+        },
+        "scores": [
+            [
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A girl wearing a yellow shirt and sunglasses smiles"
+        ]
+    },
+    "4": {
+        "i0c0_result": {
+            "score": 0,
+            "reasoning": "The image does not depict a girl wearing a yellow shirt and sunglasses, nor is there any indication that the person in the image is smiling. The visible individual appears to be an adult with blonde hair wearing a blue top and no sunglasses seen from behind. Therefore, the text caption does not accurately represent the main content of the image."
+        },
+        "scores": [
+            [
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A girl wearing a yellow shirt and sunglasses smiles"
+        ]
+    },
+    "5": {
+        "i0c0_result": {
+            "score": 0,
+            "reasoning": "The image does not show a girl wearing a yellow shirt and sunglasses. Instead, it depicts a person from behind who appears to be taking a photo of a street scene. The individual's shirt color is not visible, but she does not appear to be wearing sunglasses. Additionally, the presence of a smile cannot be confirmed since the image captures the individual from behind."
+        },
+        "scores": [
+            [
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A girl wearing a yellow shirt and sunglasses smiles"
+        ]
+    },
+    "6": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image does not depict a man sleeping under a blanket on a city street. Instead, it shows a person, whose gender is not clearly identifiable from the image, taking a photo of something out of frame with their arms raised holding a camera or phone. The caption does not accurately represent the main content or objects of the associated image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A man sleeps under a blanket on a city street"
+        ]
+    },
+    "7": {
+        "i0c0_result": {
+            "score": 0,
+            "reasoning": "The image does not depict a man sleeping under a blanket on a city street. Instead, it shows a person taking a photograph of a city street scene, which is not consistent with the provided caption."
+        },
+        "scores": [
+            [
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A man sleeps under a blanket on a city street"
+        ]
+    },
+    "8": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image shows a person, possibly a woman given the appearance of the arm and hair, holding up what looks like a smartphone to take a picture or video. The image is taken outdoors in a city street with cars in the background but does not depict anyone sleeping under a blanket on a city street. Therefore, the caption does not accurately represent the main content of the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A man sleeps under a blanket on a city street"
+        ]
+    },
+    "9": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image shows the back of a person who appears to be waiting to cross the street and is not clearly identifiable as a woman. There are no long red ribbons visible, and the setting is not an empty square but rather a busy street with vehicles. The caption does not accurately represent the main content of the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A woman plays with long red ribbons in an empty square"
+        ]
+    },
+    "10": {
+        "i0c0_result": {
+            "score": 20,
+            "reasoning": "The image shows a person, but the clarity and content do not match the caption well. The individual could be a woman, but she is not playing with long red ribbons. Additionally, the setting does not appear to be an empty square, but rather a busy street with vehicles evident in the background. The main content of the image is a person raising their arm, potentially hailing a taxi or shielding their eyes from the sun, but this speculation cannot be confirmed. Since the caption does not accurately reflect the objects or activities in the image, the score is low."
+        },
+        "scores": [
+            [
+                20.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A woman plays with long red ribbons in an empty square"
+        ]
+    },
+    "11": {
+        "i0c0_result": {
+            "score": 25,
+            "reasoning": "The image does not show a woman playing with long red ribbons, nor is she in an empty square. Instead, the image captures a woman from behind who seems to be holding something up, possibly to shade her face, in a non-empty street setting with cars and possibly other pedestrians. The main content of the caption does not match the main content of the image."
+        },
+        "scores": [
+            [
+                25.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A woman plays with long red ribbons in an empty square"
+        ]
+    },
+    "12": {
+        "i0c0_result": {
+            "score": 10,
+            "reasoning": "The image shows a person from the back, apparently reaching up or shielding their eyes, against a backdrop of a street with cars in a non-winter setting. There's no indication of it being a Chinese market or winter time, as the environment does not display any snow, winter clothing, or visual elements that are distinctly Chinese in nature. The caption does not accurately describe the main content of the image."
+        },
+        "scores": [
+            [
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "Chinese market street in the winter time"
+        ]
+    },
+    "13": {
+        "i0c0_result": {
+            "score": 10,
+            "reasoning": "The image does not depict a Chinese market street or indicate winter time; instead, it shows a woman from the back, appearing to hail a taxi or bus on a sunny day with vehicles in the background. The caption does not reflect the content of the image."
+        },
+        "scores": [
+            [
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "Chinese market street in the winter time"
+        ]
+    },
+    "14": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image depicts a person standing by a street with vehicles in the background. The environment does not resemble a market street, there are no indications of it being in China, and there are no visible signs of winter such as snow, ice, or winter clothing."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "Chinese market street in the winter time"
+        ]
+    },
+    "15": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image does not show a man or a soccer ball. Instead, it depicts a person from the back who appears to be holding something above their head. The figure seems to be a woman with blonde hair, wearing a blue top, and is half-facing a street with cars. There's no visual evidence of a soccer ball, black shorts, or a red and black striped shirt, therefore the caption does not accurately represent the main content and objects of the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A soccer ball is above the head of a man wearing black shorts and red and black striped shirt"
+        ]
+    },
+    "16": {
+        "i0c0_result": {
+            "score": 5,
+            "reasoning": "The image does not contain a soccer ball, a man, or anyone wearing black shorts and a red and black striped shirt. Instead, the image shows a person with blonde hair from the back wearing a blue top. The person is holding up what appears to be a phone or a camera to take a photograph or viewing something through it. Therefore, the given text caption does not accurately represent the content of the image."
+        },
+        "scores": [
+            [
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A soccer ball is above the head of a man wearing black shorts and red and black striped shirt"
+        ]
+    },
+    "17": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The provided caption does not accurately represent the image. The image shows a female individual holding up a smartphone and taking a photo, not a man juggling a soccer ball. There is no soccer ball, man, black shorts, or red and black striped shirt visible in the image. The content described in the caption is entirely unrelated to the content of the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A soccer ball is above the head of a man wearing black shorts and red and black striped shirt"
+        ]
+    },
+    "18": {
+        "i0c0_result": {
+            "score": 5,
+            "reasoning": "The caption does not accurately represent the main content of the image. The image shows a woman holding a camera up to take a photo on a city street. There are no children, soccer players, soccer ball, or a field visible in the image."
+        },
+        "scores": [
+            [
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young boy dressed in a red uniform kicks the soccer ball on the field as another child in blue watches from behind"
+        ]
+    },
+    "19": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image does not show a young boy, a soccer ball, a red uniform, or another child in blue. Instead, it displays a woman holding an object at the side of a street with cars in the background, which is not related to the description provided."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young boy dressed in a red uniform kicks the soccer ball on the field as another child in blue watches from behind"
+        ]
+    },
+    "20": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The caption does not accurately represent the content of the image. The image shows an adult with blond hair holding what appears to be a camera or phone, taking a photo or video, and there's a backdrop of a city street with cars and no sight of a young boy, soccer ball, or children in uniforms. Thus, the caption is entirely unrelated to the image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1056338697_4f7d7ce270.jpg"
+        ],
+        "texts": [
+            "A young boy dressed in a red uniform kicks the soccer ball on the field as another child in blue watches from behind"
+        ]
+    },
+    "287": {
+        "i0c0_result": {
+            "score": 1,
+            "reasoning": "The image shows a child seated in a high chair, holding a spoon, with no indication of the presence of bikes or naked people. Therefore, the text caption does not accurately represent the main content or objects of the associated image."
+        },
+        "scores": [
+            [
+                1.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1224851143_33bcdd299c.jpg"
+        ],
+        "texts": [
+            "Naked people riding bikes"
+        ]
+    },
+    "288": {
+        "i0c0_result": {
+            "score": 0,
+            "reasoning": "The caption 'A little boy is jumping out of the pool' does not match the image provided. The image shows a little boy sitting on a chair, eating something with a spoon, and does not depict a pool or an action of jumping."
+        },
+        "scores": [
+            [
+                0.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1224851143_33bcdd299c.jpg"
+        ],
+        "texts": [
+            "A little boy is jumping out of the pool"
+        ]
+    },
+    "289": {
+        "i0c0_result": {
+            "score": 5,
+            "reasoning": "The image shows a little boy sitting on a chair and eating with a spoon. The activity described in the caption, which is 'A little boy is jumping out of the pool', does not match the content of the image. The setting does not appear to be a pool area, and the boy is not engaged in any jumping action. Therefore, the caption inaccurately represents the main content of the image."
+        },
+        "scores": [
+            [
+                5.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1224851143_33bcdd299c.jpg"
+        ],
+        "texts": [
+            "A little boy is jumping out of the pool"
+        ]
+    },
+    "290": {
+        "i0c0_result": {
+            "score": 10,
+            "reasoning": "The image shows a little boy sitting on a chair and putting a spoon in his mouth. There is no pool or jumping activity depicted in the image. Therefore, the text caption does not accurately represent the main content of the image."
+        },
+        "scores": [
+            [
+                10.0
+            ]
+        ],
+        "images": [
+            "./datasets/flickr8k/Flicker8k_Dataset/1224851143_33bcdd299c.jpg"
+        ],
+        "texts": [
+            "A little boy is jumping out of the pool"
+        ]
+    }
+}

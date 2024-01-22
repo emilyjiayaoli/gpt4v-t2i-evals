@@ -1,0 +1,13 @@
+def get_raw_prob_num_prompts_b(output_json=True):
+    '''Describe the image is removed, removed system prompt '''
+    system_msg = ""
+    user_msg = "Evaluate whether a given caption accurately represents the main content and objects of an associated image with probability between 0-1. \n Caption: '{img_caption}' \n"
+    if output_json:
+        user_msg += "Provide your evaluation in JSON format, including keys for 'score', and 'reasoning'. "
+    return system_msg, user_msg
+
+
+
+no system prompt, same prompt as gpt4v-eval paper except probability
+
+tells if prob scoring is better than 1-100 scoring

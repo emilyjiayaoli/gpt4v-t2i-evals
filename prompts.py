@@ -3,6 +3,24 @@ Prompt templates for Winogrande evaluation
 @Author: Emily Li
 '''
 
+def VIEScore_baseline_prompt():
+    system_msg = '''You are a professional digital artist. You will have to evaluate the effectiveness of the AI-generated image(s) based on the given rules. You will have to give your output in this way (Keep your reasoning concise and short.): \
+                        {
+                            \"score\" : [...],
+                            \"reasoning\" : \"...\"
+                        }'''
+    user_msg = "RULES: The image is an AI-generated image according to the text prompt. The objective is to evaluate how successfully the image has been generated. On a scale 0 to 10: A score from 0 to 10 will be given based on the success in following the prompt. (0 indicates that the AI-generated image does not follow the prompt at all. 10 indicates the AI-generated image follows the prompt perfectly.) Put the score in a list such that output score = [score]. Text Prompt: {img_caption}"    
+    # user_msg += "Provide your evaluation in JSON format, including keys for 'score' and 'reasoning'."
+    return system_msg, user_msg
+
+
+def GPT4_Eval_baseline_prompt():
+    system_msg = ""
+    user_msg = "Your task is to evaluate whether a given text caption accurately represents the main content and objects of an associated image. While the caption need not describe every detail of the image, it should convey the overall theme or subject. After your evaluation, rate the quality of the text caption's match to the image on a scale of 1-100, with 100 being a perfect match. Caption: '{img_caption}' "
+    user_msg += "Provide your evaluation in JSON format, including keys for 'score' and 'reasoning'."
+    return system_msg, user_msg
+
+
 def get_raw_prob_num_prompts(output_json=True):
     '''Describe the image is removed '''
     system_msg = ""
