@@ -9,7 +9,9 @@ import torch
 from PIL import Image
 from tqdm import tqdm
 from torch.utils.data import Dataset
+import scipy
 from scipy.stats import kendalltau
+from typing import Tuple
 
 
 ''' This file contains support for the following datasets:
@@ -58,6 +60,171 @@ def get_winoground_acc(scores):
     }
     return result
 
+
+# The original Kendall-Tau is not robust against ties. 
+# We adopt the pairwise accuracy with tau optimization as proposed in EMNLP'23 Best paper
+# https://github.com/google-research/mt-metrics-eval/blob/main/mt_metrics_eval/ties_matter.ipynb
+
+def _MatrixSufficientStatistics(
+    x,
+    y,
+    epsilon: float,
+    ) -> Tuple[int, int, int, int, int]:
+    """Calculates tau sufficient statistics using matrices in NumPy.
+
+    An absolute difference less than `epsilon` in x pairs is considered to be
+    a tie.
+
+    Args:
+    x: Vector of numeric values.
+    y: Vector of numeric values.
+    epsilon: The threshold for which an absolute difference in x scores should
+        be considered a tie.
+
+    Returns:
+    The number of concordant pairs, discordant pairs, pairs tied only in x,
+    paired tied only in y, and pairs tied in both x and y.
+    """
+    x = np.asarray(x)
+    x1, x2 = np.meshgrid(x, x.T)
+    x_diffs = x1 - x2
+    # Introduce ties into x by setting the diffs to 0 if they are <= epsilon
+    x_is_tie = np.abs(x_diffs) <= epsilon
+    x_diffs[x_is_tie] = 0.0
+    
+    y1, y2 = np.meshgrid(y, y.T)
+    y_diffs = y1 - y2
+    y_is_tie = y_diffs == 0.0
+
+    n = len(y)
+    num_pairs = int(scipy.special.comb(n, 2))
+    # All of the counts are divided by 2 because each pair is double counted. The
+    # double counted data will always be an even number, so dividing by 2 will
+    # be an integer.
+    con = int(
+        ((x_diffs > 0) & (y_diffs > 0) | (x_diffs < 0) & (y_diffs < 0)).sum() / 2
+    )
+    t_x = int((x_is_tie & ~y_is_tie).sum() / 2)
+    t_y = int((~x_is_tie & y_is_tie).sum() / 2)
+    t_xy = int(((x_is_tie & y_is_tie).sum() - n) / 2)  # -n removes diagonal
+    dis = num_pairs - (con + t_x + t_y + t_xy)
+    return con, dis, t_x, t_y, t_xy
+
+def KendallVariants(
+    gold_scores,
+    metric_scores,
+    variant: str = 'acc23',
+    epsilon: float = 0.0,) -> Tuple[float, float]:
+    """Lightweight, optionally factored versions of variants on Kendall's Tau.
+
+    This function calculates the sufficient statistics for tau in two different
+    ways, either using a Fenwick Tree (`_FenwickTreeSufficientStatistics`) when
+    `epsilon` is 0 or NumPy matrices (`_MatrixSufficientStatistics`) otherwise.
+    Note that the latter implementation has an O(n^2) space requirement, which
+    can be significant for long vectors.
+
+    This implementation makes several changes to the SciPy implementation of
+    Kendall's tau:
+    1) For the Fenwick tree version, the cython function for computing discordant
+        pairs is replaced by inline python. This works up to 2x faster for small
+        vectors (< 50 elements), which can be advantageous when processing many
+        such vectors.
+    2) The p-value calculation and associated arguments are omitted.
+    3) The input vectors are assumed not to contain NaNs.
+
+    Args:
+    gold_scores: Vector of numeric values.
+    metric_scores: Vector of numeric values.
+    variant: Either 'b', 'c', '23', or 'acc23' to compute the respective tau
+        variant. See https://arxiv.org/abs/2305.14324 for details about the
+        '23' and 'acc23' variants.
+    epsilon: The threshold for which an absolute difference in metric scores
+        should be considered a tie.
+
+    Returns:
+    A tuple (k, 0) where the first element is the Kendall statistic and the
+    second is a dummy value for compatibility with `scipy.stats.kendalltau`.
+    """
+    if epsilon < 0:
+        raise ValueError('Epsilon must be non-negative.')
+    if epsilon > 0 and variant == 'c':
+        # It's not clear how to define minclasses with a non-zero epsilon.
+        raise ValueError('Non-zero epsilon with tau-c not supported.')
+
+    # The helper functions and tau_optimization expect metric_scores first, the
+    # reverse of the convention used for public methods in this module.
+    x, y = metric_scores, gold_scores
+
+    assert x is not None and y is not None
+    x = np.asarray(x)
+    y = np.asarray(y)
+    # assert no NaNs
+    assert not np.any(np.isnan(x)), f"NaN found in metric_scores: {x}"
+    assert not np.any(np.isnan(y)), f"NaN found in gold_scores: {y}"
+
+    # if epsilon > 0:
+    con, dis, xtie_only, ytie_only, tie_both = _MatrixSufficientStatistics(
+        x, y, epsilon
+    )
+
+    size = y.size
+    xtie = xtie_only + tie_both
+    ytie = ytie_only + tie_both
+    tot = con + dis + xtie_only + ytie_only + tie_both
+
+    if variant in ['b', 'c'] and (xtie == tot or ytie == tot):
+        return np.nan, 0
+
+    if variant == 'b':
+        tau = (con - dis) / np.sqrt(tot - xtie) / np.sqrt(tot - ytie)
+    elif variant == 'c':
+        minclasses = min(len(set(x)), len(set(y)))
+        tau = 2 * (con - dis) / (size**2 * (minclasses - 1) / minclasses)
+    elif variant == '23':
+        tau = (con + tie_both - dis - xtie_only - ytie_only) / tot
+    elif variant == 'acc23':
+        tau = (con + tie_both) / tot
+    else:
+        raise ValueError(
+            f'Unknown variant of the method chosen: {variant}. '
+            "variant must be 'b', 'c', '23', or 'acc23'.")
+
+    return tau, 0
+
+def calc_metric(gold_scores, metric_scores, variant: str="pairwise_acc_with_tie_optimization", sample_rate=1.0):
+    gold_scores = np.array(gold_scores)
+    metric_scores = np.array(metric_scores)
+    assert gold_scores.shape == metric_scores.shape
+    if gold_scores.ndim == 1:
+        # No grouping
+        gold_scores = gold_scores.reshape(1, -1)
+        metric_scores = metric_scores.reshape(1, -1)
+    else:
+        # Group by item (last dim is number of system)
+        pass
+    
+    # Calculate metric using KendallTau (including Pairwise Accuracy)
+    if variant == "pairwise_acc_with_tie_optimization":
+        import tau_optimization
+        result = tau_optimization.tau_optimization(metric_scores, gold_scores, tau_optimization.TauSufficientStats.acc_23, sample_rate=sample_rate)
+        return result.best_tau, result.best_threshold
+    elif variant == 'tau_with_tie_optimization':
+        import tau_optimization
+        result = tau_optimization.tau_optimization(metric_scores, gold_scores, tau_optimization.TauSufficientStats.tau_23, sample_rate=sample_rate)
+        return result.best_tau, result.best_threshold
+    elif variant == "tau_b":
+        taus = []
+        for gold_score, metric_score in zip(gold_scores, metric_scores):
+            tau, _ = KendallVariants(gold_score, metric_score, variant="b")
+            taus.append(tau)
+    elif variant == "tau_c":
+        taus = []
+        for gold_score, metric_score in zip(gold_scores, metric_scores):
+            tau, _ = KendallVariants(gold_score, metric_score, variant="c")
+            taus.append(tau)
+    # average all non-Nan taus
+    taus = np.array(taus)
+    return np.nanmean(taus) 
 
 class Winoground(Dataset):
     def __init__(self, image_preprocess=None, root_dir='./', return_image_paths=True):
@@ -175,7 +342,7 @@ class TIFA160_DSG(Dataset):
         
         self.dataset = json.load(open(os.path.join("datasets", "tifa160.json"), 'r'))
         self.dsg_human_likert_scores = pd.read_csv(os.path.join("datasets", "dsg_tifa160_anns.csv"))
-        self.model_type_to_names = {
+        self.model_type_to_names = { # map from dsg format to tifa format
             'mini-dalle': 'mini_dalle',
             'vq-diffusion': 'vq_diffusion',
             'sd1dot5': 'stable_diffusion_v1_5',
@@ -200,14 +367,18 @@ class TIFA160_DSG(Dataset):
                     'text_id': self.source_ids[key_idx],
                 }
         
+        self.image_preprocess = image_preprocess
+        self.items = list(self.dataset.keys())
+        self.return_image_paths = return_image_paths
         self.all_samples = {} # key is text_id, value is all indices (for each diffusion model) and human scores
         # compute 'human_avg'
-        for k_idx, k in enumerate(self.dsg_items):
+        for _, k in enumerate(self.dsg_items):
             self.dsg_items[k]['human_avg'] = float(np.mean(self.dsg_items[k]['human_scores']))
             assert self.dsg_items[k]['text_id'] == self.dataset[k]['text_id']
             assert self.dsg_items[k]['text'] == self.dataset[k]['text']
             assert self.dsg_items[k]['image_path'] == self.dataset[k]['image_path']
             text_id = self.dsg_items[k]['text_id']
+            k_idx = self.items.index(k)
             if text_id not in self.all_samples:
                 self.all_samples[text_id] = {
                     'text_id': text_id,
@@ -216,10 +387,7 @@ class TIFA160_DSG(Dataset):
                 }
             else:
                 self.all_samples[text_id]['indices'].append(k_idx)
-        self.image_preprocess = image_preprocess
-        self.items = list(self.dataset.keys())
-        self.return_image_paths = return_image_paths
-    
+        
     def __len__(self):
         return len(self.dataset)
 
@@ -238,6 +406,17 @@ class TIFA160_DSG(Dataset):
         item = {"images": [image], "texts": texts}
         return item
     
+    def get_metric_scores(self, metric):
+        if metric == 'human_avg':
+            return [self.dsg_items[k][metric] for k in self.items]
+        return [self.dataset[k][metric] for k in self.items]
+    
+    def compute_correlation(self, metric1_scores, metric2_scores):
+        spearman = 100*np.corrcoef(metric1_scores, metric2_scores)[0, 1]
+        kendall = kendalltau(metric1_scores, metric2_scores)
+        kendall_c = 100*kendalltau(metric1_scores, metric2_scores, variant='c')[0]
+        return spearman, kendall, kendall_c
+    
     def evaluate_scores(self, scores):
         scores_i2t = scores
         human_avg_scores = self.get_metric_scores('human_avg')
@@ -251,21 +430,38 @@ class TIFA160_DSG(Dataset):
                 continue
             human_avg_scores_without_nan.append(human_avg_scores[idx])
             our_scores_without_nan.append(our_scores[idx])
-        # print("human_avg_scores_without_nan", human_avg_scores_without_nan)
-        spearman, kendall, kendall_c = self.compute_correlation(human_avg_scores_without_nan, our_scores_without_nan)
-        print(f"Spearman's Correlation (ours): ", spearman)
-        print(f'Kendall Tau Score (ours): ', kendall)
-        print(f'Kendall Tau-C Score (ours): ', kendall_c)
+        pearson_no_grouping, kendall, kendall_c = self.compute_correlation(human_avg_scores_without_nan, our_scores_without_nan)
+        print(f"Pearson's Correlation (no grouping): ", pearson_no_grouping)
+        # print(f'Kendall Tau Score (no grouping): ', kendall)
+        # print(f'Kendall Tau-C Score (no grouping): ', kendall_c)
+        
+        kendall_b_no_grouping = calc_metric(human_avg_scores_without_nan, our_scores_without_nan, variant="tau_b")
+        kendall_c_no_grouping = calc_metric(human_avg_scores_without_nan, our_scores_without_nan, variant="tau_c")
+        print(f'Kendall Tau-B Score (no grouping): ', kendall_b_no_grouping)
+        print(f'Kendall Tau-C Score (no grouping): ', kendall_c_no_grouping)
+        
+        kendall_no_grouping = calc_metric(human_avg_scores_without_nan, our_scores_without_nan, variant="tau_with_tie_optimization")
+        pairwise_acc_no_grouping = calc_metric(human_avg_scores_without_nan, our_scores_without_nan, variant="pairwise_acc_with_tie_optimization")
+        print(f'Kendall Tau Score (no grouping): ', kendall_no_grouping)
+        print(f'Pairwise Accuracy Score (no grouping): ', pairwise_acc_no_grouping)
         
         # check accuracy of the score picking the highest human score
         acc_count = 0.
-        for text_id in self.all_samples:
+        human_scores_group_by_item = None
+        our_scores_group_by_item = None
+        for idx, text_id in enumerate(self.all_samples):
             # need to consider tie in human scores. 
             # acc_count += 1. whenever one of the highest human score ones is picked
             indices = self.all_samples[text_id]['indices']
-            max_human_score = max([human_avg_scores[idx] for idx in indices])
+            if human_scores_group_by_item is None:
+                human_scores_group_by_item = np.zeros((len(self.all_samples), len(indices)))
+                our_scores_group_by_item = np.zeros((len(self.all_samples), len(indices)))
+            
+            human_scores_group_by_item[idx] = [human_avg_scores[idx] for idx in indices]
+            our_scores_group_by_item[idx] = [our_scores[idx] for idx in indices]
+            max_human_score = max(human_scores_group_by_item[idx])
             max_human_score_indices = [idx for idx in indices if human_avg_scores[idx] == max_human_score]
-            max_our_score = max([our_scores[idx] for idx in indices])
+            max_our_score = max(our_scores_group_by_item[idx])
             max_our_score_indices = [idx for idx in indices if our_scores[idx] == max_our_score]
             
             overlap = False
@@ -277,21 +473,35 @@ class TIFA160_DSG(Dataset):
                 acc_count += 1.
             
         acc = acc_count / len(self.all_samples)
-        print(f"Accuracy of selecting best human score image (ours): {acc}")
-        return spearman, kendall, kendall_c
+        print(f"Accuracy of selecting best human score image (group by item): {acc}")
+        
+        kendall_b_group_by_item = calc_metric(human_scores_group_by_item, our_scores_group_by_item, variant="tau_b")
+        kendall_c_group_by_item = calc_metric(human_scores_group_by_item, our_scores_group_by_item, variant="tau_c")
+        print(f'Kendall Tau-B Score (group by item): ', kendall_b_group_by_item)
+        print(f'Kendall Tau-C Score (group by item): ', kendall_c_group_by_item)
+        
+        kendall_group_by_item = calc_metric(human_scores_group_by_item, our_scores_group_by_item, variant="tau_with_tie_optimization")
+        pairwise_acc_group_by_item = calc_metric(human_scores_group_by_item, our_scores_group_by_item, variant="pairwise_acc_with_tie_optimization")
+        print(f'Kendall Tau Score (group by item): ', kendall_group_by_item)
+        print(f'Pairwise Accuracy Score (group by item): ', pairwise_acc_group_by_item)
+        
+        # return pearson_no_grouping, kendall_b_no_grouping, kendall_c_no_grouping, kendall_no_grouping, pairwise_acc_no_grouping, kendall_b_group_by_item, kendall_c_group_by_item, kendall_group_by_item, pairwise_acc_group_by_item
+        # return a dictionary
+        results = {
+            'pearson_no_grouping': pearson_no_grouping,
+            'kendall_b_no_grouping': kendall_b_no_grouping,
+            'kendall_c_no_grouping': kendall_c_no_grouping,
+            'kendall_no_grouping': kendall_no_grouping,
+            'pairwise_acc_no_grouping': pairwise_acc_no_grouping,
+            'acc_group_by_item': acc,
+            'kendall_b_group_by_item': kendall_b_group_by_item,
+            'kendall_c_group_by_item': kendall_c_group_by_item,
+            'kendall_group_by_item': kendall_group_by_item,
+            'pairwise_acc_group_by_item': pairwise_acc_group_by_item,
+        }
+        return results
     
-    def get_metric_scores(self, metric):
-        if metric == 'human_avg':
-            return [self.dsg_items[k][metric] for k in self.items]
-        return [self.dataset[k][metric] for k in self.items]
 
-    
-    def compute_correlation(self, metric1_scores, metric2_scores):
-        spearman = 100*np.corrcoef(metric1_scores, metric2_scores)[0, 1]
-        kendall = kendalltau(metric1_scores, metric2_scores)
-        kendall_c = 100*kendalltau(metric1_scores, metric2_scores, variant='c')[0]
-        return spearman, kendall, kendall_c
-    
 class Flickr8K_CF(Dataset):
     def __init__(self, image_preprocess=None, root_dir="./", download=True, return_image_paths=True, json_path="crowdflower_flickr8k.json"):
         self.root_dir = root_dir

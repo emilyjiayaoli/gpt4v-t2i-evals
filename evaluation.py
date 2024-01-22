@@ -12,7 +12,6 @@ import traceback
 import ast
 import json
 from io import BytesIO
-import re
 
 from gpt4v_api_client import GPT4V_API_Client
 from dataset import get_dataset
@@ -21,7 +20,7 @@ class GPT4Vision_Evals:
     def __init__(self, save_folder_name:str, 
                  openai_api_key:str, 
                  dataset_name:str, 
-                 root_dir:str='./', 
+                 root_dir:str='./', datasets_dir='./datasets',
                  post_processing_fn=None, 
                  system_prompt:str=None, user_prompt:str=None, 
                  api_max_retries=2, 
@@ -42,7 +41,8 @@ class GPT4Vision_Evals:
 
         # Define dataset
         print("Loading dataset from path...", dataset_name, end=" ")
-        self.dataset = get_dataset(root_dir=root_dir, dataset_name=dataset_name)
+        datasets_root_dir = os.path.join(root_dir, datasets_dir)
+        self.dataset = get_dataset(root_dir=datasets_root_dir, dataset_name=dataset_name)
         print("Done!")
         
         self.system_msg = system_prompt

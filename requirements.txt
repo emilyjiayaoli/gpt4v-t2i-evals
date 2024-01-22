@@ -1,0 +1,7 @@
+openai
+torchvision
+scipy
+requests
+pandas
+numpy
+gdown
