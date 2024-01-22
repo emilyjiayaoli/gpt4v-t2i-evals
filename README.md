@@ -13,11 +13,11 @@ pip install -r requirements.txt
 ## Datasets
 ### Supported datasets
 
-```     Winoground,
-        EqBen_Mini,
-        TIFA160_DSG,
-        Flickr8K_Expert,
-        Flickr8K_CF,
+``` Winoground,
+    EqBen_Mini,
+    TIFA160_DSG,
+    Flickr8K_Expert,
+    Flickr8K_CF,
 ```
 
 ### Quickstart
